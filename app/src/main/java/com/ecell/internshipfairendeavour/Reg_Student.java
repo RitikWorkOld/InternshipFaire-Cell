@@ -202,7 +202,7 @@ public class Reg_Student extends AppCompatActivity implements View.OnClickListen
         }
 
     }
-    private void registeruser() {
+    private void registeruser(){
         final String email = emailId.getText().toString().trim();
         final String pwd = password.getText().toString().trim();
         final String fname = fname1.getText().toString().trim();
