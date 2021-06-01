@@ -1,41 +1,34 @@
 {
   "project_info": {
-    "project_number": "534211650867",
-    "project_id": "internship-fair",
-    "storage_bucket": "internship-fair.appspot.com"
+    "project_number": "856159340852",
+    "firebase_url": "https://internship-fair-6d538-default-rtdb.firebaseio.com",
+    "project_id": "internship-fair-6d538",
+    "storage_bucket": "internship-fair-6d538.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:534211650867:android:b5bd76fb8b683ac4ddca46",
+        "mobilesdk_app_id": "1:856159340852:android:55082116fef0f7448f7d61",
         "android_client_info": {
           "package_name": "com.ecell.internshipfairendeavour"
         }
       },
       "oauth_client": [
         {
-          "client_id": "534211650867-52s0sol53sdbofcfe00bq3klnetdkh57.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.ecell.internshipfairendeavour",
-            "certificate_hash": "c52417e162266ccba75671c3e395d61a004b2dec"
-          }
-        },
-        {
-          "client_id": "534211650867-aihv0f52jucanp8fpfg1heb6llqu7j5k.apps.googleusercontent.com",
+          "client_id": "856159340852-ks32s9qtmgp8h38bss3kv5m48plhg139.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAoStgiSAN6wdWRj3PQWwx447hVP92BsLs"
+          "current_key": "AIzaSyAewWySJO0KWOx_G7QYP9P2Vhc5zT03D1Q"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "534211650867-aihv0f52jucanp8fpfg1heb6llqu7j5k.apps.googleusercontent.com",
+              "client_id": "856159340852-ks32s9qtmgp8h38bss3kv5m48plhg139.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

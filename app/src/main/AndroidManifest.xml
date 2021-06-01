@@ -16,8 +16,19 @@
         <activity android:name="com.ecell.internshipfairendeavour.Login_Student" />
         <activity android:name="com.ecell.internshipfairendeavour.Login_Employe" />
         <activity android:name="com.ecell.internshipfairendeavour.Login_Admin" />
+        <activity android:name=".Studentdetail"/>
+        <activity android:name=".Change_Pass"/>
+        <activity android:name=".Contact_Us"/>
+        <activity android:name=".Notifications.Notifications"/>
+   <activity android:name=".profile.Edit_profile"/>
+
+        <activity android:name=".profile.Profile_activity1"/>
+        <activity android:name=".profile.Profile_activity2"/>
+        <activity android:name=".profile.Profile_activity3"/>
+        <activity android:name=".profile.Profile_activity4"/>
         <activity android:name="com.ecell.internshipfairendeavour.IntroActivity"/>
         <activity android:name="com.ecell.internshipfairendeavour.MainActivity">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

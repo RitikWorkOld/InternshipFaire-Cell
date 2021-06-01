@@ -53,11 +53,13 @@ public class InternFragment extends Fragment {
         final View view = inflater.inflate( R.layout.fragment_intern,container,false);
         // Inflate the layout for this fragment
         firebaseAuth= FirebaseAuth.getInstance();
+        progressBar=view.findViewById( R.id.progressBar2 );
+        progressBar.setVisibility( View.GONE );
         if(firebaseAuth.getCurrentUser()==null){
 
 
         }
-        progressBar=view.findViewById( R.id.progressBar2 );
+
         notification_btn = (ImageView) view.findViewById(R.id.iv_notification_btn);
         notification_btn.setOnClickListener(new View.OnClickListener() {
             @Override

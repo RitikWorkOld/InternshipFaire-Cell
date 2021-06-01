@@ -16,6 +16,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthException;
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -128,8 +129,9 @@ public class Reg_Student extends AppCompatActivity implements View.OnClickListen
 
                         @Override
                         public void onCancelled(@NonNull DatabaseError databaseError) {
+                      progressBars.setVisibility( View.GONE );
                             Toast.makeText(Reg_Student.this,"Some error occurred",Toast.LENGTH_SHORT).show();
-
+                            //Toast.makeText(LoginActivity.this, "User Authentication Failed: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                         }
                     });
 
@@ -240,6 +242,9 @@ public class Reg_Student extends AppCompatActivity implements View.OnClickListen
                             else {
                                 if (task.getException() instanceof FirebaseAuthInvalidCredentialsException) {
                                     Toast.makeText(Reg_Student.this,"Some error occurred",Toast.LENGTH_SHORT).show();
+
+
+
                                 }
 
                             }
