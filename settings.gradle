@@ -1,0 +1,2 @@
+rootProject.name = "Internship Fair e-Cell"
+include ':app'

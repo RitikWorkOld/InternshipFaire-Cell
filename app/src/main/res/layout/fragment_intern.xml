@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/artboard_try"
+    tools:context="Internship.InternFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!-- TODO: Update blank fragment layout -->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:id="@+id/notif"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:elevation="6dp"
+                android:id="@+id/iv_notification_btn"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:paddingTop="10dp"
+                android:paddingEnd="10dp"
+                android:src="@drawable/ic_notifications_blackone_24dp"
+                android:layout_width="48dp"
+                android:layout_height="48dp"/>
+
+            <ImageView
+                android:elevation="10dp"
+                android:layout_marginTop="6dp"
+                android:src="@drawable/badge_notifications"
+                android:id="@+id/notificationbadge"
+                android:layout_marginLeft="-30dp"
+                android:layout_alignTop="@+id/iv_notification_btn"
+                android:layout_toRightOf="@+id/iv_notification_btn"
+                android:layout_width="20dp"
+                android:layout_height="20dp"/>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="Internships"
+            android:layout_marginTop="12dp"
+            android:background="#00808080"
+            android:textColor="@color/white"
+
+            android:textSize="20sp"
+            android:layout_centerHorizontal="true"
+            />
+
+        <LinearLayout
+            android:visibility="visible"
+            android:id="@+id/no_app"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/no_application"/>
+
+            <TextView
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:text="No Application"
+                android:textSize="20sp"/>
+
+        </LinearLayout>
+
+
+        <com.ecell.internshipfairendeavour.Notifications.Customised.BucketRecyclerView
+            android:id="@+id/rv_internall"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/notif"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <ProgressBar
+            android:id="@+id/progressBar2"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+android:layout_below="@+id/no_app"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="18dp"
+            android:indeterminateDrawable="@drawable/cpb_white"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+
+
+</FrameLayout>

@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Internship Fair e-Cell</string>
+    <string name="input_error_name">name required</string>
+    <string name="input_error_email">email required</string>
+    <string name="input_error_password">password required</string>
+    <string name="input_error_password_length">password should be atleast 6 characters long</string>
+    <string name="input_error_phone_invalid">enter a valid phone number</string>
+    <string name="input_error_email_invalid">enter a valid email</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="default_notification_channel_id">Notification_Student</string>
+    <string name="Description">Description</string>
+    <string name="Description1">What you Get?</string>
+    <string name="Description2">Skills required</string>
+    <string name="hint"> <font size="280">Answer</font></string>
+
+</resources>

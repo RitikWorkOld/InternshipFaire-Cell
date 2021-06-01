@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MyDashboard.InternForm">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:id="@+id/main"
+        android:layout_marginTop="24dp"
+android:layout_marginStart="4dp"
+
+        android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/intern_name"
+
+        android:textSize="16sp"
+        android:fontFamily="@font/montserrat"
+        android:layout_margin="8dp"
+        android:textStyle="bold"
+        android:textColor="#0C93FA"
+        android:text="Business Development (Sales)"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:layout_below="@+id/intern_name"
+        android:id="@+id/company_name"
+
+        android:textSize="16sp"
+        android:fontFamily="@font/montserrat"
+      android:layout_marginStart="8dp"
+        android:text="Company name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_toRightOf="@+id/main"
+                android:layout_marginTop="20dp"
+                android:gravity="center|end"
+                android:layout_marginEnd="8dp"
+                android:layout_alignParentEnd="true"
+                android:layout_height="wrap_content">
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/intern_img"
+
+
+
+                    android:src="@drawable/user"
+                    android:layout_width="74dp"
+                    android:layout_height="74dp"/>
+
+
+            </RelativeLayout>
+    <TextView
+        android:id="@+id/balck_line"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="36dp"
+        android:layout_below="@id/main"
+        android:background="#808080"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"/>
+    <TextView
+        android:id="@+id/heading"
+        android:fontFamily="@font/montserrat"
+        android:layout_marginBottom="10dp"
+        android:textSize="16sp"
+        android:text="Assessment"
+        android:textAllCaps="true"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/balck_line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_below="@+id/heading"
+        android:layout_margin="12dp"
+        android:layout_height="wrap_content">
+    <TextView
+        android:layout_marginBottom="10dp"
+android:textColor="#C3000000"
+        android:id="@+id/ques_1"
+        android:fontFamily="@font/montserrat"
+        android:text="Q1.Why Should we hired you?"
+        android:textSize="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:layout_marginBottom="10dp"
+        android:layout_below="@+id/ques_1"
+        android:id="@+id/answer_1"
+        android:text="Answer1"
+        android:fontFamily="@font/montserrat"
+        android:textSize="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:layout_marginBottom="10dp"
+        android:layout_below="@+id/answer_1"
+        android:id="@+id/ques_2"
+        android:layout_marginTop="24dp"
+        android:text="Question2"
+        android:fontFamily="@font/montserrat"
+        android:textColor="#C3000000"
+        android:textSize="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:layout_marginBottom="10dp"
+        android:layout_below="@id/ques_2"
+        android:id="@+id/answer_2"
+        android:text="Answer2"
+        android:fontFamily="@font/montserrat"
+        android:textSize="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:layout_marginBottom="10dp"
+        android:layout_below="@+id/answer_2"
+        android:id="@+id/ques_3"
+        android:fontFamily="@font/montserrat"
+        android:text="Question3"
+        android:textColor="#C3000000"
+        android:layout_marginTop="24dp"
+        android:textSize="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:layout_marginBottom="10dp"
+        android:layout_below="@+id/ques_3"
+        android:id="@+id/answer_3"
+        android:text="Answer3"
+        android:fontFamily="@font/montserrat"
+        android:textSize="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

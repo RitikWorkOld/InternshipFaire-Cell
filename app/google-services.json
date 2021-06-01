@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "534211650867",
+    "project_id": "internship-fair",
+    "storage_bucket": "internship-fair.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:534211650867:android:b5bd76fb8b683ac4ddca46",
+        "android_client_info": {
+          "package_name": "com.ecell.internshipfairendeavour"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "534211650867-52s0sol53sdbofcfe00bq3klnetdkh57.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ecell.internshipfairendeavour",
+            "certificate_hash": "c52417e162266ccba75671c3e395d61a004b2dec"
+          }
+        },
+        {
+          "client_id": "534211650867-aihv0f52jucanp8fpfg1heb6llqu7j5k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAoStgiSAN6wdWRj3PQWwx447hVP92BsLs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "534211650867-aihv0f52jucanp8fpfg1heb6llqu7j5k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

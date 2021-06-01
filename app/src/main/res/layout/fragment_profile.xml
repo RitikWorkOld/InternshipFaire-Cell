@@ -1,0 +1,660 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="profile.ProfileFragment">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:id="@+id/layout_profile"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:elevation="6dp"
+                android:layout_height="340dp"
+                android:background="@drawable/bg_profile">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:background="@drawable/try_4"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/iv_notification_btn"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:elevation="6dp"
+                      android:layout_alignParentEnd="true"
+                        android:paddingTop="10dp"
+                        android:paddingEnd="10dp"
+                        android:src="@drawable/ic_notifications_blackone_24dp" />
+                    <ImageView
+                        android:elevation="10dp"
+                        android:layout_marginTop="6dp"
+                        android:src="@drawable/badge_notifications"
+                        android:id="@+id/notificationbadge"
+                        android:layout_marginLeft="-30dp"
+                        android:layout_alignTop="@+id/iv_notification_btn"
+                        android:layout_toRightOf="@+id/iv_notification_btn"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Profile"
+
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:id="@+id/profile"
+                        android:textColor="@color/white"
+                        android:layout_marginTop="20dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        />
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:id="@+id/edit_profile"
+                        android:padding="8dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerInParent="true"
+                        android:layout_centerHorizontal="true"
+
+                        android:background="@drawable/circle"
+                        android:layout_marginTop="120dp"
+                        android:layout_marginRight="50dp"
+                        android:layout_toLeftOf="@+id/image_user"
+                        android:src="@drawable/edit" />
+
+
+                    <ImageView
+                        android:id="@+id/about"
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="120dp"
+                        android:layout_marginRight="-187dp"
+                        android:layout_toLeftOf="@+id/image_user"
+                        android:background="@drawable/circle"
+                        android:padding="8dp"
+                        android:src="@drawable/info" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:src="@drawable/user"
+                        android:id="@+id/image_user"
+                        android:layout_width="100dp"
+                        android:layout_below="@id/profile"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_centerInParent="true"
+                        android:layout_centerVertical="true"
+                        android:padding="2dp"/>
+
+                    <ProgressBar
+                        android:id="@+id/pb_userimg"
+                        android:layout_width="100dp"
+                        android:layout_below="@id/profile"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_centerInParent="true"
+                        android:layout_centerVertical="true"
+                        android:padding="2dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="16sp"
+                        android:id="@+id/name_user"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:layout_below="@id/image_user"
+                        android:layout_centerHorizontal="true"
+
+                        android:layout_marginTop="12dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="16sp"
+
+                        android:id="@+id/user_ph"
+
+                        android:drawablePadding="4dp"
+                        android:textColor="@color/white"
+                        android:layout_marginTop="4dp"
+                        android:layout_below="@id/name_user"
+                        android:layout_centerHorizontal="true"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="16sp"
+                        android:textStyle="italic"
+                        android:id="@+id/user_email"
+                        android:textColor="@color/white"
+                        android:layout_marginTop="4dp"
+                        android:layout_below="@id/user_ph"
+                        android:layout_centerHorizontal="true"
+                        />
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_below="@+id/layout_profile"
+    android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+
+                android:layout_height="512dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="360dp"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="10dp"
+                    android:elevation="8dp"
+                    android:id="@+id/card_profile"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="40dp"
+                    app:cardElevation="6dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:id="@+id/pers_detail1"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_margin="12dp"
+                                android:layout_centerHorizontal="true"
+                                android:drawableLeft="@drawable/ic_personal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="#000"
+                                android:drawablePadding="10dp"
+                                android:fontFamily="@font/montserrat"
+                                android:textSize="18sp"
+                                android:text="Personal Details"/>
+
+                        </RelativeLayout>
+
+                        <!--hereeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-->
+
+                        <RelativeLayout
+                            android:layout_below="@+id/pers_detail1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                        android:layout_margin="12dp"
+                            android:visibility="gone"
+                            android:id="@+id/layout_perdet1"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="20dp"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/dob_view"
+                                    android:layout_alignParentStart="true"
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+
+                                    android:fontFamily="@font/montserrat"
+                                    android:text="Date of Birth"
+                                    android:textColor="#000"
+                                    android:textSize="16sp" />
+                                <TextView
+                                    android:id="@+id/dob_text"
+                                    android:layout_width="120dp"
+
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/montserrat"
+                                    android:hint="DOB"
+                                    android:background="@null"
+                                    android:textColor="#CD4B4B"
+                                    android:textColorHint="#808080"
+                                    android:textSize="16sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/dob_view"
+                                    android:layout_alignParentStart="true"
+
+                                    android:fontFamily="@font/montserrat"
+                                    android:text="Address"
+                                    android:textColor="#000"
+                                    android:textSize="16sp" />
+                                <TextView
+                                    android:id="@+id/add_text"
+                                    android:layout_below="@+id/dob_view"
+                                    android:layout_width="120dp"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/montserrat"
+                                    android:hint="DOB"
+                                    android:layout_alignParentEnd="true"
+
+                                    android:background="@null"
+                                    android:textColor="#CD4B4B"
+                                    android:textColorHint="#808080"
+                                    android:textSize="16sp" />
+                                <TextView
+                                    android:id="@+id/curr_occ_view"
+                                    android:layout_width="wrap_content"
+
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/add_text"
+                                    android:fontFamily="@font/montserrat"
+                                    android:text="Occupation"
+
+                                    android:layout_alignParentStart="true"
+
+                                    android:textColor="#000"
+                                    android:textSize="16sp" />
+                                <TextView
+                                    android:id="@+id/curr_occ_text"
+                                    android:layout_width="120dp"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/montserrat"
+                                    android:hint="DOB"
+                                    android:layout_below="@+id/add_text"
+                                    android:background="@null"
+                                    android:layout_alignParentEnd="true"
+                                    android:textColor="#CD4B4B"
+                                    android:textColorHint="#808080"
+                                    android:textSize="16sp" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/curr_occ_view"
+                                    android:fontFamily="@font/montserrat"
+                                    android:layout_alignParentStart="true"
+
+                                    android:text="Whatsapp Number"
+                                    android:textColor="#000"
+                                    android:textSize="16sp" />
+
+                                <TextView
+                                    android:id="@+id/wa_no_text"
+                                    android:layout_width="120dp"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/montserrat"
+                                    android:hint="DOB"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_below="@id/curr_occ_view"
+                                    android:background="@null"
+                                    android:textColor="#CD4B4B"
+                                    android:textColorHint="#808080"
+                                    android:textSize="16sp" />
+
+                            </RelativeLayout>
+
+
+                        </RelativeLayout>
+
+                        <!--hereeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-->
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="360dp"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="10dp"
+                    android:elevation="8dp"
+                    android:id="@+id/card2"
+                    android:layout_below="@+id/card_profile"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="12dp"
+                    app:cardElevation="6dp">
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:id="@+id/ed_detail1"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_margin="12dp"
+                            android:layout_centerHorizontal="true"
+                            android:drawableLeft="@drawable/ic_ed"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawablePadding="10dp"
+                            android:textColor="#000"
+                            android:fontFamily="@font/montserrat"
+                            android:textSize="18sp"
+                            android:text="Educational Details"/>
+
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_below="@+id/ed_detail1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:visibility="gone"
+                        android:id="@+id/layout_eddet1"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                android:orientation="vertical">
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+
+                                    android:layout_height="match_parent">
+                                <Button
+                                    android:layout_width="130dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="      10th      "
+                                    android:textSize="12sp"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_margin="4dp"
+                                    android:background="@drawable/btn_gradient_style"
+                                    android:textColor="#fff"
+                                    android:id="@+id/matr_btn"/>
+                                <Button
+                                    android:layout_width="130dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="      12th      "
+                                    android:textSize="12sp"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_below="@id/matr_btn"
+                                    android:layout_margin="4dp"
+                                    android:background="@drawable/btn_gradient_style"
+                                    android:textColor="#fff"
+                                    android:id="@+id/inter_btn"/>
+                                <Button
+                                    android:layout_width="130dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="      Diploma      "
+                                    android:layout_margin="4dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_below="@id/inter_btn"
+                                    android:textSize="12sp"
+                                    android:background="@drawable/btn_gradient_style"
+                                    android:textColor="#fff"
+                                    android:id="@+id/dip_btn"/>
+                                <Button
+                                    android:layout_width="130dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="      College      "
+                                    android:layout_margin="4dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_below="@id/dip_btn"
+                                    android:textSize="12sp"
+                                    android:background="@drawable/btn_gradient_style"
+                                    android:textColor="#fff"
+                                    android:id="@+id/college_btn"/>
+
+                                </RelativeLayout>
+
+
+                            </LinearLayout>
+
+
+
+
+                    </RelativeLayout>
+                    </RelativeLayout>
+
+
+
+
+
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="360dp"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="10dp"
+                    android:elevation="8dp"
+                    android:layout_below="@id/card2"
+                    android:id="@+id/card3"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="12dp"
+                    app:cardElevation="6dp">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:id="@+id/pers_detail3"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_margin="12dp"
+                            android:layout_centerHorizontal="true"
+                            android:drawableLeft="@drawable/ic_work"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawablePadding="10dp"
+                            android:textColor="#000"
+                            android:fontFamily="@font/montserrat"
+                            android:textSize="18sp"
+                            android:text="Work and Experience"/>
+
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_below="@+id/pers_detail3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:visibility="gone"
+android:id="@+id/work_det"
+                        android:layout_centerHorizontal="true"
+
+                        android:layout_marginBottom="20dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:id="@+id/layout"
+
+                            android:layout_marginBottom="30dp"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical">
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:id="@+id/abi_lay1">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="No Experience added"
+                                    android:textSize="16sp"
+                                    android:textColor="@color/purple_500"
+
+                                    />
+                            </LinearLayout>
+                            <com.ecell.internshipfairendeavour.Notifications.Customised.BucketRecyclerView
+                                android:id="@+id/rv_exp"
+                                android:layout_centerInParent="true"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+
+
+
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+</RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="360dp"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="10dp"
+                    android:elevation="8dp"
+                    android:layout_below="@+id/card3"
+                    android:id="@+id/card4"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="12dp"
+                    app:cardElevation="6dp">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:id="@+id/pers_detail4"
+
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_margin="12dp"
+                            android:layout_centerHorizontal="true"
+                            android:textColor="#000"
+                            android:drawableLeft="@drawable/ic_abili"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawablePadding="10dp"
+                            android:fontFamily="@font/montserrat"
+                            android:textSize="18sp"
+                            android:text="Abilities"/>
+
+
+                    </RelativeLayout>
+                <RelativeLayout
+                    android:layout_below="@+id/pers_detail4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:visibility="gone"
+                    android:id="@+id/abi_det"
+                    android:layout_centerHorizontal="true"
+
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+
+                        android:id="@+id/tomas"
+                        android:layout_marginBottom="30dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:id="@+id/abi_lay">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="No Abilities added"
+                                android:textSize="16sp"
+                                android:textColor="@color/purple_500"
+
+                                />
+                        </LinearLayout>
+                       <com.ecell.internshipfairendeavour.Notifications.Customised.BucketRecyclerView
+                            android:id="@+id/rv_exp1"
+                            android:layout_centerInParent="true"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+
+
+
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+android:layout_below="@+id/tomas"
+                        android:layout_marginBottom="30dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv_exp3"
+                            android:layout_centerInParent="true"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+
+
+
+                    </RelativeLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+
+
+
+</androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="10dp"
+                    android:elevation="8dp"
+                    android:layout_below="@id/card4"
+                    android:layout_alignParentBottom="true"
+                    app:cardBackgroundColor="@color/purple_200"
+
+                    android:layout_centerHorizontal="true"
+                    app:cardElevation="6dp">
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:id="@+id/layout_signout"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_margin="12dp"
+                            android:textColor="@color/white"
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat"
+                            android:textSize="20sp"
+                            android:text="Sign out"/>
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </RelativeLayout>
+
+
+</ScrollView>
+        </RelativeLayout>
+
+    </ScrollView>
+</FrameLayout>
