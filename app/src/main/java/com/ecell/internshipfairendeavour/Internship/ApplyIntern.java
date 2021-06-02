@@ -54,7 +54,7 @@ notiid = FirebaseDatabase.getInstance().getReference().child("Forms")
         final Editable text3 = answer3.getEditText().getText();
 
         TextView title = (TextView) findViewById(R.id.title);
-        final SpannableString content = new SpannableString("SocialDukan Application");
+        final SpannableString content = new SpannableString("Application");
        // content.setSpan(new UnderlineSpan(), 0, content.length(), 0);
         title.setText(content);
 

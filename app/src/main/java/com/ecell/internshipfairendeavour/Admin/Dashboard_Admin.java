@@ -32,7 +32,7 @@ public class Dashboard_Admin extends AppCompatActivity {
 
     final Fragment_three_admin_main fragmentThree = new Fragment_three_admin_main();
 
-      //  final Fragment_five_admin fragmentFive = new Fragment_five_admin();
+      final Fragment_five_admin fragmentFive = new Fragment_five_admin();
         navigationView.setOnNavigationItemSelectedListener( new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -46,7 +46,7 @@ public class Dashboard_Admin extends AppCompatActivity {
                     return true;
                 }
                 if(id==R.id.five){
-                  //  setFragment( fragmentFive );
+            setFragment( fragmentFive );
                     return true;
                 }
 

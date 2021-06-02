@@ -429,7 +429,7 @@ android:layout_below="@+id/heading"
 
                                     />
                             </LinearLayout>
-                            <com.social.socialdukan_employer.Admin.BucketRecyclerView
+                            <com.ecell.internshipfairendeavour.Notifications.Customised.BucketRecyclerView
                                 android:id="@+id/rv_exp"
                                 android:layout_centerInParent="true"
                                 android:layout_width="match_parent"
@@ -515,7 +515,7 @@ android:id="@+id/tomas"
 
                                     />
                             </LinearLayout>
-                            <com.social.socialdukan_employer.Admin.BucketRecyclerView
+                            <com.ecell.internshipfairendeavour.Notifications.Customised.BucketRecyclerView
                                 android:id="@+id/rv_exp1"
                                 android:layout_centerInParent="true"
                                 android:layout_width="match_parent"
