@@ -4,6 +4,8 @@ package com.ecell.internshipfairendeavour;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,6 +21,9 @@ private Button admin_btn;;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate( savedInstanceState );
+        //---( TO REMOVE STATUS BAR )---//
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView( R.layout.activity_main );
         student_btn=(Button) findViewById(R.id.stud_btn);
         employe_btn=(Button) findViewById(R.id.emp_btn);
