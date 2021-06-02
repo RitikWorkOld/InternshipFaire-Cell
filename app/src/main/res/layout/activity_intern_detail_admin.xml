@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/white"
-    android:layout_weight="2"
-    tools:context="com.social.socialdukan.Student.fragment.Internship.InternDetail">
+    android:layout_weight="2">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -14,7 +12,7 @@
 
         <RelativeLayout
              android:layout_width="match_parent"
-             android:layout_height="match_parent">
+             android:layout_height="wrap_content">
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -22,21 +20,44 @@
                 android:id="@+id/cmp_detail2"
                 android:background="@drawable/btn_grd_style">
                 <ImageView
-android:layout_alignParentTop="true"
+                    android:layout_alignParentTop="true"
                     android:layout_alignParentEnd="true"
-android:paddingBottom="17dp"
+                    android:paddingBottom="17dp"
                     android:layout_toRightOf="@+id/cmp_img_detail"
                     android:src="@drawable/ic_certificate_1"
 
                     android:layout_width="100dp"
                     android:layout_height="164dp"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_alignParentStart="true"
+                    android:gravity="start"
+                    android:layout_toStartOf="@+id/cmp_img_detail"
+                    android:layout_height="wrap_content">
                 <TextView
-                    android:layout_width="20dp"
+                    android:layout_width="wrap_content"
                     android:textColor="@color/white"
-                    android:visibility="gone"
-                    android:layout_height="20dp"
-                    android:layout_alignParentEnd="true"
-                    android:text="CERTIFICATE\nPROVIDED"/>
+                    android:textStyle="bold"
+                    android:visibility="visible"
+                    android:textSize="16sp"
+                    android:layout_height="wrap_content"
+                  android:layout_marginTop="8dp"
+                    android:layout_marginStart="8dp"
+                    android:text="Status :"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textColor="@color/white"
+                        android:visibility="visible"
+                        android:layout_marginTop="8dp"
+android:layout_marginEnd="4dp"
+                        android:layout_marginStart="4dp"
+                        android:id="@+id/status_show"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginLeft="8dp"
+                        android:text="Not Checked"/>
+                </LinearLayout>
                 <androidx.cardview.widget.CardView
                     app:cardCornerRadius="5dp"
                     android:elevation="5dp"
@@ -76,12 +97,22 @@ android:paddingBottom="17dp"
                     android:id="@+id/cmp_work_detail"
                     android:layout_below="@id/cmp_name_detail"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="16dp"
                     android:text="Android Development">
 
 
                 </TextView>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/pencil_desc"
+                    android:layout_gravity="end"
+android:layout_toEndOf="@+id/cmp_work_detail"
+                    android:layout_marginStart="12dp"
+                   android:layout_below="@+id/cmp_name_detail"
 
+                    android:layout_marginEnd="24dp"
+                    android:src="@drawable/ic_pencil" />
                 <LinearLayout
                     android:layout_below="@id/cmp_work_detail"
                     android:layout_width="wrap_content"
@@ -108,7 +139,7 @@ android:paddingBottom="17dp"
                             android:drawablePadding="5dp"
 
                             android:text="Delhi"
-                            android:drawableLeft="@drawable/ic_location_interncard_24dp"
+                            android:drawableStart="@drawable/ic_location_interncard_24dp"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"/>
                         <TextView
@@ -118,10 +149,10 @@ android:paddingBottom="17dp"
                             android:layout_marginTop="12dp"
                             android:id="@+id/stipend_detail"
                             android:textColor="@color/white"
-                  android:drawablePadding="8dp"
+                            android:drawablePadding="8dp"
 
                             android:text="Stipend"
-                            android:drawableLeft="@drawable/ic_attach_money_interncard_24dp"
+                            android:drawableStart="@drawable/ic_attach_money_interncard_24dp"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"/>
 
@@ -130,7 +161,7 @@ android:paddingBottom="17dp"
                     <LinearLayout
                         android:layout_gravity="center"
                         android:orientation="vertical"
-                   android:layout_marginStart="16dp"
+                        android:layout_marginStart="16dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content">
 
@@ -143,7 +174,7 @@ android:paddingBottom="17dp"
 
                             android:textColor="@color/white"
                             android:text="2 months"
-                            android:drawableLeft="@drawable/ic_date_range_interncard_24dp"
+                            android:drawableStart="@drawable/ic_date_range_interncard_24dp"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"/>
                         <TextView
@@ -151,12 +182,12 @@ android:paddingBottom="17dp"
                             android:textSize="16sp"
                             android:id="@+id/work_details"
 
-                           android:layout_marginTop="12dp"
+                            android:layout_marginTop="12dp"
                             android:drawablePadding="5dp"
 
                             android:textColor="@color/white"
                             android:text="2-3 Hour/day"
-                            android:drawableLeft="@drawable/ic_clock"
+                            android:drawableStart="@drawable/ic_clock"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"/>
 
@@ -172,69 +203,42 @@ android:paddingBottom="17dp"
                     android:layout_height="wrap_content">
 
                     <RelativeLayout
-                        android:layout_width="0dp"
+                        android:layout_width="match_parent"
                         android:background="#94808080"
                         android:layout_weight="3"
                         android:layout_height="30dp">
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:weightSum="3"
-                            android:layout_height="match_parent"
-                            android:orientation="horizontal">
-                        <LinearLayout
-
-                         android:gravity="start"
-                            android:layout_weight="1"
-
+                        <RelativeLayout
                             android:layout_width="wrap_content"
-                            android:layout_height="match_parent">
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:textColor="@color/white"
-
-                            android:gravity="start|center_vertical"
-                            android:layout_gravity="start"
-                            android:layout_marginStart="8dp"
-                            android:id="@+id/title1"
-                            android:layout_height="match_parent"
-                            android:text="Work From Home"/>
-                        </LinearLayout>
-                        <LinearLayout
-
-                            android:layout_weight="1"
-android:gravity="center"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent">
+                            android:layout_height="wrap_content">
                         <TextView
                             android:layout_width="wrap_content"
                             android:textColor="@color/white"
                             android:gravity="center"
-                            android:layout_gravity="center"
+                            android:layout_marginStart="8dp"
+                            android:id="@+id/title1"
+                            android:layout_height="match_parent"
+                            android:text="Work From Home"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:textColor="@color/white"
+                            android:gravity="center"
                             android:id="@+id/title2"
-
+                            android:layout_centerInParent="true"
                             android:layout_marginStart="8dp"
                             android:layout_height="match_parent"
                             android:text="Work in College"/>
-                        </LinearLayout>
-                        <LinearLayout
-
-                            android:layout_weight="1"
-android:gravity="end"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent">
                         <TextView
                             android:layout_width="wrap_content"
                             android:textColor="@color/white"
                             android:gravity="center"
                             android:id="@+id/title3"
                             android:layout_marginEnd="32dp"
-
+                            android:layout_alignParentEnd="true"
                             android:layout_marginStart="8dp"
                             android:layout_height="match_parent"
                             android:text="Nearby"/>
-                        </LinearLayout>
 
-                        </LinearLayout>
+                        </RelativeLayout>
                     </RelativeLayout>
 
                 </LinearLayout>
@@ -267,35 +271,37 @@ android:gravity="end"
                             android:layout_below="@id/sliding_tab"
 android:layout_above="@+id/applied_btn"
                             android:layout_height="wrap_content"/>
-                        <RelativeLayout
+                        <LinearLayout
                             android:layout_width="wrap_content"
                             android:id="@+id/applied_btn"
                             android:layout_alignParentBottom="true"
+                            android:orientation="horizontal"
                             android:layout_centerHorizontal="true"
                             android:layout_height="wrap_content">
-                      <androidx.appcompat.widget.AppCompatButton
-                            android:id="@+id/applied"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:background="@drawable/btn_gradient_style"
-                            android:textColor="#fff"
-                            android:fontFamily="@font/montserrat"
-                            android:text="Apply"
-                          android:visibility="visible"
-                           />
-                       <androidx.appcompat.widget.AppCompatButton
-                            android:id="@+id/alr_applied"
-                            android:background="@drawable/gray_btn"
-                            android:textColor="#fff"
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:id="@+id/accept"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/btn_gradient_style"
+                                android:textColor="#fff"
+                                android:fontFamily="@font/montserrat"
+                                android:text="Accept"
+                                android:visibility="visible"
+                                android:layout_marginEnd="4dp"
+                                />
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:id="@+id/reject"
 
-                            android:visibility="gone"
-                            android:fontFamily="@font/montserrat"
-                            android:padding="8dp"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Already Applied"
-                            />
-                        </RelativeLayout>
+                                android:textColor="#fff"
+
+                                android:background="@drawable/btn_gradient_style"
+                                android:fontFamily="@font/montserrat"
+                                android:padding="8dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Reject"
+                                />
+                        </LinearLayout>
                     </RelativeLayout>
 
             </LinearLayout>

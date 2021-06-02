@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Admin.Email_sendpopupAdmin"
+    android:gravity="center">
+
+    <ImageView
+        android:id="@+id/cross_btn_rf"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        android:elevation="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:srcCompat="@drawable/cancel_rf_red"/>
+
+    <androidx.cardview.widget.CardView
+        app:cardCornerRadius="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Email ID"
+                    android:id="@+id/title_city"
+                    android:textColor="@color/purple_200"
+                    android:buttonTint="@color/purple_200"
+                    android:textSize="16sp"
+                    android:layout_marginLeft="16dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint=""
+                    android:id="@+id/employ_email_et"
+                    android:gravity="start"
+                    android:textColor="@color/black"
+                    android:padding="8dp"
+                    android:layout_margin="16dp"
+                    android:textColorHint="#808080"
+                    android:background="@drawable/gray_stroke_back"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Subject"
+                    android:id="@+id/subject"
+                    android:textColor="@color/purple_200"
+                    android:buttonTint="@color/purple_200"
+                    android:textSize="16sp"
+                    android:layout_marginLeft="16dp"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint=""
+                    android:id="@+id/subject_et"
+                    android:gravity="start"
+                    android:textColor="@color/black"
+                    android:padding="8dp"
+                    android:layout_margin="16dp"
+                    android:textColorHint="#808080"
+                    android:background="@drawable/gray_stroke_back"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:hint="Write you message here"
+                    android:id="@+id/message_et"
+                    android:gravity="start"
+                    android:textColor="@color/black"
+                    android:padding="8dp"
+                    android:layout_margin="16dp"
+                    android:textColorHint="#808080"
+                    android:background="@drawable/gray_stroke_back"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint=""
+                    android:visibility="gone"
+                    android:id="@+id/student_email_et"
+                    android:gravity="start"
+                    android:textColor="@color/white"
+                    android:padding="8dp"
+                    android:layout_margin="8dp"
+                    android:textColorHint="#808080"
+                    android:background="@drawable/gray_stroke_back"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint=""
+                    android:visibility="gone"
+                    android:id="@+id/bcc_et"
+                    android:gravity="start"
+                    android:textColor="@color/white"
+                    android:padding="8dp"
+                    android:layout_margin="8dp"
+                    android:textColorHint="#808080"
+                    android:background="@drawable/gray_stroke_back"/>
+
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Send"
+                    android:id="@+id/send_btn_email_popup"
+                  android:layout_gravity="center"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/montserrat"
+                    android:background="@drawable/btn_gradient_style"/>
+
+
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

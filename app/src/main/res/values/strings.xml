@@ -10,9 +10,70 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="default_notification_channel_id">Notification_Student</string>
+
+    <string name="hint"> <font size="280">Answer</font></string>
+    <string-array name="duration">
+        <item>   1   </item>
+        <item>   2   </item>
+        <item>   3   </item>
+        <item>   4   </item>
+        <item>   5   </item>
+        <item>   6   </item>
+
+
+    </string-array>
+    <string-array name="month">
+        <item>Month</item>
+        <item>Week</item>
+    </string-array>
+    <string-array name="per_month">
+        <item>/Month</item>
+        <item>/Week</item>
+
+
+    </string-array>
+    <string-array name="per_scale">
+        <item>/Scale</item>
+        <item>write-up</item>
+        <item>design</item>
+        <item>video</item>
+        <item>data entry</item>
+        <item>others</item>
+
+
+    </string-array>
     <string name="Description">Description</string>
     <string name="Description1">What you Get?</string>
     <string name="Description2">Skills required</string>
-    <string name="hint"> <font size="280">Answer</font></string>
+    <string-array name="Genre">
+
+        <item>Food Partner</item>
+        <item>Media Partner</item>
+        <item>Travel Partner</item>
+        <item>Cosmetic Partner</item>
+        <item>Fashion Partner</item>
+        <item>Others</item>
+    </string-array>
+    <string-array name="pay_type">
+        <item>Paytm</item>
+        <item>UPI</item>
+        <item>Bank Account</item>
+        <item>Barter deal</item>
+
+    </string-array>
+    <string-array name="campaign">
+
+        <item>Product review</item>
+        <item>Service review</item>
+        <item>Others</item>
+
+
+    </string-array>
+    <string-array name="team_indi">
+
+
+        <item>/individual</item>
+    </string-array>
+
 
 </resources>

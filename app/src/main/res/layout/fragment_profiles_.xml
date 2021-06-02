@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Admin.Profiles_Fragment">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+      android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+
+        android:id="@+id/buttons_layout">
+    <Button
+        android:layout_width="wrap_content"
+        android:background="@drawable/btn_gradient_style"
+        android:textColor="@color/white"
+        android:id="@+id/accept_profile"
+        android:textSize="12sp"
+        android:layout_margin="4dp"
+        android:text="Accept"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:background="@drawable/btn_gradient_style"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:id="@+id/reject_profile"
+        android:layout_margin="4dp"
+        android:text="Reject"
+        android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <LinearLayout
+        android:visibility="visible"
+        android:id="@+id/no_new_notifications"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/noprofile"
+          />
+
+        <TextView
+            android:textStyle="bold"
+            android:textColor="@color/purple_200"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No Profile"
+
+            android:textSize="20sp"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/buttons_layout"
+        android:layout_marginTop="8dp"
+        android:layout_height="wrap_content">
+    <com.ecell.internshipfairendeavour.Notifications.Customised.BucketRecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recycle_application"/>
+    </RelativeLayout>
+
+</RelativeLayout>

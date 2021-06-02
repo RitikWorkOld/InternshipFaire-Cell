@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="">
+
+   <ImageView
+       android:id="@+id/iv_notification_btn"
+       android:layout_width="48dp"
+       android:layout_height="48dp"
+       android:elevation="6dp"
+       android:layout_alignParentEnd="true"
+       android:paddingTop="10dp"
+       android:paddingEnd="10dp"
+       android:src="@drawable/ic_notifications_black_24dp" />
+   <ImageView
+       android:elevation="10dp"
+       android:layout_marginTop="6dp"
+       android:src="@drawable/badge_notifications"
+       android:id="@+id/notificationbadge"
+       android:layout_marginLeft="-30dp"
+       android:layout_alignTop="@+id/iv_notification_btn"
+       android:layout_toRightOf="@+id/iv_notification_btn"
+       android:layout_width="20dp"
+       android:layout_height="20dp"/>
+   <LinearLayout
+       android:visibility="visible"
+       android:id="@+id/no_new_notifications"
+       android:layout_centerInParent="true"
+       android:orientation="vertical"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:gravity="center">
+
+      <ImageView
+          android:layout_width="100dp"
+          android:layout_height="100dp"
+          android:src="@drawable/no_application_two"
+          />
+
+      <TextView
+          android:textStyle="bold"
+          android:textColor="@color/purple_200"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="No Application"
+          android:textSize="20sp"/>
+
+   </LinearLayout>
+   <com.ecell.internshipfairendeavour.Notifications.Customised.BucketRecyclerView
+       android:layout_width="match_parent"
+       android:layout_below="@+id/iv_notification_btn"
+       android:layout_height="match_parent"
+       android:id="@+id/recyclerview"
+       />
+
+</RelativeLayout>
