@@ -171,7 +171,7 @@ reject.setOnClickListener( new View.OnClickListener() {
         viewPager = (ViewPager) findViewById(R.id.viewpager);
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
         //Creating our pager adapter
-        SimpleFragmentPagerAdapter adapter = new SimpleFragmentPagerAdapter(getSupportFragmentManager(), tabLayout.getTabCount(),key);
+        SimpleFragmentPagerAdapter_Admin adapter = new SimpleFragmentPagerAdapter_Admin(getSupportFragmentManager(), tabLayout.getTabCount(),key);
 
         //Adding adapter to pager
         viewPager.setAdapter(adapter);

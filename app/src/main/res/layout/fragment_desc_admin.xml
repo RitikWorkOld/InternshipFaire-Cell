@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:id="@+id/about_title"
+            android:fontFamily="@font/montserrat"
+            android:textColor="#000"
+            android:layout_marginStart="8dp"
+            android:textSize="20sp"
+            android:text="About Company" />
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_height="20dp"
+            android:layout_marginTop="4dp"
+            android:id="@+id/pencil_desc"
+
+
+          android:layout_marginEnd="12dp"
+
+            android:src="@drawable/ic_pencil_black" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:visibility="gone"
+            android:id="@+id/cross_desc"
+            android:layout_alignParentEnd="true"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginEnd="12dp"
+            android:layout_marginTop="4dp"
+            android:src="@drawable/cancel_rf_red" />
+        <EditText
+            android:id="@+id/textview1_desc_et"
+            android:layout_marginTop="8dp"
+            android:layout_margin="8dp"
+            android:visibility="gone"
+
+            android:background="#00808080"
+android:layout_below="@id/about_title"
+            android:fontFamily="@font/montserrat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/hello_blank_fragment" />
+        <TextView
+            android:id="@+id/textview1_desc"
+            android:layout_marginTop="8dp"
+            android:layout_margin="8dp"
+android:layout_below="@id/about_title"
+            android:fontFamily="@font/montserrat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/hello_blank_fragment" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginEnd="16dp"
+            android:layout_alignParentEnd="true"
+            android:text="Update"
+            android:layout_below="@+id/textview1_desc_et"
+            android:background="@color/purple_200"
+            android:textColor="@color/white"
+            android:id="@+id/update_et1"
+            android:visibility="gone"/>
+
+        <TextView
+android:layout_below="@id/textview1_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:id="@+id/title2"
+            android:fontFamily="@font/montserrat"
+            android:textColor="#000"
+            android:layout_marginLeft="8dp"
+            android:textSize="20sp"
+            android:text="Intern's Responsibilities" />
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:id="@+id/pencil_desc1"
+            android:layout_gravity="end"
+            android:layout_below="@id/textview1_desc"
+        android:layout_marginEnd="12dp"
+ android:layout_marginTop="4dp"
+           android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_pencil_black" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:visibility="gone"
+            android:id="@+id/cross_desc1"
+            android:layout_below="@id/textview1_desc"
+            android:layout_marginEnd="12dp"
+            android:layout_marginTop="4dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/cancel_rf_red" />
+        <EditText
+            android:id="@+id/textview1_desc_et1"
+            android:layout_marginTop="8dp"
+            android:layout_margin="8dp"
+            android:visibility="gone"
+            android:background="#00808080"
+            android:layout_below="@+id/title2"
+            android:fontFamily="@font/montserrat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/hello_blank_fragment" />
+        <TextView
+            android:id="@+id/textview2_desc"
+            android:layout_marginTop="8dp"
+            android:layout_margin="8dp"
+android:layout_below="@+id/title2"
+            android:fontFamily="@font/montserrat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/hello_blank_fragment" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginEnd="16dp"
+            android:text="Update"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/textview1_desc_et1"
+            android:background="@color/purple_200"
+            android:textColor="@color/white"
+            android:id="@+id/update_et2"
+            android:visibility="gone"/>
+
+
+    </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</FrameLayout>

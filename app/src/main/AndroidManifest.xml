@@ -35,15 +35,25 @@
         <activity android:name=".Login_Employe" />
         <activity android:name=".Admin.Login_Admin" />
         <activity android:name=".Studentdetail" />
+        <activity android:name=".Employe.Student_detail_emp"/>
         <activity android:name=".Change_Pass" />
         <activity android:name=".Contact_Us" />
+        <activity android:name=".Employe.edit_prof_emp"/>
+        <activity android:name=".Employe.Dashboard_emp"/>
+        <activity android:name=".Admin.Student_Profile"/>
         <activity android:name=".Notifications.Notifications" />
         <activity android:name=".profile.Edit_profile" />
         <activity android:name=".profile.Profile_activity1" />
+        <activity android:name=".Employe.Employe_detail"/>
+        <activity android:name=".Employe.Application_detail"/>
+        <activity android:name=".Employe.Email_sendpopup"/>
         <activity android:name=".profile.Profile_activity2" />
+        <activity android:name=".Employe.Employe_profile"/>
+
         <activity android:name=".profile.Profile_activity3" />
         <activity android:name=".profile.Profile_activity4" />
         <activity android:name=".IntroActivity" />
+<activity android:name=".Employe.Reg_Employe"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
