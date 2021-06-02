@@ -8,6 +8,8 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -338,8 +340,11 @@ public class Edit_profile extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //---( TO REMOVE STATUS BAR )---//
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView( R.layout.activity_edit_profile);
-        getWindow().setBackgroundDrawableResource(R.drawable.try001);
+        getWindow().setBackgroundDrawableResource(R.drawable.ic_mian_internship);
         no_app=findViewById( R.id.no_exp_yet );
         no_app1=findViewById( R.id.no_exp_yet1 );
         no_app2=findViewById( R.id.no_exp_yet2 );

@@ -16,7 +16,7 @@ import com.ecell.internshipfairendeavour.Admin.Login_Admin;
 public class MainActivity extends AppCompatActivity {
     private Button student_btn;
     private Button employe_btn;
-private Button admin_btn;;
+    private Button admin_btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +27,7 @@ private Button admin_btn;;
         setContentView( R.layout.activity_main );
         student_btn=(Button) findViewById(R.id.stud_btn);
         employe_btn=(Button) findViewById(R.id.emp_btn);
-admin_btn = findViewById( R.id.admin );
+        admin_btn = findViewById( R.id.admin );
         student_btn.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View v) {

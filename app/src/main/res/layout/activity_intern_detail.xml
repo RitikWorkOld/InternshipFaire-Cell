@@ -16,18 +16,23 @@
              android:layout_width="match_parent"
              android:layout_height="match_parent">
 
+            <ImageView
+                android:src="@drawable/ic_mian_internship"
+                android:scaleType="centerCrop"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/cmp_detail2"
-                android:background="@drawable/btn_grd_style">
+                android:id="@+id/cmp_detail2">
+
                 <ImageView
-android:layout_alignParentTop="true"
+                    android:layout_alignParentTop="true"
                     android:layout_alignParentEnd="true"
-android:paddingBottom="17dp"
+                    android:paddingBottom="17dp"
                     android:layout_toRightOf="@+id/cmp_img_detail"
                     android:src="@drawable/ic_certificate_1"
-
                     android:layout_width="100dp"
                     android:layout_height="164dp"/>
                 <TextView
@@ -102,19 +107,18 @@ android:paddingBottom="17dp"
                         <TextView
                             android:maxLines="1"
                             android:textSize="16dp"
-
                             android:id="@+id/icd_location"
                             android:textColor="@color/white"
                             android:drawablePadding="5dp"
-
                             android:text="Delhi"
+                            android:drawableTint="@color/white"
                             android:drawableLeft="@drawable/ic_location_interncard_24dp"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"/>
                         <TextView
                             android:maxLines="1"
                             android:textSize="16sp"
-
+                            android:drawableTint="@color/white"
                             android:layout_marginTop="12dp"
                             android:id="@+id/stipend_detail"
                             android:textColor="@color/white"
@@ -140,7 +144,7 @@ android:paddingBottom="17dp"
                             android:id="@+id/icd_duration"
 
                             android:drawablePadding="5dp"
-
+                            android:drawableTint="@color/white"
                             android:textColor="@color/white"
                             android:text="2 months"
                             android:drawableLeft="@drawable/ic_date_range_interncard_24dp"
@@ -153,7 +157,7 @@ android:paddingBottom="17dp"
 
                            android:layout_marginTop="12dp"
                             android:drawablePadding="5dp"
-
+                            android:drawableTint="@color/white"
                             android:textColor="@color/white"
                             android:text="2-3 Hour/day"
                             android:drawableLeft="@drawable/ic_clock"
@@ -264,8 +268,9 @@ android:gravity="end"
                         <androidx.viewpager.widget.ViewPager
                             android:layout_width="match_parent"
                             android:id="@+id/viewpager"
+                            android:background="@color/white"
                             android:layout_below="@id/sliding_tab"
-android:layout_above="@+id/applied_btn"
+                            android:layout_above="@+id/applied_btn"
                             android:layout_height="wrap_content"/>
                         <RelativeLayout
                             android:layout_width="wrap_content"

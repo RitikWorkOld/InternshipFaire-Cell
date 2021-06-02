@@ -22,7 +22,7 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:background="@drawable/try_4"
+                    android:background="@drawable/ic_mian_internship"
                     android:layout_height="match_parent">
 
                     <ImageView
@@ -495,7 +495,7 @@ android:id="@+id/work_det"
                                     android:layout_height="wrap_content"
                                     android:text="No Experience added"
                                     android:textSize="16sp"
-                                    android:textColor="@color/purple_500"
+                                    android:textColor="@color/main_color"
 
                                     />
                             </LinearLayout>
@@ -580,7 +580,7 @@ android:id="@+id/work_det"
                                 android:layout_height="wrap_content"
                                 android:text="No Abilities added"
                                 android:textSize="16sp"
-                                android:textColor="@color/purple_500"
+                                android:textColor="@color/main_color"
 
                                 />
                         </LinearLayout>
@@ -626,8 +626,7 @@ android:layout_below="@+id/tomas"
                     android:elevation="8dp"
                     android:layout_below="@id/card4"
                     android:layout_alignParentBottom="true"
-                    app:cardBackgroundColor="@color/purple_200"
-
+                    app:cardBackgroundColor="@color/main_color"
                     android:layout_centerHorizontal="true"
                     app:cardElevation="6dp">
 
@@ -639,7 +638,6 @@ android:layout_below="@+id/tomas"
                         <TextView
                             android:layout_margin="12dp"
                             android:textColor="@color/white"
-
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/montserrat"

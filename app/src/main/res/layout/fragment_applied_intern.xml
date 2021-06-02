@@ -11,14 +11,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="My Application"
-
             android:layout_centerInParent="true"
-            android:textColor="@color/purple_500"
-
-            android:textSize="20sp"
-
-
-            />
+            android:textColor="@color/main_color"
+            android:textSize="20sp"/>
 
         <ImageView
             android:elevation="6dp"
@@ -51,13 +46,15 @@
         android:gravity="center">
 
         <ImageView
+            android:tint="@color/main_color"
+            android:tintMode="src_atop"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:src="@drawable/no_events"/>
 
         <TextView
             android:textStyle="bold"
-            android:textColor="@color/purple_500"
+            android:textColor="@color/main_color"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="No Application"
