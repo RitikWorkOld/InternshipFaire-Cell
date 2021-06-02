@@ -3,7 +3,6 @@ package com.ecell.internshipfairendeavour.Admin;
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.inputmethodservice.Keyboard;
 import android.os.Bundle;
 import android.os.Environment;
 import android.view.LayoutInflater;
@@ -64,7 +63,7 @@ public class Student_Fragment extends Fragment {
     ArrayList<String> selectedStudent_main,selectedStudent_noti,all_main,all_noti,all_names,all_numbers,selected_numbers,selected_names;
     FirebaseRecyclerAdapter<User_admin, Student_vh> adapterinternall;
 
-Row[] rownames;
+    Row[] rownames;
 
     public Student_Fragment() {
         // Required empty public constructor
@@ -432,7 +431,7 @@ Row[] rownames;
             Workbook wb=new HSSFWorkbook();
             Cell cell=null;
             CellStyle cellStyle=wb.createCellStyle();
-         //   cellStyle.setFillForegroundColor( HSSFColor.BLUE.index);
+            cellStyle.setFillForegroundColor(HSSFColor.HSSFColorPredefined.BLUE.getIndex());
             Sheet sheet=null;
             sheet = wb.createSheet("Name of sheet");
             Row row =sheet.createRow(0);
