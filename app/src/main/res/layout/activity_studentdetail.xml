@@ -479,9 +479,7 @@ android:layout_toRightOf="@+id/schlstarty10"
                  android:drawableLeft="@drawable/ic_assignment_black_24dp"
                  android:id="@id/schlendy12"/>
                 <Spinner
-
                     android:id="@+id/spinner3"
-
                     android:spinnerMode="dropdown"
 
                     android:layout_toRightOf="@+id/schlendy12"

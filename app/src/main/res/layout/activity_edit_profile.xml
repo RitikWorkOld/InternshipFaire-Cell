@@ -286,7 +286,6 @@
                         <Spinner
                             android:id="@+id/spinner"
                             android:spinnerMode="dropdown"
-
                             android:layout_toRightOf="@+id/schlstarty10"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
@@ -316,7 +315,6 @@
                             android:id="@+id/spinner1"
 
                             android:spinnerMode="dropdown"
-
                             android:layout_toRightOf="@+id/schlendy10"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
@@ -455,7 +453,6 @@
                             android:id="@+id/spinner2"
 
                             android:spinnerMode="dropdown"
-
                             android:layout_toRightOf="@+id/schlstarty12"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
@@ -483,7 +480,6 @@
                             android:id="@+id/spinner3"
 
                             android:spinnerMode="dropdown"
-
                             android:layout_toRightOf="@+id/schlendy12"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
@@ -675,7 +671,6 @@
                             android:id="@+id/spinner4"
 
                             android:spinnerMode="dropdown"
-
                             android:layout_toRightOf="@+id/collegestart"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
@@ -703,7 +698,6 @@
                             android:id="@+id/spinner5"
 
                             android:spinnerMode="dropdown"
-
                             android:layout_toRightOf="@+id/collegeend"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
@@ -885,7 +879,6 @@
                             android:drawableLeft="@drawable/ic_assignment_black_24dp"
                             android:id="@id/companystartdate"/>
                         <Spinner
-
                             android:id="@+id/spinner6"
 android:visibility="visible"
                             android:spinnerMode="dropdown"
@@ -915,7 +908,6 @@ android:visibility="visible"
                             android:drawableLeft="@drawable/ic_assignment_black_24dp"
                             android:id="@id/companyenddate"/>
                         <Spinner
-
                             android:id="@+id/spinner7"
 
                             android:spinnerMode="dropdown"

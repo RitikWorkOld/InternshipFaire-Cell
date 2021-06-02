@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -47,7 +48,6 @@ public class MainActivity extends AppCompatActivity {
                     Intent intent=new Intent(getApplicationContext(), Login_Admin.class);
                     startActivity(intent);
                     overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out);
-
                 }
             }
         } );
@@ -55,9 +55,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(v==employe_btn){
-                    Intent intent=new Intent(getApplicationContext(), Login_Employe.class);
+                    /*Intent intent=new Intent(getApplicationContext(), Login_Employe.class);
                     startActivity(intent);
-                    overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out);
+                    overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out);*/
+                    Toast.makeText(MainActivity.this,"Coming Soon!",Toast.LENGTH_SHORT).show();
                 }
             }
         } );

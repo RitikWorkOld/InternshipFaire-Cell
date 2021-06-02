@@ -3,10 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/bg_check"
-    >
+    android:layout_height="match_parent">
 
+    <ImageView
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_mian_internship"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -35,7 +38,7 @@
                     android:layout_width="wrap_content"
                     android:id="@+id/card"
                     android:elevation="6dp"
-android:layout_below="@id/det_title"
+                    android:layout_below="@id/det_title"
                     app:cardCornerRadius="6dp"
                     android:layout_centerHorizontal="true"
 
@@ -53,11 +56,8 @@ android:layout_below="@id/det_title"
                             android:src="@drawable/user"
                             android:scaleType="centerCrop"
                             android:id="@+id/user_img"
-
                             android:layout_width="118dp"
-                            android:layout_height="118dp"
-
-                            />
+                            android:layout_height="118dp"/>
 
                         <ProgressBar
                             android:id="@+id/pb_userimg"

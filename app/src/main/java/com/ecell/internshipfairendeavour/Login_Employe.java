@@ -10,6 +10,8 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
@@ -65,6 +67,9 @@ public class Login_Employe extends AppCompatActivity implements TextWatcher,
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate( savedInstanceState );
+        //---( TO REMOVE STATUS BAR )---//
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView( R.layout.activity_login__employe );
         login=findViewById( R.id.go1 );
         fgt_pass=findViewById( R.id.frgt_pass );
