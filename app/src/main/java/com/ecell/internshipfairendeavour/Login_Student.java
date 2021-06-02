@@ -69,7 +69,7 @@ public class Login_Student extends AppCompatActivity implements TextWatcher,
             @Override
             public void onClick(View v) {
                 if (v == btnSignUp) {
-                    Intent intent = new Intent( Login_Student.this, IntroActivity.class );
+                    Intent intent = new Intent( Login_Student.this, Reg_Student.class );
                     startActivity( intent );
                     overridePendingTransition( android.R.anim.fade_in, android.R.anim.fade_out );
                     finish();

@@ -69,6 +69,7 @@
                     <ImageView
                         android:layout_gravity="center_vertical"
                         android:layout_width="80dp"
+                    android:layout_marginStart="16dp"
                         android:layout_height="80dp"
                         android:src="@drawable/ic_admin_panel" />
                     <RelativeLayout
@@ -80,13 +81,15 @@
                             android:layout_width="140dp"
                             android:layout_height="wrap_content"
                             android:text="Admin"
+
                             android:textColor="@color/white"
                             android:fontFamily="@font/montserrat"
                             android:background="@drawable/btn_gradient_style"
                             android:id="@+id/admin"
                             android:textSize="14sp"
-                            android:layout_centerInParent="true"
-
+                            android:layout_centerVertical="true"
+android:layout_alignParentEnd="true"
+                            android:layout_marginRight="16dp"
                             />
                     </RelativeLayout>
 
@@ -136,6 +139,7 @@
                         android:layout_gravity="center_vertical"
                         android:layout_width="80dp"
                         android:layout_height="80dp"
+                        android:layout_marginStart="16dp"
                         android:src="@drawable/ic_employe_panel"
 
                         />
@@ -150,7 +154,9 @@
                             android:layout_width="140dp"
                             android:layout_height="wrap_content"
                             android:textColor="@color/white"
-                            android:layout_centerInParent="true"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginRight="16dp"
                             android:background="@drawable/btn_gradient_style"
                             android:fontFamily="@font/montserrat"
                             android:text="EMPLOYER"
@@ -201,6 +207,7 @@
                     <ImageView
                         android:layout_gravity="center_vertical"
                         android:layout_width="80dp"
+                        android:layout_marginStart="16dp"
                         android:layout_height="80dp"
                         android:src="@drawable/ic_student_panel"
 
@@ -216,7 +223,9 @@
                             android:layout_width="140dp"
                             android:layout_height="wrap_content"
                             android:textColor="@color/white"
-                            android:layout_centerInParent="true"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginRight="16dp"
                             android:background="@drawable/btn_gradient_style"
                             android:fontFamily="@font/montserrat"
                             android:text="Student"

@@ -199,9 +199,10 @@
                             android:text="Add Personal Details"
                             android:textSize="12dp"
                             android:padding="16dp"
-                            android:textColor="@color/white"
+                            android:textColor="@color/main_color"
+                            android:backgroundTint="@color/white"
                             android:layout_alignParentRight="true"
-                            android:background="@drawable/btn_gradient_style"
+
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
                     </RelativeLayout>
@@ -352,9 +353,10 @@
                             android:id="@+id/addschool10det_btn"
                             android:layout_margin="5dp"
                             android:text="Add School Details"
-                            android:background="@drawable/btn_gradient_style"
+
                             android:padding="16dp"
-                            android:textColor="@color/white"
+                            android:textColor="@color/main_color"
+                            android:backgroundTint="@color/white"
                             android:layout_alignParentRight="true"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
@@ -375,7 +377,7 @@
                                 android:layout_height="wrap_content"
                                 android:gravity="center_horizontal"
                                 android:orientation="horizontal"
-                                android:background="@color/purple_500"
+                                android:background="@color/main_color"
                                 android:padding="8dp">
 
 
@@ -391,7 +393,7 @@
                                     android:fontFamily="@font/nunito"
                                     android:padding="8dp"
                                     android:text="12th"
-                                    android:textColor="@color/white"
+                                    android:textColor="@color/main_color"
                                     android:textSize="16sp" />
 
                                 <RadioButton
@@ -406,7 +408,7 @@
                                     android:padding="8dp"
                                     android:paddingLeft="16dp"
                                     android:text="Diploma"
-                                    android:textColor="@color/white"
+                                    android:textColor="@color/main_color"
                                     android:textSize="16sp" />
 
 
@@ -573,11 +575,12 @@
                         <Button
                             android:id="@+id/addschool12det_btn"
                             android:layout_margin="5dp"
-                            android:background="@drawable/btn_gradient_style"
+
                             android:padding="16dp"
                             android:layout_alignParentRight="true"
                             android:text="Add School Details"
-                            android:textColor="@color/white"
+                            android:textColor="@color/main_color"
+                            android:backgroundTint="@color/white"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
 
@@ -585,11 +588,12 @@
                             android:visibility="gone"
                             android:id="@+id/adddiplomadet_btn"
                             android:layout_margin="5dp"
-                            android:background="@drawable/btn_gradient_style"
+
                             android:padding="16dp"
                             android:layout_alignParentRight="true"
                             android:text="Add diploma Details"
-                            android:textColor="@color/white"
+                            android:textColor="@color/main_color"
+                            android:backgroundTint="@color/white"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
                     </RelativeLayout>
@@ -724,9 +728,10 @@
                             android:id="@+id/addcollegedet_btn"
                             android:layout_margin="5dp"
                             android:text="Add College Details"
-                            android:background="@drawable/btn_gradient_style"
+
                             android:padding="16dp"
-                            android:textColor="@color/white"
+                            android:textColor="@color/main_color"
+                            android:backgroundTint="@color/white"
                             android:layout_alignParentEnd="true"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
@@ -785,14 +790,15 @@
                         android:layout_height="match_parent">
 
                         <Button
-                            android:background="@drawable/btn_gradient_style"
+
                             android:padding="16dp"
 
                             android:layout_marginLeft="12dp"
                             android:layout_marginTop="4dp"
                             android:layout_marginStart="16dp"
                             android:text="Add new experience"
-                            android:textColor="@color/white"
+                            android:textColor="@color/main_color"
+                            android:backgroundTint="@color/white"
                             android:id="@+id/addnewexpshowbtn"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
@@ -820,25 +826,27 @@
 
                         >
                         <Button
-                            android:background="@drawable/btn_gradient_style"
+                            android:textColor="@color/main_color"
+                            android:backgroundTint="@color/white"
                             android:padding="16dp"
 
                             android:layout_margin="5dp"
                             android:layout_marginStart="32dp"
                             android:text="Yes"
-                            android:textColor="@color/white"
+
 
                             android:id="@+id/yes_exp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
                         <Button
-                            android:background="@drawable/btn_gradient_style"
+                            android:textColor="@color/main_color"
+                            android:backgroundTint="@color/white"
                             android:padding="16dp"
 
                             android:layout_margin="5dp"
                             android:layout_marginEnd="32dp"
                             android:text="No"
-                            android:textColor="@color/white"
+
                             android:layout_toRightOf="@id/yes_exp"
                             android:id="@+id/no_exp"
                             android:layout_width="wrap_content"
@@ -880,7 +888,7 @@
                             android:id="@id/companystartdate"/>
                         <Spinner
                             android:id="@+id/spinner6"
-android:visibility="visible"
+                            android:visibility="visible"
                             android:spinnerMode="dropdown"
 
                             android:layout_toRightOf="@+id/companystartdate"
@@ -949,9 +957,10 @@ android:visibility="visible"
                             android:id="@+id/addexp_btn"
                             android:layout_margin="5dp"
                             android:text="Add Expperience"
-                            android:background="@drawable/btn_gradient_style"
+
                             android:padding="16dp"
-                            android:textColor="@color/white"
+                            android:textColor="@color/main_color"
+                            android:backgroundTint="@color/white"
                             android:layout_alignParentRight="true"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
@@ -960,9 +969,10 @@ android:visibility="visible"
                             android:id="@+id/updateexp_btn"
                             android:layout_margin="5dp"
                             android:text="Update Exp"
-                            android:background="@drawable/btn_gradient_style"
+                            android:textColor="@color/main_color"
+                            android:backgroundTint="@color/white"
                             android:padding="16dp"
-                            android:textColor="@color/white"
+
                             android:layout_alignParentRight="true"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
@@ -1030,11 +1040,12 @@ android:visibility="visible"
                         android:layout_height="match_parent">
                         <Button
                             android:layout_alignParentLeft="true"
-                            android:background="@drawable/btn_gradient_style"
+
                             android:padding="16dp"
                             android:layout_margin="5dp"
                             android:text="Add new Skill"
-                            android:textColor="@color/white"
+                            android:textColor="@color/main_color"
+                            android:backgroundTint="@color/white"
                             android:id="@+id/addnewexpshowbtn1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
@@ -1060,9 +1071,10 @@ android:visibility="visible"
                             android:id="@+id/addexp_btn1"
                             android:layout_margin="5dp"
                             android:text="Add Skill"
-                            android:background="@drawable/btn_gradient_style"
+
                             android:padding="16dp"
-                            android:textColor="@color/white"
+                            android:textColor="@color/main_color"
+                            android:backgroundTint="@color/white"
                             android:layout_alignParentRight="true"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
@@ -1071,9 +1083,10 @@ android:visibility="visible"
                             android:id="@+id/updateexp_btn1"
                             android:layout_margin="5dp"
                             android:text="Update Skill"
-                            android:background="@drawable/btn_gradient_style"
+                            android:textColor="@color/main_color"
+                            android:backgroundTint="@color/white"
                             android:padding="16dp"
-                            android:textColor="@color/white"
+
                             android:layout_alignParentRight="true"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
@@ -1115,11 +1128,12 @@ android:visibility="visible"
                         android:layout_height="match_parent">
 
                         <Button
-                            android:background="@drawable/btn_gradient_style"
+                            android:textColor="@color/main_color"
+                            android:backgroundTint="@color/white"
                             android:padding="16dp"
                             android:layout_margin="5dp"
                             android:text="Add new achievements/awards"
-                            android:textColor="@color/white"
+
                             android:id="@+id/addnewexpshowbtn2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
@@ -1145,9 +1159,10 @@ android:visibility="visible"
                             android:id="@+id/addexp_btn2"
                             android:layout_margin="5dp"
                             android:text="Add Achievements"
-                            android:background="@drawable/btn_gradient_style"
+                            android:textColor="@color/main_color"
+                            android:backgroundTint="@color/white"
                             android:padding="16dp"
-                            android:textColor="@color/white"
+
                             android:layout_alignParentRight="true"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
@@ -1157,9 +1172,10 @@ android:visibility="visible"
                             android:layout_margin="5dp"
                             android:visibility="gone"
                             android:text="Update Achievements"
-                            android:background="@drawable/btn_gradient_style"
+                            android:textColor="@color/main_color"
+                            android:backgroundTint="@color/white"
                             android:padding="16dp"
-                            android:textColor="@color/white"
+
                             android:layout_alignParentRight="true"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
@@ -1189,9 +1205,10 @@ android:visibility="visible"
                             android:layout_marginTop="20dp"
                             android:layout_centerInParent="true"
                             android:textAllCaps="true"
-                            android:background="@drawable/btn_gradient_style"
+
                             android:padding="16dp"
-                            android:textColor="@color/white"
+                            android:textColor="@color/main_color"
+                            android:backgroundTint="@color/white"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
                     </RelativeLayout>

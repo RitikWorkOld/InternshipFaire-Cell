@@ -12,6 +12,7 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
@@ -53,7 +54,7 @@ private Button matri_btn,inter_btn,dip_btn,clg_btn;
     private FirebaseRecyclerOptions<addexp1_model> optionsexp1;  //Ritik
     private FirebaseRecyclerOptions<addexp2_model> optionsexp2;  //Ritik
     private FirebaseRecyclerAdapter<addexp2_model, addexp2_viewholder> adapterexp2; //Ritik
-    ImageView notification_btn;
+    ImageView notification_btn,about;
     private FirebaseRecyclerAdapter<addexp_model, addexp_viewholder> adapterexp;
     private FirebaseRecyclerAdapter<addexp1_model, addexp1_viewholder>adapterexp1; //Ritik
     private View view1,view2;
@@ -109,7 +110,7 @@ private TextView user_ph;
         name_user = view.findViewById(R.id.name_user);
         user_email = view.findViewById(R.id.user_email);
         user_ph=view.findViewById( R.id.user_ph );
-
+about = view.findViewById( R.id.about );
         view1=view.findViewById( R.id.abi_lay );
         view2=view.findViewById( R.id.abi_lay1 );
 
@@ -144,7 +145,12 @@ private TextView user_ph;
             }
         });
 
-
+about.setOnClickListener( new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        Toast.makeText(getActivity(),"Coming Soon...",Toast.LENGTH_SHORT).show();
+    }
+} );
         notification_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -491,7 +497,7 @@ Log.d("HAS","ONE");
             @Override
             public void onClick(View v) { AlertDialog.Builder builder = new AlertDialog.Builder( requireActivity() );
                 builder.setTitle(R.string.app_name);
-                builder.setIcon(R.drawable.user);
+                builder.setIcon(R.mipmap.ic_launcher_round);
                 builder.setMessage("Do you want to Logout?")
                         .setCancelable(false)
                         .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
