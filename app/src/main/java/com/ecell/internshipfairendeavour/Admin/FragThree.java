@@ -15,7 +15,7 @@ import com.ecell.internshipfairendeavour.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class FragThree extends AppCompatActivity {
+public class  FragThree extends AppCompatActivity {
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {

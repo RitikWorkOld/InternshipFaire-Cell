@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            tools:visibility="visible"
+            android:id="@+id/pencil_desc"
+            android:visibility="visible"
+android:layout_alignParentEnd="true"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="12dp"
+            android:src="@drawable/ic_pencil_black" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:visibility="gone"
+            tools:visibility="visible"
+            android:id="@+id/cross_desc"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="12dp"
+            android:src="@drawable/cancel_rf_red" />
+        <EditText
+            android:id="@+id/textview1_desc_et"
+            android:layout_marginTop="8dp"
+            android:layout_margin="8dp"
+            android:visibility="gone"
+            android:background="#00808080"
+
+            tools:visibility="visible"
+            android:fontFamily="@font/montserrat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/hello_blank_fragment" />
+        <TextView
+            android:id="@+id/textview1_wca"
+            android:layout_width="match_parent"
+            android:layout_gravity="start"
+            android:layout_margin="8dp"
+            android:visibility="visible"
+            tools:visibility="visible"
+            android:fontFamily="@font/montserrat"
+            android:layout_height="wrap_content"
+            android:text="@string/hello_blank_fragment" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginEnd="16dp"
+            tools:visibility="visible"
+            android:layout_alignParentEnd="true"
+            android:text="Update"
+            android:layout_below="@+id/textview1_desc_et"
+            android:background="@color/purple_200"
+            android:textColor="@color/white"
+            android:id="@+id/update_et1"
+            android:visibility="gone"/>
+
+
+
+    </RelativeLayout>
+
+
+</FrameLayout>

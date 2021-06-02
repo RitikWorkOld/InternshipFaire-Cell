@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:id="@+id/recy_lay"
+        android:layout_marginTop="8dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:textSize="22sp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/purple_200"
+            android:text="Employers:"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:id="@+id/total"
+            android:textColor="@color/black"
+            android:layout_marginLeft="4dp"
+            android:text=""/>
+
+    </LinearLayout>
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_marginStart="16dp"
+        android:id="@+id/all"
+        android:visibility="visible"
+        android:layout_marginTop="8dp"
+        android:layout_below="@id/recy_lay"
+        android:layout_alignParentStart="true"
+        android:layout_height="wrap_content"/>
+    <ImageView
+        android:src="@drawable/ic_baseline_arrow_downward_24"
+        android:layout_width="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:id="@+id/downloadxls"
+        android:visibility="visible"
+        android:layout_marginTop="12dp"
+        android:layout_below="@id/recy_lay"
+        android:layout_alignParentEnd="true"
+        android:layout_height="wrap_content"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_lay"
+        android:layout_below="@+id/recy_lay"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:background="@drawable/btn_gradient_style"
+            android:text="Email"
+            android:layout_margin="4dp"
+            android:id="@+id/send_email"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:background="@drawable/btn_gradient_style"
+            android:layout_margin="4dp"
+            android:textSize="10sp"
+            android:text="Notification"
+            android:id="@+id/send_noti"/>
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:visibility="visible"
+        android:id="@+id/no_new_notifications"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/noprofile"
+            />
+
+        <TextView
+            android:textStyle="bold"
+            android:textColor="@color/purple_200"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No Profile"
+
+            android:textSize="20sp"/>
+
+    </LinearLayout>
+    <com.ecell.internshipfairendeavour.Notifications.Customised.BucketRecyclerView
+        android:id="@+id/rv_internall1"
+android:layout_below="@+id/button_lay"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</RelativeLayout>

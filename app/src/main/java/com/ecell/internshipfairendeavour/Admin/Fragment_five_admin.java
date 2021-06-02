@@ -56,7 +56,7 @@ arrow.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 final FragmentTransaction fragmentTransaction2 = getFragmentManager().beginTransaction();
-                fragmentTransaction2.replace( R.id.events_container, new Student_Fragment() );
+                fragmentTransaction2.replace( R.id.events_container, new Employe_Fragment() );
                 fragmentTransaction2.commit();
             }
         } );
