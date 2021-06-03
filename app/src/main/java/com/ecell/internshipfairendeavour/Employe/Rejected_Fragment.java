@@ -126,7 +126,7 @@ public class Rejected_Fragment extends Fragment {
                             holder.cmpsubname.setText(model.getUsernumber());
                           //  Picasso.get().load(model.getUserimg()).into(holder.cmpimg);
                             holder.checkBox.setChecked(model.isSelected());
-id=model.getInternid();
+                            id=model.getInternid();
                             if (model.getUserimg()!=null){
 
                                 Picasso.get().load(model.getUserimg()).resize(400,400).into(holder.cmpimg);

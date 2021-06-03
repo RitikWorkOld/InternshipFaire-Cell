@@ -104,69 +104,71 @@ public class Shortlisted_Fragment extends Fragment {
 
             }
         });
-                    drinternall = FirebaseDatabase.getInstance().getReference().child("Forms").child( cmpid );
-                    drinternall.keepSynced(true);
-                    Query query = drinternall.orderByChild("internid_status").equalTo(key+"Shortlisted");
 
-                    optionsinternall = new FirebaseRecyclerOptions.Builder<applied_intern_md>().setQuery(query,applied_intern_md.class).build();
+        drinternall = FirebaseDatabase.getInstance().getReference().child("Forms").child( cmpid );
+        drinternall.keepSynced(true);
+        Query query = drinternall.orderByChild("internid_status").equalTo(key+"Shortlisted");
 
-                    adapterinternall = new FirebaseRecyclerAdapter<applied_intern_md, Application_vh>(optionsinternall) {
-                        @Override
-                        protected void onBindViewHolder(@NonNull final Application_vh holder, int position, @NonNull final applied_intern_md model) {
-                            holder.cmpname.setText(model.getUsername());
-                            holder.cmpsubname.setText(model.getUsernumber());
-                         //   Picasso.get().load(model.getUserimg()).into(holder.cmpimg);
-                            holder.checkBox.setChecked(model.isSelected());
-id=model.getInternid();
-                            if (model.getUserimg()!=null){
+        optionsinternall = new FirebaseRecyclerOptions.Builder<applied_intern_md>().setQuery(query,applied_intern_md.class).build();
 
-                                Picasso.get().load(model.getUserimg()).resize(400,400).into(holder.cmpimg);
+        adapterinternall = new FirebaseRecyclerAdapter<applied_intern_md, Application_vh>(optionsinternall) {
+            @Override
+            protected void onBindViewHolder(@NonNull final Application_vh holder, int position, @NonNull final applied_intern_md model) {
+                holder.cmpname.setText(model.getUsername());
+                holder.cmpsubname.setText(model.getUsernumber());
+                //   Picasso.get().load(model.getUserimg()).into(holder.cmpimg);
+                holder.checkBox.setChecked(model.isSelected());
+                id=model.getInternid();
+                if (model.getUserimg()!=null){
 
-                            }
-                            else {
-                                holder.cmpimg.setImageResource(R.drawable.user);
+                    Picasso.get().load(model.getUserimg()).resize(400,400).into(holder.cmpimg);
 
-                            }
-                            holder.checkBox.setOnClickListener( new View.OnClickListener() {
-                                @Override
-                                public void onClick(View v) {
-                                    if(holder.checkBox.isChecked()) {
-                                        model.setSelected(true);
-                                        selectedStudents.add(model.getUseremail());
-                                        statusStudents.add(model.getUserid());
-                                        key_status.add(model.getId());
-                                    }
-                                    else if (!holder.checkBox.isChecked()) {
-                                        model.setSelected(false);
-                                        selectedStudents.remove(model.getUseremail());
-                                        statusStudents.remove( model.getUserid() );
-                                        key_status.remove(model.getId());
-                                    }
-                                }
-                            } );
+                }
+                else {
+                    holder.cmpimg.setImageResource(R.drawable.user);
 
-
-                            holder.profile.setOnClickListener( new View.OnClickListener() {
-                                @Override
-                                public void onClick(View v) {
-                                    Intent intent = new Intent(getActivity(), Student_detail_emp.class);
-                                    intent.putExtra("id",model.getInternid());
-                                    intent.putExtra( "userid",model.getUserid() );
-                                    intent.putExtra( "cmpid",model.getCompanyid() );
-                                    Log.d("has","thi0"+model.getUserid() );
-                                    startActivity( intent );
-                                }
-                            } );
+                }
+                holder.checkBox.setOnClickListener( new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        if(holder.checkBox.isChecked()) {
+                            model.setSelected(true);
+                            selectedStudents.add(model.getUseremail());
+                            statusStudents.add(model.getUserid());
+                            key_status.add(model.getId());
                         }
-
-                        @NonNull
-                        @Override
-                        public Application_vh onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-                            return new Application_vh(LayoutInflater.from(view.getContext()).inflate(R.layout.application_vh, parent,false));
+                        else if (!holder.checkBox.isChecked()) {
+                            model.setSelected(false);
+                            selectedStudents.remove(model.getUseremail());
+                            statusStudents.remove( model.getUserid() );
+                            key_status.remove(model.getId());
                         }
-                    };
-                    rv_internall.setAdapter(adapterinternall);
-                    adapterinternall.startListening();
+                    }
+                } );
+
+
+                holder.profile.setOnClickListener( new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(getActivity(), Student_detail_emp.class);
+                        intent.putExtra("id",model.getInternid());
+                        intent.putExtra( "userid",model.getUserid() );
+                        intent.putExtra( "cmpid",model.getCompanyid() );
+                        Log.d("has","thi0"+model.getUserid() );
+                        startActivity( intent );
+                    }
+                } );
+            }
+
+            @NonNull
+            @Override
+            public Application_vh onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+                return new Application_vh(LayoutInflater.from(view.getContext()).inflate(R.layout.application_vh, parent,false));
+            }
+        };
+        rv_internall.setAdapter(adapterinternall);
+        adapterinternall.startListening();
+
         all.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -218,15 +220,13 @@ id=model.getInternid();
 
                                     Intent intent = new Intent(getActivity(), Student_detail_emp.class);
                                     intent.putExtra("id",key);
-                                    intent.putExtra( "userid",model.getUserid() );
+                                    intent.putExtra( "userid",model.getUserid());
                                     intent.putExtra("cmpid",model.getCompanyid());
-                                    Log.d("has","thi0"+model.getUserid() );
+                                    Log.d("has","thi0"+model.getUserid());
                                     Log.d("has","CHECKK "+key );
                                     startActivity( intent );
                                 }
                             } );
-
-
 
                             send_notif.setOnClickListener( new View.OnClickListener() {
                                 @Override
@@ -279,7 +279,7 @@ id=model.getInternid();
                     statusStudents.clear();
                     statusStudents.addAll( all_noti );
 
-                    Query query = drinternall.orderByChild("internid_status").equalTo(key+"Applied");
+                    Query query = drinternall.orderByChild("internid_status").equalTo(key+"Shortlisted");
                     optionsinternall = new FirebaseRecyclerOptions.Builder<applied_intern_md>().setQuery(query,applied_intern_md.class).build();
 
                     adapterinternall = new FirebaseRecyclerAdapter<applied_intern_md, Application_vh>(optionsinternall) {
@@ -333,8 +333,6 @@ id=model.getInternid();
                                     startActivity( intent );
                                 }
                             } );
-
-
 
                             send_notif.setOnClickListener( new View.OnClickListener() {
                                 @Override
