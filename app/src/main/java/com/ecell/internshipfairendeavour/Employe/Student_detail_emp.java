@@ -1,11 +1,14 @@
 package com.ecell.internshipfairendeavour.Employe;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -53,6 +56,9 @@ public class Student_detail_emp extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate( savedInstanceState );
+        //---( TO REMOVE STATUS BAR )---//
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView( R.layout.activity_student_detail_emp );
         dob =findViewById( R.id.dob_text );
         view1=findViewById( R.id.layout_test1 );
@@ -242,6 +248,16 @@ Log.d("HAS","HELLOHELLO"+key+uid);
         rv_exp.setAdapter(adapterexp);
         adapterexp.startListening();
 
+        //---link intent
+
+        answer2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Uri uri = Uri.parse(answer2.getText().toString());
+                Intent intent = new Intent(Intent.ACTION_VIEW,uri);
+                startActivity(intent);
+            }
+        });
 
         //////////-----------------------------------------------
         BucketRecyclerView rv_exp1 = findViewById( R.id.rv_exp1 );

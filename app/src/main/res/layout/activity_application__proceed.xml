@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.social.socialdukan_employer.Employe.Fragment.Application_Proceed"
     android:gravity="center">
 
     <ImageView
@@ -54,7 +53,7 @@
 
 
                 <TextView
-
+                    android:textColor="@color/gray"
                     android:id="@+id/textemail"
                     android:layout_width="wrap_content"
                     android:gravity="start"

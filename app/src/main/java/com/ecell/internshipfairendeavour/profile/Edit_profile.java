@@ -344,7 +344,7 @@ public class Edit_profile extends AppCompatActivity implements View.OnClickListe
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView( R.layout.activity_edit_profile);
-        getWindow().setBackgroundDrawableResource(R.drawable.ic_mian_internship);
+        getWindow().setBackgroundDrawableResource(R.drawable.ic_main_internship);
         no_app=findViewById( R.id.no_exp_yet );
         no_app1=findViewById( R.id.no_exp_yet1 );
         no_app2=findViewById( R.id.no_exp_yet2 );

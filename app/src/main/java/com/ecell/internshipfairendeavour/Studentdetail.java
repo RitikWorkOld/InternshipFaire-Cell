@@ -200,7 +200,7 @@ int counter=0;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView( R.layout.activity_studentdetail);
-        getWindow().setBackgroundDrawableResource(R.drawable.ic_mian_internship);
+        getWindow().setBackgroundDrawableResource(R.drawable.ic_main_internship);
         //textview=findViewById( R.id.txtview );
 
         //alreaady aopen hai to next pe jaega

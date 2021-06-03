@@ -377,7 +377,6 @@
                                 android:layout_height="wrap_content"
                                 android:gravity="center_horizontal"
                                 android:orientation="horizontal"
-                                android:background="@color/main_color"
                                 android:padding="8dp">
 
 
@@ -393,7 +392,7 @@
                                     android:fontFamily="@font/nunito"
                                     android:padding="8dp"
                                     android:text="12th"
-                                    android:textColor="@color/main_color"
+                                    android:textColor="@color/black"
                                     android:textSize="16sp" />
 
                                 <RadioButton
@@ -408,7 +407,7 @@
                                     android:padding="8dp"
                                     android:paddingLeft="16dp"
                                     android:text="Diploma"
-                                    android:textColor="@color/main_color"
+                                    android:textColor="@color/black"
                                     android:textSize="16sp" />
 
 

@@ -319,7 +319,7 @@ name=employe.getName();
 
                 AlertDialog.Builder builder = new AlertDialog.Builder( requireActivity() );
                 builder.setTitle(R.string.app_name);
-                builder.setIcon(R.drawable.user );
+                builder.setIcon(R.mipmap.ic_launcher_round );
                 builder.setMessage("Do you want to submit your Application?")
                         .setCancelable(false)
                         .setPositiveButton("Yes", new DialogInterface.OnClickListener() {

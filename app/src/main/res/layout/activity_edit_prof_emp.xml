@@ -3,9 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/bg_check"
-    tools:context="com.social.socialdukan_employer.Employe.Fragment.edit_prof_emp">
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_main_internship"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -48,14 +52,11 @@
 
 
                 <ImageView
-                    android:src="@drawable/user"
+                    android:src="@drawable/empty2"
                     android:scaleType="centerCrop"
                     android:id="@+id/user_img"
-
                     android:layout_width="118dp"
-                    android:layout_height="118dp"
-
-                    />
+                    android:layout_height="118dp"/>
 
                 <ProgressBar
                     android:id="@+id/pb_userimg"
@@ -229,11 +230,8 @@
                 android:layout_marginBottom="12dp"
                 android:id="@+id/buttonNext"
                 android:layout_gravity="center"
-                android:background="@drawable/btn_gradient_style"
-                />
+                android:background="@drawable/btn"/>
         </RelativeLayout>
-
-
 
     </RelativeLayout>
         </androidx.core.widget.NestedScrollView>

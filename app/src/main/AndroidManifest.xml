@@ -20,7 +20,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".Admin.Dashboard_Admin" />
-        <activity android:name=".Admin.Email_sendpopupAdmin" />
+        <activity android:name=".Admin.Email_sendpopupAdmin"
+            android:theme="@style/Theme.InternshipPopup"/>
         <activity android:name=".Admin.Profiles_Fragment" />
         <activity android:name=".Admin.FragThree" />
         <activity android:name=".Admin.Intern_Fragment" />
@@ -29,11 +30,14 @@
         <activity android:name=".Employe.Profile_activity2"
             android:theme="@style/Theme.InternshipPopup"/>
         <activity android:name=".Admin.Student_Fragment_Detail" />
-        <activity android:name=".Employe.Profile_activity3" />
-        <activity android:name=".Employe.Profile_activity4" />
+        <activity android:name=".Employe.Profile_activity3"
+            android:theme="@style/Theme.InternshipPopup"/>
+        <activity android:name=".Employe.Profile_activity4"
+            android:theme="@style/Theme.InternshipPopup"/>
         <activity android:name=".Admin.AdminWorkArrow" />
         <activity android:name=".Admin.Application_detailAdmin" />
-        <activity android:name=".Employe.Application_Proceed" />
+        <activity android:name=".Employe.Application_Proceed"
+            android:theme="@style/Theme.InternshipPopup"/>
         <activity android:name=".Admin.InternDetail_admin" />
         <activity android:name=".Internship.InternDetail" />
         <activity android:name=".MyDashboard.InternForm" />
@@ -61,19 +65,20 @@
             android:theme="@style/Theme.InternshipPopup" />
         <activity android:name=".Employe.Employe_detail" />
         <activity android:name=".Employe.Application_detail" />
-        <activity android:name=".Employe.Email_sendpopup" />
+        <activity android:name=".Employe.Email_sendpopup"
+            android:theme="@style/Theme.InternshipPopup"/>
         <activity
             android:name=".profile.Profile_activity2"
             android:theme="@style/Theme.InternshipPopup" />
         <activity android:name=".Employe.Employe_profile" />
         <activity
             android:name=".profile.Profile_activity3"
-            android:theme="@style/Theme.InternshipPopup" />
+            android:theme="@style/Theme.InternshipPopup"/>
         <activity
             android:name=".profile.Profile_activity4"
-            android:theme="@style/Theme.InternshipPopup" />
-        <activity android:name=".IntroActivity" />
-        <activity android:name=".Employe.Reg_Employe" />
+            android:theme="@style/Theme.InternshipPopup"/>
+        <activity android:name=".IntroActivity"/>
+        <activity android:name=".Employe.Reg_Employe"/>
         <activity android:name=".MainActivity"/>
     </application>
 

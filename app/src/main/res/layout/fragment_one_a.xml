@@ -5,8 +5,13 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:id="@+id/relativelayout"
-    android:background="@drawable/btn_grd_style"
     android:layout_height="match_parent">
+
+    <ImageView
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_main_internship"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -43,17 +48,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:weightSum="2"
+        android:weightSum="1"
         android:layout_below="@id/post_for"
-
         android:gravity="top">
 
         <LinearLayout
             android:layout_marginTop="10dp"
-            android:layout_marginLeft="60dp"
+            android:layout_marginLeft="80dp"
             android:elevation="10dp"
-            android:layout_marginRight="10dp"
-
+            android:layout_marginRight="80dp"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="50dp"
@@ -66,7 +69,7 @@
                 android:layout_height="match_parent"
                 android:text="Internship"
                 android:fontFamily="@font/montserrat"
-                android:textColor="@color/purple_700"
+                android:textColor="@color/main_color"
                 android:textSize="20sp"
                 android:textAlignment="center"
                 android:gravity="center"/>
@@ -98,7 +101,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="18sp"
-                    android:textColor="@color/purple_700"
+                    android:textColor="@color/main_color"
 
                     android:fontFamily="@font/montserrat"
                     android:text="Internship Detail"/>
@@ -140,90 +143,90 @@
 
 
                                 <RadioButton
-                                    android:textColor="@color/purple_700"
+                                    android:textColor="@color/main_color"
                                     android:layout_marginBottom="5dp"
                                     android:layout_marginTop="5dp"
                                     android:checked="true"
                                     android:id="@+id/option_1"
-                                    android:buttonTint="@color/purple_700"
+                                    android:buttonTint="@color/main_color"
                                     android:text="Business Development (Sales)"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"/>
 
                                 <RadioButton
-                                    android:textColor="@color/purple_700"
+                                    android:textColor="@color/main_color"
                                     android:layout_marginBottom="5dp"
                                     android:layout_marginTop="5dp"
                                     android:id="@+id/option_2"
-                                    android:buttonTint="@color/purple_700"
+                                    android:buttonTint="@color/main_color"
                                     android:text="Web Development"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"/>
 
                                 <RadioButton
-                                    android:textColor="@color/purple_700"
+                                    android:textColor="@color/main_color"
                                     android:layout_marginBottom="5dp"
                                     android:layout_marginTop="5dp"
                                     android:id="@+id/option_3"
-                                    android:buttonTint="@color/purple_700"
+                                    android:buttonTint="@color/main_color"
                                     android:text="Graphic Design"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"/>
 
                                 <RadioButton
-                                    android:textColor="@color/purple_700"
+                                    android:textColor="@color/main_color"
                                     android:layout_marginBottom="5dp"
                                     android:layout_marginTop="5dp"
                                     android:id="@+id/option_4"
                                     android:text="Content Writing"
-                                    android:buttonTint="@color/purple_700"
+                                    android:buttonTint="@color/main_color"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"/>
                                 <RadioButton
-                                    android:textColor="@color/purple_700"
+                                    android:textColor="@color/main_color"
                                     android:layout_marginBottom="5dp"
                                     android:layout_marginTop="5dp"
-                                    android:buttonTint="@color/purple_700"
+                                    android:buttonTint="@color/main_color"
                                     android:id="@+id/option_5"
                                     android:text="Social Media Marketing"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"/>
 
                                 <RadioButton
-                                    android:textColor="@color/purple_700"
+                                    android:textColor="@color/main_color"
                                     android:layout_marginBottom="5dp"
                                     android:layout_marginTop="5dp"
                                     android:id="@+id/option_6"
-                                    android:buttonTint="@color/purple_700"
+                                    android:buttonTint="@color/main_color"
                                     android:text="Marketing"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"/>
 
                                 <RadioButton
-                                    android:textColor="@color/purple_700"
+                                    android:textColor="@color/main_color"
                                     android:layout_marginBottom="5dp"
                                     android:layout_marginTop="5dp"
                                     android:id="@+id/option_7"
-                                    android:buttonTint="@color/purple_700"
+                                    android:buttonTint="@color/main_color"
                                     android:text="Operations"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"/>
 
                                 <RadioButton
-                                    android:textColor="@color/purple_700"
+                                    android:textColor="@color/main_color"
                                     android:layout_marginBottom="5dp"
                                     android:layout_marginTop="5dp"
                                     android:id="@+id/option_8"
                                     android:text="Mobile App Development"
                                     android:layout_width="wrap_content"
-                                    android:buttonTint="@color/purple_700"
+                                    android:buttonTint="@color/main_color"
                                     android:layout_height="wrap_content"/>
                                 <RadioButton
-                                    android:textColor="@color/purple_700"
+                                    android:textColor="@color/main_color"
                                     android:layout_marginBottom="5dp"
                                     android:layout_marginTop="5dp"
                                     android:id="@+id/option_9"
-                                    android:buttonTint="@color/purple_700"
+                                    android:buttonTint="@color/main_color"
                                     android:text="Digital Marketing"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"/>

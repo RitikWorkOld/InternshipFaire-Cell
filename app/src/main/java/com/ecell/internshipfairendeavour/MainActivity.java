@@ -55,10 +55,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(v==employe_btn){
-                    /*Intent intent=new Intent(getApplicationContext(), Login_Employe.class);
+                    Intent intent=new Intent(getApplicationContext(), Login_Employe.class);
                     startActivity(intent);
-                    overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out);*/
-                    Toast.makeText(MainActivity.this,"Coming Soon!",Toast.LENGTH_SHORT).show();
+                    overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out);
                 }
             }
         } );

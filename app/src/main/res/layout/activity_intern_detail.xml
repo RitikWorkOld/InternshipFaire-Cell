@@ -17,7 +17,7 @@
              android:layout_height="match_parent">
 
             <ImageView
-                android:src="@drawable/ic_mian_internship"
+                android:src="@drawable/ic_main_internship"
                 android:scaleType="centerCrop"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"/>

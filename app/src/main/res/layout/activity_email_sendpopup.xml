@@ -118,7 +118,7 @@
                     android:layout_height="wrap_content"
                     android:text="Send"
                     android:id="@+id/send_btn_email_popup"
-                  android:layout_gravity="center"
+                    android:layout_gravity="center"
                     android:layout_marginTop="8dp"
                     android:textColor="@color/white"
                     android:fontFamily="@font/montserrat"

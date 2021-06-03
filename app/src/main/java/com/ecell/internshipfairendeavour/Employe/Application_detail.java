@@ -1,6 +1,8 @@
 package com.ecell.internshipfairendeavour.Employe;
 
 import android.os.Bundle;
+import android.view.Window;
+import android.view.WindowManager;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
@@ -19,11 +21,14 @@ public class Application_detail extends AppCompatActivity implements TabLayout.O
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate( savedInstanceState );
+        //---( TO REMOVE STATUS BAR )---//
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView( R.layout.activity_application_detail );
         //Initializing the tablayout
         tabLayout = (TabLayout) findViewById( R.id.sliding_tab );
         key = getIntent().getStringExtra("key");
-        cmpid=getIntent().getStringExtra( "cmpid" );
+        cmpid=getIntent().getStringExtra( "cmpid");
 
 
         Bundle bundle = new Bundle();

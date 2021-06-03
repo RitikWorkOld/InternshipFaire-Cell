@@ -1,6 +1,7 @@
 package com.ecell.internshipfairendeavour.MyDashboard;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -116,6 +117,15 @@ public class InternForm extends AppCompatActivity {
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
 
+            }
+        });
+
+        answer_2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Uri uri = Uri.parse(answer_2.getText().toString());
+                Intent intent = new Intent(Intent.ACTION_VIEW,uri);
+                startActivity(intent);
             }
         });
 

@@ -14,7 +14,7 @@
             android:layout_width="match_parent"
             android:id="@+id/main_layout"
             android:layout_height="wrap_content">
-            <LinearLayout
+            <RelativeLayout
                 android:id="@+id/layout_profile"
                 android:orientation="vertical"
                 android:layout_width="match_parent"
@@ -22,10 +22,15 @@
                 android:layout_height="340dp"
                 android:background="@drawable/bg_profile">
 
+                <ImageView
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_main_internship"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:id="@+id/layout_this"
-                    android:background="@drawable/try_4"
                     android:layout_height="match_parent">
 
                     <ImageView
@@ -153,7 +158,7 @@
 
                 </RelativeLayout>
 
-            </LinearLayout>
+            </RelativeLayout>
 
             <ScrollView
                 android:layout_width="match_parent"
