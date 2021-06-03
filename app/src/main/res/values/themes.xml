@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.InternshipFairECell" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="Theme.InternshipFairECell" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/main_color</item>
         <item name="colorPrimaryVariant">@color/main_color</item>
@@ -11,10 +11,11 @@
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <item name="android:forceDarkAllowed" tools:targetApi="q"> false </item>
         <!-- Customize your theme here. -->
     </style>
 
-    <style name="Theme.InternshipPopup" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="Theme.InternshipPopup" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/main_color</item>
         <item name="colorPrimaryVariant">@color/main_color</item>
@@ -28,12 +29,14 @@
         <item name="android:windowIsTranslucent">true</item>
         <item name="android:windowIsFloating">true</item>
         <item name="android:windowCloseOnTouchOutside">true</item>
+        <item name="android:forceDarkAllowed" tools:targetApi="q"> false </item>
+
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
 
-    <style name="Theme.InternshipSplash" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="Theme.InternshipSplash" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/white</item>
         <item name="colorPrimaryVariant">@color/white</item>
@@ -47,6 +50,7 @@
         <!-- Customize your theme here. -->
         <item name="statusBarBackground">@color/white</item>
         <item name="android:windowBackground">@drawable/splash_background</item>
+        <item name="android:forceDarkAllowed" tools:targetApi="q"> false </item>
     </style>
 
     <style name="TextLimitError" parent="TextAppearance.AppCompat.Small">
