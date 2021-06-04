@@ -41,7 +41,7 @@ public class Rejected_Fragment extends Fragment {
     FirebaseRecyclerOptions<applied_intern_md> optionsinternall;
     FirebaseRecyclerAdapter<applied_intern_md, Application_vh> adapterinternall;
     CheckBox all;
-    ArrayList<String> all_noti,all_names;
+    ArrayList<String> all_noti,all_names,all_keys;
     ArrayList<String> selectedStudents;
     ArrayList<String> statusStudents,key_status;
     String key,cmpid,eid;
@@ -77,6 +77,7 @@ public class Rejected_Fragment extends Fragment {
         selectedStudents = new ArrayList<>();
         statusStudents = new ArrayList<>();
         key_status = new ArrayList<>();
+        all_keys = new ArrayList<>();
 
         rv_internall = view.findViewById(R.id.rejected_rv);
         no_app=view.findViewById( R.id.no_new_notifications );
@@ -104,6 +105,7 @@ public class Rejected_Fragment extends Fragment {
 
                                 all_noti.add(user.getUserid());
                                 all_names.add(user.getUsername());
+                                all_keys.add(user.getId());
 
                             }
                         }
@@ -212,6 +214,7 @@ public class Rejected_Fragment extends Fragment {
                             }
                             selectedStudents.clear();
                             statusStudents.clear();
+                            key_status.clear();
                             holder.checkBox.setOnClickListener( new View.OnClickListener() {
                                 @Override
                                 public void onClick(View v) {
@@ -296,6 +299,8 @@ public class Rejected_Fragment extends Fragment {
                     selectedStudents.addAll( all_names );
                     statusStudents.clear();
                     statusStudents.addAll( all_noti );
+                    key_status.clear();
+                    key_status.addAll( all_keys );
 
                     Query query = drinternall.orderByChild("internid_status").equalTo(key+"Rejected");
                     optionsinternall = new FirebaseRecyclerOptions.Builder<applied_intern_md>().setQuery(query,applied_intern_md.class).build();
@@ -406,7 +411,6 @@ public class Rejected_Fragment extends Fragment {
         shortlist_btn.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 if(statusStudents.isEmpty()){
 
                     Toast.makeText(container.getContext(), "You have not selected any student", Toast.LENGTH_SHORT).show();
@@ -427,6 +431,8 @@ public class Rejected_Fragment extends Fragment {
                     }
                     //-------------------------------------------------Here is code for Deleting---------------------------------------------------------------------
                     statusStudents.clear();
+                    key_status.clear();
+                    all.setChecked(false);
                     getActivity().recreate();
                     //------
                 }
@@ -453,6 +459,8 @@ public class Rejected_Fragment extends Fragment {
                     }
                     //-------------------------------------------------Here is code for Deleting---------------------------------------------------------------------
                     statusStudents.clear();
+                    key_status.clear();
+                    all.setChecked(false);
                     getActivity().recreate();
                     //------
                 }
@@ -478,6 +486,8 @@ public class Rejected_Fragment extends Fragment {
                     }
                     //-------------------------------------------------Here is code for Deleting---------------------------------------------------------------------
                     statusStudents.clear();
+                    key_status.clear();
+                    all.setChecked(false);
                     getActivity().recreate();
                     //------
                 }

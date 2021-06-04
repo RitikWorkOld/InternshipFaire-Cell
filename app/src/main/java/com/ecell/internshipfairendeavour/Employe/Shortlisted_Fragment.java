@@ -44,7 +44,7 @@ public class Shortlisted_Fragment extends Fragment {
     ArrayList<String> statusStudents,key_status;
     String key,cmpid,eid,id;
     CheckBox all;
-    ArrayList<String> all_noti,all_names;
+    ArrayList<String> all_noti,all_names,all_keys;
     String email;
     private FirebaseAuth mFirebaseAuth;
     public Shortlisted_Fragment() {
@@ -63,7 +63,7 @@ public class Shortlisted_Fragment extends Fragment {
         // Inflate the layout for this fragment
         final View view=  inflater.inflate( R.layout.fragment_shortlisted_, container, false );
         key = getArguments().getString("key");
-        cmpid=getArguments().getString( "cmpid"  );
+        cmpid=getArguments().getString( "cmpid");
         send_email_btn=view.findViewById( R.id.send_email_btn );
         shortlist_btn=view.findViewById( R.id.shortlist_btn );
         hire_btn=view.findViewById( R.id.hired_btn );
@@ -71,6 +71,7 @@ public class Shortlisted_Fragment extends Fragment {
 
         send_notif=view.findViewById( R.id.notification );
         all_names = new ArrayList<>();
+        all_keys = new ArrayList<>();
         all=view.findViewById( R.id.all );
         all_noti = new ArrayList<>();
 
@@ -92,9 +93,9 @@ public class Shortlisted_Fragment extends Fragment {
                 for (DataSnapshot dataSnapshot1: dataSnapshot.getChildren()){
                     applied_intern_md user = dataSnapshot1.getValue(applied_intern_md.class);
 
-
                     all_noti.add(user.getUserid());
                     all_names.add(user.getUsername());
+                    all_keys.add(user.getId());
 
                 }
             }
@@ -175,7 +176,6 @@ public class Shortlisted_Fragment extends Fragment {
                 if (!all.isChecked()){
                     Query query = drinternall.orderByChild("internid_status").equalTo(key+"Shortlisted");
                     optionsinternall = new FirebaseRecyclerOptions.Builder<applied_intern_md>().setQuery(query,applied_intern_md.class).build();
-
                     adapterinternall = new FirebaseRecyclerAdapter<applied_intern_md, Application_vh>(optionsinternall) {
                         @Override
                         protected void onBindViewHolder(@NonNull final Application_vh holder, int position, @NonNull final applied_intern_md model) {
@@ -196,6 +196,7 @@ public class Shortlisted_Fragment extends Fragment {
                             }
                             selectedStudents.clear();
                             statusStudents.clear();
+                            key_status.clear();
                             holder.checkBox.setOnClickListener( new View.OnClickListener() {
                                 @Override
                                 public void onClick(View v) {
@@ -278,6 +279,8 @@ public class Shortlisted_Fragment extends Fragment {
                     selectedStudents.addAll( all_names );
                     statusStudents.clear();
                     statusStudents.addAll( all_noti );
+                    key_status.clear();
+                    key_status.addAll( all_keys );
 
                     Query query = drinternall.orderByChild("internid_status").equalTo(key+"Shortlisted");
                     optionsinternall = new FirebaseRecyclerOptions.Builder<applied_intern_md>().setQuery(query,applied_intern_md.class).build();
@@ -407,6 +410,8 @@ public class Shortlisted_Fragment extends Fragment {
                     }
                     //-------------------------------------------------Here is code for Deleting---------------------------------------------------------------------
                     statusStudents.clear();
+                    key_status.clear();
+                    all.setChecked(false);
                     getActivity().recreate();
                     //------
                 }
@@ -434,6 +439,8 @@ public class Shortlisted_Fragment extends Fragment {
                     }
                     //-------------------------------------------------Here is code for Deleting---------------------------------------------------------------------
                     statusStudents.clear();
+                    key_status.clear();
+                    all.setChecked(false);
                     getActivity().recreate();
                     //------
                 }
@@ -460,6 +467,8 @@ public class Shortlisted_Fragment extends Fragment {
                     }
                     //-------------------------------------------------Here is code for Deleting---------------------------------------------------------------------
                     statusStudents.clear();
+                    key_status.clear();
+                    all.setChecked(false);
                     getActivity().recreate();
                     //------
                 }

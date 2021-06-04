@@ -46,7 +46,7 @@ String id;
     private View no_app;
     CheckBox all;
     ArrayList<String> selectedStudents;
-    ArrayList<String> all_noti,all_names;
+    ArrayList<String> all_noti,all_names,all_keys;
     ArrayList<String> statusStudents,key_status;
     String key,cmpid,eid;
     String email;
@@ -78,6 +78,7 @@ String id;
         reject_btn=view.findViewById( R.id.reject_btn );
 
         selectedStudents = new ArrayList<>();
+        all_keys = new ArrayList<>();
         all_names = new ArrayList<>();
 
         statusStudents = new ArrayList<>();
@@ -105,6 +106,7 @@ String id;
 
                     all_noti.add(user.getUserid());
                     all_names.add(user.getUsername());
+                    all_keys.add(user.getId());
 
                 }
             }
@@ -225,6 +227,7 @@ all.setOnClickListener( new View.OnClickListener() {
                     }
                     selectedStudents.clear();
                     statusStudents.clear();
+                    key_status.clear();
                     holder.checkBox.setOnClickListener( new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
@@ -309,6 +312,8 @@ all.setOnClickListener( new View.OnClickListener() {
             selectedStudents.addAll( all_names );
             statusStudents.clear();
             statusStudents.addAll( all_noti );
+            key_status.clear();
+            key_status.addAll( all_keys );
 
             Query query = drinternall.orderByChild("internid_status").equalTo(key+"Applied");
             optionsinternall = new FirebaseRecyclerOptions.Builder<applied_intern_md>().setQuery(query,applied_intern_md.class).build();
@@ -439,6 +444,8 @@ shortlist_btn.setOnClickListener( new View.OnClickListener() {
             }
             //-------------------------------------------------Here is code for Deleting---------------------------------------------------------------------
             statusStudents.clear();
+            key_status.clear();
+            all.setChecked(false);
             getActivity().recreate();
             //------
         }
@@ -465,6 +472,8 @@ hire_btn.setOnClickListener( new View.OnClickListener() {
             }
             //-------------------------------------------------Here is code for Deleting---------------------------------------------------------------------
             statusStudents.clear();
+            key_status.clear();
+            all.setChecked(false);
             getActivity().recreate();
             //------
         }
@@ -489,6 +498,8 @@ reject_btn.setOnClickListener( new View.OnClickListener() {
             }
             //-------------------------------------------------Here is code for Deleting---------------------------------------------------------------------
             statusStudents.clear();
+            key_status.clear();
+            all.setChecked(false);
             getActivity().recreate();
             //------
         }

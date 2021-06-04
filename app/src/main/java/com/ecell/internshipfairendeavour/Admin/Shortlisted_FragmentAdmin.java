@@ -49,7 +49,7 @@ String id;
     String key,cmpid,eid;
     String email;
     CheckBox all;
-    ArrayList<String> all_noti,all_names;
+    ArrayList<String> all_noti,all_names,all_keys;
     private FirebaseAuth mFirebaseAuth;
     public Shortlisted_FragmentAdmin() {
         // Required empty public constructor
@@ -78,6 +78,7 @@ String id;
         hire_btn=view.findViewById( R.id.hired_btn );
         reject_btn=view.findViewById( R.id.reject_btn );
         all_noti = new ArrayList<>();
+        all_keys = new ArrayList<>();
 
 
         selectedStudents = new ArrayList<>();
@@ -101,6 +102,7 @@ String id;
 
                     all_noti.add(user.getUserid());
                     all_names.add(user.getUsername());
+                    all_keys.add(user.getId());
 
                 }
             }
@@ -204,6 +206,7 @@ id=model.getInternid();
                             }
                             selectedStudents.clear();
                             statusStudents.clear();
+                            key_status.clear();
 
                             holder.checkBox.setOnClickListener( new View.OnClickListener() {
                                 @Override
@@ -289,6 +292,9 @@ id=model.getInternid();
                     selectedStudents.addAll( all_names );
                     statusStudents.clear();
                     statusStudents.addAll( all_noti );
+                    key_status.clear();
+                    key_status.addAll( all_keys );
+
                     hire_btn.setOnClickListener( new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
@@ -445,6 +451,8 @@ id=model.getInternid();
                     }
                     //-------------------------------------------------Here is code for Deleting---------------------------------------------------------------------
                     statusStudents.clear();
+                    key_status.clear();
+                    all.setChecked(false);
                     getActivity().recreate();
                     //------
 
@@ -471,6 +479,8 @@ id=model.getInternid();
                     }
                     //-------------------------------------------------Here is code for Deleting---------------------------------------------------------------------
                     statusStudents.clear();
+                    key_status.clear();
+                    all.setChecked(false);
                     getActivity().recreate();
                     //------
                 }
@@ -495,6 +505,8 @@ id=model.getInternid();
                     }
                     //-------------------------------------------------Here is code for Deleting---------------------------------------------------------------------
                     statusStudents.clear();
+                    key_status.clear();
+                    all.setChecked(false);
                     getActivity().recreate();
                     //------
                 }
