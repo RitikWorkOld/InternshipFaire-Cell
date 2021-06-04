@@ -477,7 +477,21 @@ name=employe.getName();
                                                         }
 
                                                      Intent intent = new Intent(getActivity(), Application_Proceed.class);
-
+                                                        city_edit_text.setText( "" );
+                                                        no_of_opening.setText( "" );
+                                                        FromET.setText( "" );
+                                                        ToET.setText( "" );
+                                                        resp_edit_text.setText( "" );
+                                                        skills.setText( "" );
+                                                        que1.setText( "" );
+                                                        que2.setText( "" );
+                                                        main_stipend_et.setText( "" );
+                                                        neg_to_et.setText( "" );
+                                                        inc_based_et.setText( "" );
+                                                        one.setChecked( false );
+                                                        two.setChecked( false );
+                                                        three.setChecked( false );
+                                                        four.setChecked( false );
                                                              startActivity(intent);
 
                                                     }
