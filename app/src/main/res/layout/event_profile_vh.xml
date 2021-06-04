@@ -22,6 +22,7 @@
 
 
     <CheckBox
+        android:buttonTint="@color/main_color"
         android:layout_width="wrap_content"
         android:id="@+id/checker"
         android:layout_centerVertical="true"

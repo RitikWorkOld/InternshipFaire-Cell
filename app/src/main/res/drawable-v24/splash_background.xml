@@ -14,7 +14,7 @@
         android:height="120dp"
         android:width="120dp">
         <bitmap
-            android:src="@drawable/internship_logo"/>
+            android:src="@drawable/internshiplogonew"/>
     </item>
 
 </layer-list>

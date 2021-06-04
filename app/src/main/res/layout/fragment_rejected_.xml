@@ -96,6 +96,7 @@
     </HorizontalScrollView>
 
     <CheckBox
+        android:buttonTint="@color/main_color"
         android:layout_width="wrap_content"
         android:id="@+id/all"
         android:visibility="visible"

@@ -41,7 +41,7 @@ public class Login_Student extends AppCompatActivity implements TextWatcher,
     private ProgressBar progressBars;
     Button go;
     EditText emailId, password;
-   FirebaseAuth mFirebaseAuth;
+    FirebaseAuth mFirebaseAuth;
     String pstatus;
     TextView fgt_pass;
 
@@ -52,7 +52,7 @@ public class Login_Student extends AppCompatActivity implements TextWatcher,
     private static final String KEY_REMEMBER = "remember";
     private static final String KEY_USERNAME = "username";
     private static final String KEY_PASS = "password";
-   private FirebaseAuth.AuthStateListener mAuthStateListener;
+    private FirebaseAuth.AuthStateListener mAuthStateListener;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -86,7 +86,7 @@ public class Login_Student extends AppCompatActivity implements TextWatcher,
             rem_userpass.setChecked(true);
         else
             rem_userpass.setChecked(false);
-fgt_pass = findViewById( R.id.frgt_pass );
+        fgt_pass = findViewById( R.id.frgt_pass );
         emailId = findViewById( R.id.Lemail );
         password = findViewById( R.id.Lpass );
         emailId.setText( sharedPreferences.getString( KEY_USERNAME, "" ) );

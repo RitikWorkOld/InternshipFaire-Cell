@@ -41,6 +41,8 @@
         android:gravity="center">
 
         <ImageView
+            android:tint="@color/main_color"
+            android:tintMode="src_atop"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:src="@drawable/noprofile"
@@ -52,7 +54,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="No Profile"
-
             android:textSize="20sp"/>
 
     </LinearLayout>
