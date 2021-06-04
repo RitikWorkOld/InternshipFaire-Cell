@@ -122,7 +122,7 @@ public class Fragment_three extends Fragment {
             public void onClick(View v) {
                 AlertDialog.Builder builder = new AlertDialog.Builder( requireActivity() );
                 builder.setTitle(R.string.app_name);
-                builder.setIcon(R.drawable.user);
+                builder.setIcon(R.mipmap.ic_launcher);
                 builder.setMessage("Do you want to Logout?")
                         .setCancelable(false)
                         .setPositiveButton("Yes", new DialogInterface.OnClickListener() {

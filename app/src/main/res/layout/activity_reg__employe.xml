@@ -89,7 +89,7 @@
                         android:hint="Name"
 
 
-                        android:textColor="#CD4B4B"
+                        android:textColor="@color/main_color"
                         android:textColorHint="#808080"
                         android:textSize="18sp" />
 
@@ -111,7 +111,7 @@
                         android:layout_marginEnd="8dp"
                         android:fontFamily="@font/montserrat"
                         android:hint="Email ID"
-                        android:textColor="#CD4B4B"
+                        android:textColor="@color/main_color"
                         android:textColorHint="#808080"
                         android:textSize="18sp" />
                     <TextView
@@ -133,7 +133,7 @@
                         android:fontFamily="@font/montserrat"
                         android:hint="website"
 
-                        android:textColor="#CD4B4B"
+                        android:textColor="@color/main_color"
                         android:textColorHint="#808080"
                         android:textSize="18sp" />
 
@@ -157,7 +157,7 @@
                             android:textSize="18sp"
                             android:id="@+id/password"
                             android:layout_width="match_parent"
-                            android:textColor="#CD4B4B"
+                            android:textColor="@color/main_color"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="8dp"
                             android:layout_marginEnd="8dp"
@@ -189,7 +189,7 @@
                         android:inputType="number"
                         android:fontFamily="@font/montserrat"
                         android:hint="You will recieve an OTP"
-                        android:textColor="#CD4B4B"
+                        android:textColor="@color/main_color"
                         android:textColorHint="#808080"
                         android:textSize="18sp" />
 
@@ -216,7 +216,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/go1"
                 android:elevation="6dp"
-                android:background="@drawable/btn_gradient_style"
+                android:background="@drawable/btn"
               android:text="Register"
                 android:textColor="@color/white"
                 />
@@ -250,7 +250,7 @@
                 android:textColor="@color/white"
                 android:layout_marginLeft="80dp"
                 android:layout_marginRight="80dp"
-                android:background="@drawable/btn_gradient_style"
+                android:background="@drawable/btn"
                 android:layout_below="@id/text0"
                 android:layout_centerHorizontal="true"
 
