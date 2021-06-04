@@ -28,6 +28,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.ecell.internshipfairendeavour.Employe.Employe_detail;
 import com.ecell.internshipfairendeavour.ModelandViewholder.addexp1_model;
 import com.ecell.internshipfairendeavour.ModelandViewholder.addexp1_viewholder;
 import com.ecell.internshipfairendeavour.ModelandViewholder.addexp2_model;
@@ -57,7 +58,10 @@ TextView schlstarty10,schlendy10,schlstarty12,schlendy12,collegestart,collegeend
             percentage10,schoolname12,percentage12,collegename,
             collegecourse,collegedept,collegeper;
     EditText companyname,companyrole,companybenefits;
+    RelativeLayout layout_tam;
+    RelativeLayout next_layout;
     //TextView textview;
+    Button okay;
     int thisYear3;
     Button addpersonaldet,addschool10det,addschool12det,addcollegedet,addexpbtn,addnewexpbtn,updateexpbtn,adddiplomadet_btn;
     Button addexpbtn1,addnewexpbtn1,updateexpbtn1;//RITIK
@@ -230,6 +234,12 @@ int counter=0;
             }
         });
 
+        layout_tam = findViewById( R.id.layout_tam );
+        layout_tam.setVisibility( View.VISIBLE );
+        next_layout = findViewById( R.id.next );
+        next_layout.setVisibility( View.GONE );
+
+okay = findViewById( R.id.okay_btn_test );
         submit=findViewById( R.id.submit );
         dob = findViewById(R.id.dob);
         adress = findViewById(R.id.adress);
@@ -1531,10 +1541,22 @@ max++;
                     DatabaseReference databaseReferencepstatus = FirebaseDatabase.getInstance().getReference().child("Users").child(FirebaseAuth.getInstance().getCurrentUser().getUid());
                     databaseReferencepstatus.keepSynced(true);
                     databaseReferencepstatus.child("profilestatus").setValue("yes");
+layout_tam.setVisibility( View.GONE );
+next_layout.setVisibility( View.VISIBLE );
+                  //  Intent intent = new Intent( Studentdetail.this, Dashboard_Student.class );
+                //    startActivity( intent );
+                //    finish();
+                okay.setOnClickListener( new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
 
-                    Intent intent = new Intent( Studentdetail.this, Dashboard_Student.class );
-                    startActivity( intent );
-                    finish();
+
+                        Intent intent = new Intent( Studentdetail.this, Login_Student.class );
+                        finish();
+                        startActivity( intent );
+
+                    }
+                } );
 
             }
             else{

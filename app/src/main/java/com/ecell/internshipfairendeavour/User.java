@@ -9,24 +9,33 @@ public class User {
     public String password;
     public String profileimg;
     public String profilestatus;
+    public String officialstatus;
 public String  code;
 
     public User(){
 
     }
 
-    public User(String name, String email, String contactn, String uid, String password, String profileimg, String profilestatus, String code) {
+    public User(String name, String email, String contactn, String uid, String password, String profileimg, String profilestatus, String code, String officialstatus) {
         this.name = name;
         this.email = email;
 this.code=code;
         this.contactn = contactn;
-
+this.officialstatus = officialstatus;
         this.uid = uid;
 
         this.password = password;
         this.profileimg = profileimg;
         this.profilestatus = profilestatus;
 
+    }
+
+    public String getOfficialstatus() {
+        return officialstatus;
+    }
+
+    public void setOfficialstatus(String officialstatus) {
+        this.officialstatus = officialstatus;
     }
 
     public String getCode() {

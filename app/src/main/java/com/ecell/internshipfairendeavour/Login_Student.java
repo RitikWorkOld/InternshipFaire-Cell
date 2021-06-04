@@ -23,6 +23,8 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.ecell.internshipfairendeavour.Admin.Student_Profile;
+import com.ecell.internshipfairendeavour.Employe.Employe_detail;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -44,7 +46,7 @@ public class Login_Student extends AppCompatActivity implements TextWatcher,
    FirebaseAuth mFirebaseAuth;
     String pstatus;
     TextView fgt_pass;
-
+String ostatus;
     private CheckBox rem_userpass;
     SharedPreferences sharedPreferences;
     SharedPreferences.Editor editor;
@@ -183,21 +185,41 @@ fgt_pass = findViewById( R.id.frgt_pass );
 
                                             assert user != null;
                                             pstatus = user.getProfilestatus();
+                                            ostatus = user.getOfficialstatus();
 
                                             Log.d("HEL**************","**************************************   "+pstatus);
 
                                             FirebaseUser firebaseUser=mFirebaseAuth.getCurrentUser();
 
 
-                                                if (pstatus.equals("yes")){
+                                                if (pstatus.equals("yes") && ostatus.equals( "yes" ) ){
                                                     Log.d("HEL","msg= yha agya");
                                                     progressBars.setVisibility(View.GONE);
                                                     // Toast.makeText(Login_Student.this, "Successfully logged in", Toast.LENGTH_SHORT).show();
-                                                    Intent intent = new Intent(Login_Student.this, Dashboard_Student.class);
+                                                 //   Intent intent = new Intent(Login_Student.this, Dashboard_Student.class);
 
-                                                    startActivity(intent);
-                                                    finish();
+                                                 //   startActivity(intent);
+                                                  //  finish();
                                                 }
+
+                                            if (ostatus.equals( "Not Checked" ) && pstatus.equals( "yes" ) ){
+                                                Log.d("HEL","msg= yha agya");
+                                                progressBars.setVisibility(View.GONE);
+                                                // Toast.makeText(Login_Student.this, "Successfully logged in", Toast.LENGTH_SHORT).show();
+                                                Intent intent = new Intent(Login_Student.this, Studentdetail.class);
+
+                                                startActivity(intent);
+                                                finish();
+                                            }
+
+
+                                            if(ostatus.equals( "no" )) {
+                                                Log.d("HEL","msg= yha agya");
+                                                progressBars.setVisibility(View.GONE);
+                                                Toast.makeText(Login_Student.this, "Your profile has been rejected,feel free to contact us at ecellwebtechnical@gmail.com ", Toast.LENGTH_LONG).show();
+
+                                            }
+
                                                 if(pstatus.equals( "no" )) {
                                                     Log.d("HEL","msg= yha agya");
                                                     progressBars.setVisibility(View.GONE);

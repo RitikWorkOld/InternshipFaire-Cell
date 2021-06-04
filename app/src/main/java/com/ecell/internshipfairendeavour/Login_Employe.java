@@ -41,7 +41,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 
-public class Login_Employe extends AppCompatActivity implements TextWatcher,
+public class  Login_Employe extends AppCompatActivity implements TextWatcher,
         CompoundButton.OnCheckedChangeListener {
     Button btnSignUp,login;
     ImageButton go;
