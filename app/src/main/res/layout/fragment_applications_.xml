@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -14,12 +15,11 @@
       android:gravity="center">
 
     <ImageView
-        android:tint="@color/main_color"
         android:tintMode="src_atop"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:src="@drawable/noprofile"
-        />
+        app:tint="@color/main_color" />
 
     <TextView
         android:textStyle="bold"
@@ -96,6 +96,7 @@
 
   </HorizontalScrollView>
   <CheckBox
+      android:buttonTint="@color/main_color"
       android:layout_width="wrap_content"
 
       android:id="@+id/all"

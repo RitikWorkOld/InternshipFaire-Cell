@@ -57,8 +57,8 @@ import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 import java.util.Calendar;
 
-public class Studentdetail extends AppCompatActivity implements View.OnClickListener {
-TextView schlstarty10,schlendy10,schlstarty12,schlendy12,collegestart,collegeend,companystartdate,companyenddate;
+public class Check_Act extends AppCompatActivity implements View.OnClickListener {
+    TextView schlstarty10,schlendy10,schlstarty12,schlendy12,collegestart,collegeend,companystartdate,companyenddate;
     EditText dob,adress,occupation,schoolname10,wanumber,
             percentage10,schoolname12,percentage12,collegename,
             collegecourse,collegedept,collegeper;
@@ -77,7 +77,7 @@ TextView schlstarty10,schlendy10,schlstarty12,schlendy12,collegestart,collegeend
     Button submit,yesbtn,nobtn;
     String name,phno,email,uid;
     RadioButton radioButton_high, radioButton_diploma;
-private String pres_doctor,pres_doctor1,pres_doctor2,pres_doctor3,pres_doctor4,pres_doctor5,pres_doctor6,pres_doctor7;
+    private String pres_doctor,pres_doctor1,pres_doctor2,pres_doctor3,pres_doctor4,pres_doctor5,pres_doctor6,pres_doctor7;
     EditText stream1,board,board1,dipclgname,dipcorsname,dippercentage;
     long maxid,maxid1,maxid2;
     private int max;
@@ -85,7 +85,7 @@ private String pres_doctor,pres_doctor1,pres_doctor2,pres_doctor3,pres_doctor4,p
     private static final int ImageBack = 1;
     StorageReference storageReference;
     ProgressBar pb_userimg;
-int counter=0;
+    int counter=0;
     private int mYear, mMonth, mDay;
     private int count1=0,count2=0,count3=0,count4=0,count5=0;
 
@@ -285,7 +285,7 @@ int counter=0;
         adapterexp.startListening();
         adapterexp1.startListening();
         adapterexp2.startListening();
-       // adapterexp1.startListening();
+        // adapterexp1.startListening();
     }
 
     protected void onStop(){
@@ -293,7 +293,7 @@ int counter=0;
         adapterexp.stopListening();
         adapterexp1.stopListening();
         adapterexp2.stopListening();
-       // adapterexp1.stopListening();
+        // adapterexp1.stopListening();
     }
 
     @Override
@@ -348,7 +348,7 @@ int counter=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView( R.layout.activity_studentdetail);
+        setContentView( R.layout.activity_check);
         getWindow().setBackgroundDrawableResource(R.drawable.ic_main_internship);
         //textview=findViewById( R.id.txtview );
 
@@ -377,7 +377,7 @@ int counter=0;
         next_layout = findViewById( R.id.next );
         next_layout.setVisibility( View.GONE );
 
-okay = findViewById( R.id.okay_btn_test );
+        okay = findViewById( R.id.okay_btn_test );
         submit=findViewById( R.id.submit );
         dob = findViewById(R.id.dob);
         adress = findViewById(R.id.adress);
@@ -539,7 +539,7 @@ okay = findViewById( R.id.okay_btn_test );
 
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-               pres_doctor = spinYear.getSelectedItem().toString();
+                pres_doctor = spinYear.getSelectedItem().toString();
             }
 
             @Override
@@ -598,7 +598,7 @@ okay = findViewById( R.id.okay_btn_test );
 
 //------------------------------------------------------------------------------------------------//RITIK
         ArrayList<String> years3 = new ArrayList<String>();
-         thisYear3 = Calendar.getInstance().get(Calendar.YEAR);
+        thisYear3 = Calendar.getInstance().get(Calendar.YEAR);
         for (int i = 1995; i <= thisYear3; i++) {
             years3.add(Integer.toString(i));
         }
@@ -753,8 +753,8 @@ okay = findViewById( R.id.okay_btn_test );
 
 
         displayname = findViewById(R.id.displayname);
-           displayemail = findViewById(R.id.displayemail);
-           displaymno=findViewById( R.id.displaymno );
+        displayemail = findViewById(R.id.displayemail);
+        displaymno=findViewById( R.id.displaymno );
         //------------------------------------------------------------------------------------------------//RITIK
         companyname1 = findViewById(R.id.companyname1);
         addexpbtn1 = findViewById(R.id.addexp_btn1);
@@ -834,7 +834,7 @@ okay = findViewById( R.id.okay_btn_test );
             public void onClick(View v) {
                 if (!companyname2.getText().toString().isEmpty()){
 
-max++;
+                    max++;
 
                     DatabaseReference databaseReferencecmpexp = FirebaseDatabase.getInstance().getReference().child("Profile").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("cmpach").child( String.valueOf( max ) );
                     databaseReferencecmpexp.keepSynced(true);
@@ -981,14 +981,14 @@ max++;
             @NonNull
             @Override
             public addexp2_viewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-                return new addexp2_viewholder(LayoutInflater.from(Studentdetail.this).inflate(R.layout.exp2_card_layout,parent,false));
+                return new addexp2_viewholder(LayoutInflater.from(Check_Act.this).inflate(R.layout.exp2_card_layout,parent,false));
             }
         };
 
         rv_exp2.setAdapter(adapterexp2);
         adapterexp2.startListening();
 
-          //---------------------------------------------------------------------------
+        //---------------------------------------------------------------------------
         rv_exp1 = findViewById(R.id.rv_exp1);
         rv_exp1.setHasFixedSize(true);
         rv_exp1.setLayoutManager(new LinearLayoutManager(this));
@@ -1083,7 +1083,7 @@ max++;
             @NonNull
             @Override
             public addexp1_viewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-                return new addexp1_viewholder(LayoutInflater.from(Studentdetail.this).inflate(R.layout.exp1_card_layout,parent,false));
+                return new addexp1_viewholder(LayoutInflater.from(Check_Act.this).inflate(R.layout.exp1_card_layout,parent,false));
             }
         };
 
@@ -1239,7 +1239,7 @@ max++;
             @NonNull
             @Override
             public addexp_viewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-                return new addexp_viewholder(LayoutInflater.from(Studentdetail.this).inflate(R.layout.exp_card_layout,parent,false));
+                return new addexp_viewholder(LayoutInflater.from(Check_Act.this).inflate(R.layout.exp_card_layout,parent,false));
             }
         };
 
@@ -1286,8 +1286,8 @@ max++;
                         else{
                             wanumber.setError( "Empty" );
 
-                            }
                         }
+                    }
 
                     else
                     {
@@ -1306,45 +1306,45 @@ max++;
             @Override
             public void onClick(View v) {
                 if(!board.getText().toString().isEmpty()){
-                if (!schoolname10.getText().toString().isEmpty()){
-                    if (!schlstarty10.getText().toString().isEmpty()){
-                        if (!schlendy10.getText().toString().isEmpty()){
-                            if (!percentage10.getText().toString().isEmpty()){
+                    if (!schoolname10.getText().toString().isEmpty()){
+                        if (!schlstarty10.getText().toString().isEmpty()){
+                            if (!schlendy10.getText().toString().isEmpty()){
+                                if (!percentage10.getText().toString().isEmpty()){
 
-                                count2 = 1;
+                                    count2 = 1;
 
-                                DatabaseReference databaseReferenceschl10 = FirebaseDatabase.getInstance().getReference().child("Profile").child(FirebaseAuth.getInstance().getCurrentUser().getUid());
-                                databaseReferenceschl10.keepSynced(true);
-                                databaseReferenceschl10.child("school10").child("schoolname").setValue(schoolname10.getText().toString());
-                                databaseReferenceschl10.child("school10").child("schoolstarty").setValue(pres_doctor);
-                                databaseReferenceschl10.child("school10").child("schoolendy").setValue(pres_doctor1);
-                                databaseReferenceschl10.child("school10").child("schoolper").setValue(percentage10.getText().toString());
-                                databaseReferenceschl10.child("school10").child("schoolboard").setValue(board.getText().toString());
-                                databaseReferenceschl10.child("school10").child( "uid" ).setValue("sch10"+ uid );
-                                addschool10det.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_check_green_24dp,0,0,0);
-                                addschool10det.setText( "Added" );
-                                addschool10det.setCompoundDrawablePadding(5);
+                                    DatabaseReference databaseReferenceschl10 = FirebaseDatabase.getInstance().getReference().child("Profile").child(FirebaseAuth.getInstance().getCurrentUser().getUid());
+                                    databaseReferenceschl10.keepSynced(true);
+                                    databaseReferenceschl10.child("school10").child("schoolname").setValue(schoolname10.getText().toString());
+                                    databaseReferenceschl10.child("school10").child("schoolstarty").setValue(pres_doctor);
+                                    databaseReferenceschl10.child("school10").child("schoolendy").setValue(pres_doctor1);
+                                    databaseReferenceschl10.child("school10").child("schoolper").setValue(percentage10.getText().toString());
+                                    databaseReferenceschl10.child("school10").child("schoolboard").setValue(board.getText().toString());
+                                    databaseReferenceschl10.child("school10").child( "uid" ).setValue("sch10"+ uid );
+                                    addschool10det.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_check_green_24dp,0,0,0);
+                                    addschool10det.setText( "Added" );
+                                    addschool10det.setCompoundDrawablePadding(5);
 
+                                }
+                                else {
+                                    percentage10.setError("Empty");
+                                }
                             }
                             else {
-                                percentage10.setError("Empty");
+                                schlendy10.setError("Empty");
                             }
                         }
                         else {
-                            schlendy10.setError("Empty");
+                            schlstarty10.setError("Empty");
                         }
                     }
                     else {
-                        schlstarty10.setError("Empty");
+                        schoolname10.setError("Empty");
                     }
                 }
                 else {
-                    schoolname10.setError("Empty");
+                    board.setError("Empty");
                 }
-            }
-                else {
-                board.setError("Empty");
-            }
             }
         });
 
@@ -1353,48 +1353,48 @@ max++;
             public void onClick(View v) {
                 if (!stream1.getText().toString().isEmpty()) {
 
-                if (!board1.getText().toString().isEmpty()) {
+                    if (!board1.getText().toString().isEmpty()) {
 
-                if (!schoolname12.getText().toString().isEmpty()) {
-                    if (!schlstarty12.getText().toString().isEmpty()) {
-                        if (!schlendy12.getText().toString().isEmpty()) {
-                            if (!percentage12.getText().toString().isEmpty()) {
+                        if (!schoolname12.getText().toString().isEmpty()) {
+                            if (!schlstarty12.getText().toString().isEmpty()) {
+                                if (!schlendy12.getText().toString().isEmpty()) {
+                                    if (!percentage12.getText().toString().isEmpty()) {
 
-                                count3 = 1;
+                                        count3 = 1;
 
-                                DatabaseReference databaseReferenceschl12 = FirebaseDatabase.getInstance().getReference().child( "Profile" ).child( FirebaseAuth.getInstance().getCurrentUser().getUid() );
-                                databaseReferenceschl12.keepSynced( true );
-                                databaseReferenceschl12.child( "school12" ).child( "schoolname" ).setValue( schoolname12.getText().toString() );
-                                databaseReferenceschl12.child( "school12" ).child( "schoolstarty" ).setValue( pres_doctor2 );
-                                databaseReferenceschl12.child( "school12" ).child( "schoolendy" ).setValue( pres_doctor3 );
-                                databaseReferenceschl12.child( "school12" ).child( "schoolper" ).setValue( percentage12.getText().toString() );
-                                databaseReferenceschl12.child( "school12" ).child( "schoolstream" ).setValue( stream1.getText().toString() );
-                                databaseReferenceschl12.child( "school12" ).child( "schoolboard" ).setValue( board1.getText().toString() );
-                                databaseReferenceschl12.child( "school12" ).child( "uid" ).setValue("sch12"+ uid );
+                                        DatabaseReference databaseReferenceschl12 = FirebaseDatabase.getInstance().getReference().child( "Profile" ).child( FirebaseAuth.getInstance().getCurrentUser().getUid() );
+                                        databaseReferenceschl12.keepSynced( true );
+                                        databaseReferenceschl12.child( "school12" ).child( "schoolname" ).setValue( schoolname12.getText().toString() );
+                                        databaseReferenceschl12.child( "school12" ).child( "schoolstarty" ).setValue( pres_doctor2 );
+                                        databaseReferenceschl12.child( "school12" ).child( "schoolendy" ).setValue( pres_doctor3 );
+                                        databaseReferenceschl12.child( "school12" ).child( "schoolper" ).setValue( percentage12.getText().toString() );
+                                        databaseReferenceschl12.child( "school12" ).child( "schoolstream" ).setValue( stream1.getText().toString() );
+                                        databaseReferenceschl12.child( "school12" ).child( "schoolboard" ).setValue( board1.getText().toString() );
+                                        databaseReferenceschl12.child( "school12" ).child( "uid" ).setValue("sch12"+ uid );
 
-                                addschool12det.setCompoundDrawablesWithIntrinsicBounds( R.drawable.ic_check_green_24dp, 0, 0, 0 );
-                                addschool12det.setCompoundDrawablePadding( 5 );
-                                addschool12det.setText( "Added" );
+                                        addschool12det.setCompoundDrawablesWithIntrinsicBounds( R.drawable.ic_check_green_24dp, 0, 0, 0 );
+                                        addschool12det.setCompoundDrawablePadding( 5 );
+                                        addschool12det.setText( "Added" );
 
+                                    } else {
+                                        percentage12.setError( "Empty" );
+                                    }
+                                } else {
+                                    schlendy12.setError( "Empty" );
+                                }
                             } else {
-                                percentage12.setError( "Empty" );
+                                schlstarty12.setError( "Empty" );
                             }
                         } else {
-                            schlendy12.setError( "Empty" );
+                            schoolname12.setError( "Empty" );
                         }
-                    } else {
-                        schlstarty12.setError( "Empty" );
                     }
-                } else {
-                    schoolname12.setError( "Empty" );
-                }
-            }
-                else
+                    else
 
-            {
-                board1.setError( "Empty" );
-            }
-        }
+                    {
+                        board1.setError( "Empty" );
+                    }
+                }
                 else {
                     stream1.setError("Empty");
                 }
@@ -1512,7 +1512,7 @@ max++;
                 addnewexpbtn.setVisibility(View.GONE);
                 spinYear6.setVisibility( View.VISIBLE );
                 spinYear7.setVisibility( View.VISIBLE );
-            //    expcount.setVisibility(View.GONE);
+                //    expcount.setVisibility(View.GONE);
             }
         });
         addnewexpbtn2.setOnClickListener(new View.OnClickListener() {
@@ -1594,19 +1594,19 @@ max++;
                 if (!companyname1.getText().toString().isEmpty()){
 
 
-                                    DatabaseReference databaseReferencecmpexp = FirebaseDatabase.getInstance().getReference().child("Profile").child(FirebaseAuth.getInstance().getCurrentUser().getUid());
-                                    databaseReferencecmpexp.keepSynced(true);
+                    DatabaseReference databaseReferencecmpexp = FirebaseDatabase.getInstance().getReference().child("Profile").child(FirebaseAuth.getInstance().getCurrentUser().getUid());
+                    databaseReferencecmpexp.keepSynced(true);
                     databaseReferencecmpexp.child("cmpskills").child(String.valueOf(maxid)).child("skills").setValue(companyname1.getText().toString());
                     databaseReferencecmpexp.child("cmpskills").child(String.valueOf(maxid)).child("expid").setValue(String.valueOf( maxid ));
                     databaseReferencecmpexp.child("cmpskills").child(String.valueOf(maxid)).child("uid").setValue(String.valueOf( uid ));
-                                    companyname1.setVisibility(View.GONE);
-                                    addexpbtn1.setVisibility(View.GONE);
-                                    updateexpbtn1.setVisibility(View.GONE);
-                                    addnewexpbtn1.setVisibility(View.VISIBLE);
+                    companyname1.setVisibility(View.GONE);
+                    addexpbtn1.setVisibility(View.GONE);
+                    updateexpbtn1.setVisibility(View.GONE);
+                    addnewexpbtn1.setVisibility(View.VISIBLE);
                     Toast.makeText( getApplicationContext(),"Added",Toast.LENGTH_SHORT ).show();
-                                }
+                }
 
-                     else {
+                else {
                     companyname1.setError("Empty");
                 }
             }
@@ -1660,19 +1660,16 @@ max++;
         }
         if(v==submit ){
 
-            int count = count1+count2+count3+count4+count5;
-
-            if(count>3){
 
 
 
 
-                    DatabaseReference databaseReferencepstatus = FirebaseDatabase.getInstance().getReference().child("Users").child(FirebaseAuth.getInstance().getCurrentUser().getUid());
-                    databaseReferencepstatus.keepSynced(true);
-                    databaseReferencepstatus.child("profilestatus").setValue("yes");
-layout_tam.setVisibility( View.GONE );
-next_layout.setVisibility( View.VISIBLE );
-                  //  Intent intent = new Intent( Studentdetail.this, Dashboard_Student.class );
+                DatabaseReference databaseReferencepstatus = FirebaseDatabase.getInstance().getReference().child("Users").child(FirebaseAuth.getInstance().getCurrentUser().getUid());
+                databaseReferencepstatus.keepSynced(true);
+                databaseReferencepstatus.child("profilestatus").setValue("yes");
+                layout_tam.setVisibility( View.GONE );
+                next_layout.setVisibility( View.VISIBLE );
+                //  Intent intent = new Intent( Studentdetail.this, Dashboard_Student.class );
                 //    startActivity( intent );
                 //    finish();
                 okay.setOnClickListener( new View.OnClickListener() {
@@ -1680,18 +1677,15 @@ next_layout.setVisibility( View.VISIBLE );
                     public void onClick(View v) {
 
 
-                        Intent intent = new Intent( Studentdetail.this, Login_Student.class );
+                        Intent intent = new Intent( Check_Act.this, Login_Student.class );
                         finish();
                         startActivity( intent );
 
                     }
                 } );
 
-            }
-            else{
 
-                Toast.makeText(Studentdetail.this,"PLease fill all the required details. If you think it is a mistake, try to add the details again.",Toast.LENGTH_SHORT).show();
-            }
+
         }
 
 

@@ -324,6 +324,10 @@ public class Edit_profile extends AppCompatActivity implements View.OnClickListe
                                         Toast.makeText(Edit_profile.this,"Completed",Toast.LENGTH_SHORT).show();
                                         pb_userimg.setVisibility(View.GONE);
                                         user_img.setVisibility(View.VISIBLE);
+
+                                        DatabaseReference databaseReferencepd = FirebaseDatabase.getInstance().getReference().child( "Users" ).child( FirebaseAuth.getInstance().getCurrentUser().getUid() );
+                                        databaseReferencepd.keepSynced( true );
+                                        databaseReferencepd.child( "logostatus" ).setValue( "yes" );
                                     }
                                 });
                             }

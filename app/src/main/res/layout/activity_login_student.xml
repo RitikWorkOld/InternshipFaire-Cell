@@ -126,6 +126,7 @@
 
 
                     <CheckBox
+                        android:buttonTint="@color/main_color"
                         android:text="Remember me"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -214,8 +215,5 @@
         android:layout_centerInParent="true"
         android:indeterminateDrawable="@drawable/cpb_4"
         android:layout_height="wrap_content" />
-
-
-
 
 </RelativeLayout>

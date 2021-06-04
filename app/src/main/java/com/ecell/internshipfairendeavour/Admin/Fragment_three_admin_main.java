@@ -13,7 +13,7 @@ import com.ecell.internshipfairendeavour.R;
 
 
 public class Fragment_three_admin_main extends Fragment {
-    CardView card1,card3,card4,card5,card6;
+    CardView card1,card3,card4,card5,card6,card7;
 
     public Fragment_three_admin_main() {
         // Required empty public constructor
@@ -38,6 +38,17 @@ public class Fragment_three_admin_main extends Fragment {
         card4=view.findViewById( R.id.card4 );
         card5=view.findViewById( R.id.card5 );
         card6=view.findViewById( R.id.card6 );
+
+        card7 = view.findViewById( R.id.card7 );
+
+        card7.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), Student_Accept.class);
+
+                startActivity( intent );
+            }
+        } );
       
 
         card1.setOnClickListener( new View.OnClickListener() {

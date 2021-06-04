@@ -11,12 +11,13 @@ public class User {
     public String profilestatus;
     public String officialstatus;
 public String  code;
+public String logostatus;
 
     public User(){
 
     }
 
-    public User(String name, String email, String contactn, String uid, String password, String profileimg, String profilestatus, String code, String officialstatus) {
+    public User(String name, String email, String contactn, String uid, String password, String profileimg, String profilestatus, String code, String officialstatus,String logostatus) {
         this.name = name;
         this.email = email;
 this.code=code;
@@ -27,7 +28,16 @@ this.officialstatus = officialstatus;
         this.password = password;
         this.profileimg = profileimg;
         this.profilestatus = profilestatus;
+        this.logostatus = logostatus;
 
+    }
+
+    public String getLogostatus() {
+        return logostatus;
+    }
+
+    public void setLogostatus(String logostatus) {
+        this.logostatus = logostatus;
     }
 
     public String getOfficialstatus() {
