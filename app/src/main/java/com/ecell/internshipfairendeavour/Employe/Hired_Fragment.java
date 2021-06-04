@@ -190,7 +190,7 @@ id=model.getInternid();
             @Override
             public void onClick(View v) {
                 if (!all.isChecked()){
-                    Query query = drinternall.orderByChild("internid_status").equalTo(key+"Rejected");
+                    Query query = drinternall.orderByChild("internid_status").equalTo(key+"Hired");
                     optionsinternall = new FirebaseRecyclerOptions.Builder<applied_intern_md>().setQuery(query,applied_intern_md.class).build();
 
                     adapterinternall = new FirebaseRecyclerAdapter<applied_intern_md, Application_vh>(optionsinternall) {
@@ -298,7 +298,7 @@ id=model.getInternid();
                     statusStudents.clear();
                     statusStudents.addAll( all_noti );
 
-                    Query query = drinternall.orderByChild("internid_status").equalTo(key+"Rejected");
+                    Query query = drinternall.orderByChild("internid_status").equalTo(key+"Hired");
                     optionsinternall = new FirebaseRecyclerOptions.Builder<applied_intern_md>().setQuery(query,applied_intern_md.class).build();
 
                     adapterinternall = new FirebaseRecyclerAdapter<applied_intern_md, Application_vh>(optionsinternall) {
