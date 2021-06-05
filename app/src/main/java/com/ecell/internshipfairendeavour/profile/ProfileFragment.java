@@ -20,6 +20,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.ecell.internshipfairendeavour.Contact_Us;
 import com.ecell.internshipfairendeavour.Login_Student;
 import com.ecell.internshipfairendeavour.ModelandViewholder.addexp1_model;
 import com.ecell.internshipfairendeavour.ModelandViewholder.addexp1_viewholder;
@@ -148,7 +149,8 @@ about = view.findViewById( R.id.about );
 about.setOnClickListener( new View.OnClickListener() {
     @Override
     public void onClick(View v) {
-        Toast.makeText(getActivity(),"Coming Soon...",Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(getActivity(), Contact_Us.class);
+        startActivity(intent);
     }
 } );
         notification_btn.setOnClickListener(new View.OnClickListener() {

@@ -30,6 +30,7 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 
@@ -121,8 +122,8 @@ public class Student_Fragment extends Fragment {
 
             }
         });
-
-        optionsinternall = new FirebaseRecyclerOptions.Builder<User_admin>().setQuery(drinternall,User_admin.class).build();
+        Query query = drinternall.orderByChild("officialstatus").equalTo("yes");
+        optionsinternall = new FirebaseRecyclerOptions.Builder<User_admin>().setQuery(query,User_admin.class).build();
 
         adapterinternall = new FirebaseRecyclerAdapter<User_admin, Student_vh>(optionsinternall) {
             @Override
@@ -219,7 +220,8 @@ public class Student_Fragment extends Fragment {
             @Override
             public void onClick(View v) {
                 if (!all.isChecked()){
-                    optionsinternall = new FirebaseRecyclerOptions.Builder<User_admin>().setQuery(drinternall,User_admin.class).build();
+                    Query query = drinternall.orderByChild("officialstatus").equalTo("yes");
+                    optionsinternall = new FirebaseRecyclerOptions.Builder<User_admin>().setQuery(query,User_admin.class).build();
 
                     adapterinternall = new FirebaseRecyclerAdapter<User_admin, Student_vh>(optionsinternall) {
                         @Override
@@ -324,7 +326,9 @@ public class Student_Fragment extends Fragment {
                     selected_numbers.clear();
                     selected_numbers.addAll(all_numbers);
 
-                    optionsinternall = new FirebaseRecyclerOptions.Builder<User_admin>().setQuery(drinternall,User_admin.class).build();
+
+                    Query query = drinternall.orderByChild("officialstatus").equalTo("yes");
+                    optionsinternall = new FirebaseRecyclerOptions.Builder<User_admin>().setQuery(query,User_admin.class).build();
 
                     adapterinternall = new FirebaseRecyclerAdapter<User_admin, Student_vh>(optionsinternall) {
                         @Override

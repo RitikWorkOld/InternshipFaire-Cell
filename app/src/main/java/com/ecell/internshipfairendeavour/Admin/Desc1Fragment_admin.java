@@ -1,4 +1,4 @@
-package com.social.socialdukan_employer.Admin;
+package com.ecell.internshipfairendeavour.Admin;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;

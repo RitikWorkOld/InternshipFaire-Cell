@@ -265,7 +265,7 @@ public class Reg_Student extends AppCompatActivity implements View.OnClickListen
                 if (task.isSuccessful()) {
                     Toast.makeText(Reg_Student.this, "Registration Successful", Toast.LENGTH_LONG).show();
                     String uid = FirebaseAuth.getInstance().getUid();
-                    User user=new User(fname,email,number,uid,pwd,null,"no","91","Not Checked","no",endvr);
+                    User user=new User(fname,email,number,uid,pwd,null,"no","Not Checked","91","no",endvr);
 
                     FirebaseDatabase.getInstance().getReference("Users")
                             .child(FirebaseAuth.getInstance().getCurrentUser().getUid())

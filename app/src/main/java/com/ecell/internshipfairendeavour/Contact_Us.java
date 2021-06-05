@@ -32,7 +32,7 @@ public class Contact_Us extends AppCompatActivity {
         Intent intent = new Intent(Intent.ACTION_SENDTO);
         intent.setData( Uri.parse("mailto:")); // only email apps should handle this
 
-        intent.putExtra( Intent.EXTRA_EMAIL, new String[]{"ecell@kiet.edu"  });
+        intent.putExtra( Intent.EXTRA_EMAIL, new String[]{"harshmishra1399@gmail.com"  });
 
         if (intent.resolveActivity(getPackageManager()) != null) {
             startActivity(intent);
@@ -46,7 +46,7 @@ public class Contact_Us extends AppCompatActivity {
 
                 Intent intent = new Intent(Intent.ACTION_SENDTO);
                 intent.setData( Uri.parse("mailto:")); // only email apps should handle this
-                intent.putExtra( Intent.EXTRA_EMAIL, new String[]{"socialdukan@gmail.com" });
+                intent.putExtra( Intent.EXTRA_EMAIL, new String[]{"ecell@kiet.edu" });
 
 
                 if (intent.resolveActivity(getPackageManager()) != null) {
@@ -73,7 +73,7 @@ public class Contact_Us extends AppCompatActivity {
             public void onClick(View v) {
 
                 Intent i = new Intent(Intent.ACTION_DIAL);
-                i.setData(Uri.parse("tel:+91 82727084770"));
+                i.setData(Uri.parse("tel:+91 8601613337"));
 /*
 Intent i = new Intent(Intent.ACTION_DIAL);
 i.setData(Uri.parse("tel:0612312312"));

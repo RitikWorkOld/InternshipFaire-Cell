@@ -31,6 +31,8 @@
         <activity android:name=".Admin.Profiles_Fragment" />
         <activity android:name=".Admin.FragThree" />
         <activity android:name=".Admin.Intern_Fragment" />
+        <activity android:name=".Contact_Us"
+            android:theme="@style/Theme.InternshipPopup" />
         <activity
             android:name=".Employe.Profile_activity1"
             android:theme="@style/Theme.InternshipPopup" />
@@ -63,9 +65,6 @@
         <activity android:name=".Employe.Student_detail_emp" />
         <activity
             android:name=".Change_Pass"
-            android:theme="@style/Theme.InternshipPopup" />
-        <activity
-            android:name=".Contact_Us"
             android:theme="@style/Theme.InternshipPopup" />
         <activity android:name=".Employe.edit_prof_emp" />
         <activity android:name=".Employe.Dashboard_emp" />

@@ -87,6 +87,8 @@ public class Student_detail_status extends AppCompatActivity {
         inter_btn=findViewById( R.id.inter_btn );
         dip_btn=findViewById( R.id.dip_btn );
         pb_userimg =findViewById(R.id.pb_userimg);
+        pb_userimg.setVisibility(View.GONE);
+
         clg_btn=findViewById( R.id.college_btn );
         final RelativeLayout eddet1 = (RelativeLayout)findViewById(R.id.layout_eddet1);
         final RelativeLayout layout_profile2 = (RelativeLayout)findViewById(R.id.ed_detail1);
@@ -107,6 +109,7 @@ public class Student_detail_status extends AppCompatActivity {
             public void onClick(View v) {
                 DatabaseReference rootRef = FirebaseDatabase.getInstance().getReference();
                 rootRef.child( "Users" ).child( userid ).child( "officialstatus" ).setValue( "yes" );
+                finish();
             }
         } );
         rej.setOnClickListener( new View.OnClickListener() {
@@ -114,6 +117,7 @@ public class Student_detail_status extends AppCompatActivity {
             public void onClick(View v) {
                 DatabaseReference rootRef = FirebaseDatabase.getInstance().getReference();
                 rootRef.child( "Users" ).child( userid ).child( "officialstatus" ).setValue( "no" );
+                finish();
             }
         } );
 

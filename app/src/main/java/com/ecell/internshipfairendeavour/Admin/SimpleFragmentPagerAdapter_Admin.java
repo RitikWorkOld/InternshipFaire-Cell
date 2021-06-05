@@ -34,7 +34,7 @@ public class SimpleFragmentPagerAdapter_Admin extends FragmentStatePagerAdapter 
                 tab1.setArguments(bundle1);
                 return tab1;
             case 1:
-                com.social.socialdukan_employer.Admin.Desc1Fragment_admin tab2 = new com.social.socialdukan_employer.Admin.Desc1Fragment_admin();
+              Desc1Fragment_admin tab2 = new Desc1Fragment_admin();
                 Bundle bundle2 = new Bundle();
                 bundle2.putString("key",key);
                 tab2.setArguments(bundle2);

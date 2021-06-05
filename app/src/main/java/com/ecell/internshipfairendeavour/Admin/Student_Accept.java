@@ -84,8 +84,8 @@ public class Student_Accept extends AppCompatActivity {
         drinternall = FirebaseDatabase.getInstance().getReference().child("Users");
 
         drinternall.keepSynced(true);
-        Query query = drinternall.orderByChild("officialstatus").equalTo("Not Checked");
-        optionsinternall = new FirebaseRecyclerOptions.Builder<User_admin>().setQuery(query, User_admin.class).build();
+        Query query1 = drinternall.orderByChild("officialstatus").equalTo("Not Checked");
+        optionsinternall = new FirebaseRecyclerOptions.Builder<User_admin>().setQuery(query1, User_admin.class).build();
 
         adapterinternall = new FirebaseRecyclerAdapter<User_admin, Student_vh>(optionsinternall) {
             @Override

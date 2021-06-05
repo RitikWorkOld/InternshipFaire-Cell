@@ -15,6 +15,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 
+import com.ecell.internshipfairendeavour.Contact_Us;
 import com.ecell.internshipfairendeavour.Employe.Model.Employe;
 import com.ecell.internshipfairendeavour.Login_Employe;
 import com.ecell.internshipfairendeavour.Notifications.Notifications;
@@ -105,6 +106,8 @@ public class Fragment_three extends Fragment {
             @Override
             public void onClick(View v) {
              //   Intent intent = new Intent(getActivity(), about_us.class);
+                Intent intent = new Intent(getActivity(), Contact_Us.class);
+                startActivity(intent);
 
              //   startActivity(intent);
             }
