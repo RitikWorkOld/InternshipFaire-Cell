@@ -11,7 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.InternshipFairECell">
-        <activity android:name=".Admin.Student_detail_status"></activity>
+        <activity android:name=".Admin.Student_detail_status" />
         <activity android:name=".Admin.Student_Accept" />
         <activity android:name=".Check_Act" />
         <activity android:name=".Thankyou_Act" />

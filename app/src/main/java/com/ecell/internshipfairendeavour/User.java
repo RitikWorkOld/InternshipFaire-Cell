@@ -13,12 +13,13 @@ public class User {
     public String code;
     public String logostatus;
     public String endvrid;
+    public int noi;
 
     public User(){
 
     }
 
-    public User(String name, String email, String contactn, String uid, String password, String profileimg, String profilestatus, String officialstatus, String code, String logostatus, String endvrid) {
+    public User(String name, String email, String contactn, String uid, String password, String profileimg, String profilestatus, String officialstatus, String code, String logostatus, String endvrid,int noi) {
         this.name = name;
         this.email = email;
         this.contactn = contactn;
@@ -30,6 +31,15 @@ public class User {
         this.code = code;
         this.logostatus = logostatus;
         this.endvrid = endvrid;
+        this.noi = noi;
+    }
+
+    public int getNoi() {
+        return noi;
+    }
+
+    public void setNoi(int noi) {
+        this.noi = noi;
     }
 
     public String getLogostatus() {

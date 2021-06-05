@@ -10,6 +10,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,6 +21,7 @@ import androidx.viewpager.widget.ViewPager;
 import com.ecell.internshipfairendeavour.Internship.model.internall_md;
 import com.ecell.internshipfairendeavour.R;
 import com.ecell.internshipfairendeavour.SimpleFragmentPagerAdapter;
+import com.ecell.internshipfairendeavour.User;
 import com.google.android.material.tabs.TabLayout;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -143,9 +145,39 @@ Log.d("HAS","KEY:"+key);
         apply_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(InternDetail.this, ApplyIntern.class);
-                intent.putExtra("key",key);
-                startActivity(intent);
+
+
+                DatabaseReference dbhelper1 = FirebaseDatabase.getInstance().getReference().child("Users");
+                dbhelper1.keepSynced(true);
+                dbhelper1.orderByChild("uid").equalTo(FirebaseAuth.getInstance().getCurrentUser().getUid()).addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        for (DataSnapshot dataSnapshot1: dataSnapshot.getChildren()){
+                            User user = dataSnapshot1.getValue(User.class);
+
+                            int noi = user.getNoi();
+
+                            if(noi == 0 || noi ==1 ){
+
+                                Intent intent = new Intent(InternDetail.this, ApplyIntern.class);
+                                intent.putExtra("key",key);
+                                startActivity(intent);
+
+                            }
+
+                            else{
+                                Toast.makeText(getApplicationContext(),"You have already applied for the maximum companies",Toast.LENGTH_LONG).show();
+                            }
+
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                    }
+                });
+
             }
         });
 

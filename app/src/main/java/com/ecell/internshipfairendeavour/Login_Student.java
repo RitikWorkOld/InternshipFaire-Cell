@@ -194,7 +194,7 @@ String lstatus;
 
                                             FirebaseUser firebaseUser=mFirebaseAuth.getCurrentUser();
 
-                                            if (lstatus.equals( "no" ) && pstatus.equals("yes") ||lstatus.equals( "no" ) && pstatus.equals("no")  ){
+                                            if (lstatus.equals( "no" ) && pstatus.equals("yes") && ostatus.equals("Not Checked"  ) ||lstatus.equals( "no" ) && pstatus.equals("no") && ostatus.equals( "Not Checked"  )  ){
                                                 Log.d("HEL","msg= yha agya");
                                                 progressBars.setVisibility(View.GONE);
                                                 Intent intent = new Intent(Login_Student.this, Studentdetail.class);
@@ -237,7 +237,7 @@ String lstatus;
                                                 finish();
                                             }
 
-                                            if(ostatus.equals( "no" ) && pstatus.equals( "yes" )) {
+                                            if(ostatus.equals( "no" )) {
                                                 Log.d("HEL","msg= yha agya");
                                                 progressBars.setVisibility(View.GONE);
                                                 Toast.makeText(Login_Student.this, "Your profile has been rejected,feel free to contact us at ecellwebtechnical@gmail.com ", Toast.LENGTH_LONG).show();
