@@ -30,7 +30,7 @@ import java.util.regex.Pattern;
 
 public class Reg_Student extends AppCompatActivity implements View.OnClickListener {
     Button btnSignIn;
-    private EditText emailId,password,number1,fname1;
+    private EditText emailId,password,number1,fname1,endvrid;
     FirebaseAuth mFirebaseAuth;
 
 
@@ -63,6 +63,7 @@ public class Reg_Student extends AppCompatActivity implements View.OnClickListen
         password = findViewById(R.id.password);
         fname1 = findViewById(R.id.fname);
         number1 = findViewById(R.id.cnumber);
+        endvrid = findViewById(R.id.endvr);
 
 
 
@@ -83,6 +84,7 @@ public class Reg_Student extends AppCompatActivity implements View.OnClickListen
                     password.setText( "" );
                     fname1.setText( "" );
                     number1.setText( "" );
+                    endvrid.setText("");
                     overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out);
                     finish();
                 }
@@ -156,9 +158,8 @@ public class Reg_Student extends AppCompatActivity implements View.OnClickListen
         final String email=emailId.getText().toString().trim();
         final String pwd=password.getText().toString().trim();
         final String fname=fname1.getText().toString().trim();
-
         final String number=number1.getText().toString().trim();
-
+        final String endvr=endvrid.getText().toString().trim();
 
         if(fname.isEmpty()){
             fname1.setError(getString(R.string.input_error_name));
@@ -168,6 +169,21 @@ public class Reg_Student extends AppCompatActivity implements View.OnClickListen
         else if(email.isEmpty()){
             emailId.setError(getString(R.string.input_error_email));
             emailId.requestFocus();
+            return false;
+        }
+        else if (endvr.isEmpty()){
+            endvrid.setError("Endeavour ID Required!");
+            endvrid.requestFocus();
+            return false;
+        }
+        else if (endvr.length()!=19){
+            endvrid.setError("Invalid EndeavourID!");
+            endvrid.requestFocus();
+            return false;
+        }
+        else if (validateEndvr(endvr)){
+            endvrid.setError("Invalid EndeavourID!");
+            endvrid.requestFocus();
             return false;
         }
         else if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
@@ -189,8 +205,6 @@ public class Reg_Student extends AppCompatActivity implements View.OnClickListen
             return false;
         }
 
-
-
         else if(number.isEmpty()){
             number1.setError("Please Enter Your Number");
             number1.requestFocus();
@@ -202,18 +216,42 @@ public class Reg_Student extends AppCompatActivity implements View.OnClickListen
             number1.requestFocus();
             return false;
         }
-
-
         else {
             return true;
         }
 
     }
+
+    private boolean validateEndvr(String endvr) {
+        String regex = "[0-9]+";
+        Pattern p = Pattern.compile(regex);
+
+        String partOne = endvr.substring(0,9);
+        String partTwo = endvr.substring(10);
+
+        if (partOne.equals("ENDVR2021")){
+            if (!Patterns.PHONE.matcher(partTwo).matches()){
+                endvrid.setError("Invalid EndeavourID!");
+                endvrid.requestFocus();
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+        else {
+            endvrid.setError("Invalid EndeavourID!");
+            endvrid.requestFocus();
+            return true;
+        }
+    }
+
     private void registeruser(){
         final String email = emailId.getText().toString().trim();
         final String pwd = password.getText().toString().trim();
         final String fname = fname1.getText().toString().trim();
         final String number = number1.getText().toString().trim();
+        final String endvr = endvrid.getText().toString().trim();
     //    final String cd = ccp.getSelectedCountryCode();
 
 
@@ -227,7 +265,7 @@ public class Reg_Student extends AppCompatActivity implements View.OnClickListen
                 if (task.isSuccessful()) {
                     Toast.makeText(Reg_Student.this, "Registration Successful", Toast.LENGTH_LONG).show();
                     String uid = FirebaseAuth.getInstance().getUid();
-                    User user=new User(fname,email,number,uid,pwd,null,"no","91","Not Checked","no");
+                    User user=new User(fname,email,number,uid,pwd,null,"no","91","Not Checked","no",endvr);
 
                     FirebaseDatabase.getInstance().getReference("Users")
                             .child(FirebaseAuth.getInstance().getCurrentUser().getUid())

@@ -103,9 +103,6 @@ public class  Login_Employe extends AppCompatActivity implements TextWatcher,
         else
             rem_userpass.setChecked(false);
 
-
-
-
         mFirebaseAuth = FirebaseAuth.getInstance();
 
         emailId = findViewById( R.id.Lemail );

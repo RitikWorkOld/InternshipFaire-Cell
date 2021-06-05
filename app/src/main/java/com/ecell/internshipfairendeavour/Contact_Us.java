@@ -25,7 +25,7 @@ public class Contact_Us extends AppCompatActivity {
         email1 = findViewById( R.id.email1 );
         email2 = findViewById( R.id.email2 );
         email3 = findViewById( R.id.email3 );
-email1.setOnClickListener( new View.OnClickListener() {
+        email1.setOnClickListener( new View.OnClickListener() {
     @Override
     public void onClick(View v) {
 

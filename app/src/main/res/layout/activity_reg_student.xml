@@ -118,6 +118,27 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
                         android:fontFamily="@font/montserrat"
+                        android:text="Endeavour ID"
+                        android:textColor="#000"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/endvr"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:fontFamily="@font/montserrat"
+                        android:hint="Your Endeavour ID"
+                        android:textColor="#CD4B4B"
+                        android:textColorHint="#808080"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/montserrat"
                         android:text="Password"
                         android:textColor="#000"
                         android:textSize="16sp" />

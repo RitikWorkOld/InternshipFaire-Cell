@@ -10,26 +10,26 @@ public class User {
     public String profileimg;
     public String profilestatus;
     public String officialstatus;
-public String  code;
-public String logostatus;
+    public String code;
+    public String logostatus;
+    public String endvrid;
 
     public User(){
 
     }
 
-    public User(String name, String email, String contactn, String uid, String password, String profileimg, String profilestatus, String code, String officialstatus,String logostatus) {
+    public User(String name, String email, String contactn, String uid, String password, String profileimg, String profilestatus, String officialstatus, String code, String logostatus, String endvrid) {
         this.name = name;
         this.email = email;
-this.code=code;
         this.contactn = contactn;
-this.officialstatus = officialstatus;
         this.uid = uid;
-
         this.password = password;
         this.profileimg = profileimg;
         this.profilestatus = profilestatus;
+        this.officialstatus = officialstatus;
+        this.code = code;
         this.logostatus = logostatus;
-
+        this.endvrid = endvrid;
     }
 
     public String getLogostatus() {
@@ -115,5 +115,13 @@ this.officialstatus = officialstatus;
 
     public void setProfilestatus(String profilestatus) {
         this.profilestatus = profilestatus;
+    }
+
+    public String getEndvrid() {
+        return endvrid;
+    }
+
+    public void setEndvrid(String endvrid) {
+        this.endvrid = endvrid;
     }
 }

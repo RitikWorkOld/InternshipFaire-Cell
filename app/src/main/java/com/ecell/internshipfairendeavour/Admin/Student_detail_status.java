@@ -235,7 +235,6 @@ public class Student_detail_status extends AppCompatActivity {
                 holder.companyrolelayout.setText( model.getCompanyrole() );
                 holder.companybenefitslayout.setText( model.getCompanybenefits() );
 
-
                 holder.companynamelayout.setOnClickListener( new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
