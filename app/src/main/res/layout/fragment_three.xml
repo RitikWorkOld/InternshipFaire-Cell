@@ -32,7 +32,13 @@
                     android:layout_width="match_parent"
                     android:id="@+id/layout_this"
                     android:layout_height="match_parent">
-
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_marginTop="-4dp"
+                        android:layout_height="60dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_alignParentStart="true"
+                        android:src="@drawable/ecell"/>
                     <ImageView
                         android:id="@+id/iv_notification_btn"
                         android:layout_width="48dp"

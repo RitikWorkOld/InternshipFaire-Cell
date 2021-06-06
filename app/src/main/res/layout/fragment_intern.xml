@@ -20,7 +20,13 @@
             android:id="@+id/notif"
             android:layout_height="wrap_content">
 
-
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_marginTop="-4dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="8dp"
+                android:layout_alignParentStart="true"
+                android:src="@drawable/ecell"/>
             <ImageView
                 android:elevation="6dp"
                 android:id="@+id/iv_notification_btn"

@@ -24,6 +24,13 @@
         android:text="Post For :"
         android:textColor="@color/white"/>
     <ImageView
+        android:layout_width="60dp"
+        android:layout_marginTop="-8dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="8dp"
+        android:layout_alignParentStart="true"
+        android:src="@drawable/ecell"/>
+    <ImageView
         android:id="@+id/iv_notification_btn"
         android:layout_width="48dp"
         android:layout_height="48dp"
@@ -849,7 +856,7 @@
 
                                 android:layout_marginLeft="16dp"
                                 android:layout_width="wrap_content"
-                                android:text="Question 1 will be asked to every applicant by default.If you wish, you may ask two more customized questions"
+                                android:text="Question 1 and 2 will be asked to every applicant by default.If you wish, you may ask one more customized questions"
                                 android:textSize="18sp"
                                 android:layout_marginTop="8dp"
                                 android:textColor="#808080"
@@ -858,6 +865,7 @@
                                 />
                             <LinearLayout
                                 android:layout_width="wrap_content"
+                                android:orientation="vertical"
                                 android:layout_height="wrap_content">
                                 <TextView
 
@@ -870,6 +878,19 @@
                                     android:layout_height="wrap_content"
 
                                     />
+                                <TextView
+
+                                    android:layout_marginLeft="16dp"
+                                    android:layout_width="wrap_content"
+                                    android:text="Question 2: Provide the resume link (google doc)"
+                                    android:textSize="18sp"
+                                    android:layout_marginTop="8dp"
+                                    android:textColor="@color/purple_700"
+                                    android:layout_height="wrap_content"
+
+                                    />
+
+
 
 
                             </LinearLayout>
@@ -908,6 +929,7 @@
                                 android:layout_width="wrap_content"
                                 android:text=" + Add another question"
                                 android:textSize="18sp"
+                                android:visibility="gone"
                                 android:id="@+id/anoth_que"
                                 android:layout_marginTop="8dp"
                                 android:textColor="#3F51B5"

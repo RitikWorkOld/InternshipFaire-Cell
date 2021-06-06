@@ -49,7 +49,7 @@ public class Student_detail_status extends AppCompatActivity {
     FirebaseRecyclerOptions<addexp_model> optionsexp;
     private FirebaseRecyclerAdapter<addexp_model, addexp_viewholder> adapterexp;
     String userid,cmpid,key;
-    private TextView user_ph;
+    private TextView user_ph,endvrid;
     private TextView name_user;
     private TextView user_email;
     private DatabaseReference reff;
@@ -70,7 +70,7 @@ public class Student_detail_status extends AppCompatActivity {
         address = findViewById( R.id.add_text );
         dob =findViewById( R.id.dob_text );
         imageuser =findViewById(R.id.image_user);
-
+endvrid=findViewById( R.id.endv_id );
         acc = findViewById( R.id.acc );
         rej = findViewById( R.id.rej );
 
@@ -131,6 +131,8 @@ public class Student_detail_status extends AppCompatActivity {
 
                     name_user.setText(user.name);
                     user_email.setText(user.email);
+                    endvrid.setText( user.endvrid );
+                    
                     String code=user.getCode();
                     if(user.code!=null){
                         user_ph.setText("(+"+code+")"+ user.getContactn() );

@@ -83,7 +83,7 @@ private Button matri_btn,inter_btn,dip_btn,clg_btn;
         // Required empty public constructor
     }
 
-    private TextView dob,address,occ,wa_no;
+    private TextView dob,address,occ,wa_no,endv_id;
     private DatabaseReference reff;
 private TextView user_ph;
     private TextView name_user;
@@ -103,6 +103,7 @@ private TextView user_ph;
         final View view = inflater.inflate( R.layout.fragment_profile, container, false );
         notification_btn = (ImageView) view.findViewById(R.id.iv_notification_btn);
 
+        endv_id = view.findViewById( R.id.endv_id );
         dob = view.findViewById( R.id.dob_text );
         address = view.findViewById( R.id.add_text );
         occ = view.findViewById( R.id.curr_occ_text );
@@ -535,6 +536,7 @@ Log.d("HAS","ONE");
 
                     name_user.setText(user.name);
                     user_email.setText(user.email);
+                    endv_id.setText( user.endvrid );
                     String code=user.getCode();
                     if(user.code!=null){
                         user_ph.setText("(+"+code+")"+ user.getContactn() );

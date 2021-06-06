@@ -330,7 +330,7 @@ name=employe.getName();
                                                         databaseReference_resp.child( "ctext2" ).setValue( "yes" );
                                                         databaseReference_resp.child( "ctext3" ).setValue( "yes" );
                                                         databaseReference_resp.child( "worktime" ).setValue( "2-3 hour/day" );
-                                                        databaseReference_resp.child("ques1").setValue( "Q2. "+que1.getText().toString());
+                                                        databaseReference_resp.child("ques1").setValue( "Q2. "+"Provide the resume link (google doc)");
                                                         databaseReference_resp.child("ques2").setValue( "Q3. "+que2.getText().toString());
                                                         databaseReference_resp.child("id_status").setValue("Not Checked" );
                                                         databaseReference_resp.child("admin_status").setValue("Not Checked" );
