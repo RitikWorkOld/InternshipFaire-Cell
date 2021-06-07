@@ -22,6 +22,7 @@ import com.google.firebase.database.ValueEventListener;
 public class Profile_activity2 extends AppCompatActivity {
 TextView schoolname,startyear,endyear,board,percentage,stream;
     DatabaseReference reff;
+    String userid;
     ImageView cross_btn;
     Button okay_btn;
     @Override
@@ -36,6 +37,7 @@ TextView schoolname,startyear,endyear,board,percentage,stream;
         okay_btn=findViewById( R.id.okay );
         percentage=findViewById( R.id.percentage12 );
         stream=findViewById( R.id.stream );
+        userid= getIntent().getStringExtra("userid");
         cross_btn.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View v) {

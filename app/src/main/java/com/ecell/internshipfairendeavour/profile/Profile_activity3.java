@@ -24,6 +24,7 @@ public class Profile_activity3 extends AppCompatActivity {
     DatabaseReference reff;
     ImageView cross_btn;
     Button okay_btn;
+    String userid;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate( savedInstanceState );
@@ -33,6 +34,7 @@ public class Profile_activity3 extends AppCompatActivity {
         okay_btn=findViewById( R.id.okay );
         coursename=findViewById( R.id.course_name );
         percentage=findViewById( R.id.percentage_dip );
+        userid= getIntent().getStringExtra("userid");
         cross_btn.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View v) {

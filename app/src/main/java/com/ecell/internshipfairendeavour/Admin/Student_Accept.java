@@ -169,6 +169,7 @@ public class Student_Accept extends AppCompatActivity {
                         Intent intent = new Intent(Student_Accept.this, Student_detail_status.class);
 
                         intent.putExtra( "userid",model.getUid() );
+                        Toast.makeText( getApplicationContext(),model.getUid(),Toast.LENGTH_LONG ).show();
 
                         startActivity( intent );
                     }

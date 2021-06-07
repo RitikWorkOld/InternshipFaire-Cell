@@ -67,6 +67,7 @@ public class Student_detail_status extends AppCompatActivity {
         super.onCreate( savedInstanceState );
         getWindow().setFlags( WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView( R.layout.activity_student_detail_status );
+        userid= getIntent().getStringExtra("userid");
         address = findViewById( R.id.add_text );
         dob =findViewById( R.id.dob_text );
         imageuser =findViewById(R.id.image_user);
@@ -75,10 +76,12 @@ endvrid=findViewById( R.id.endv_id );
         rej = findViewById( R.id.rej );
 
 
-        name_user = findViewById(R.id.name_user);
-        user_email = findViewById(R.id.user_email);
-        user_ph=findViewById( R.id.user_ph );
-        userid= getIntent().getStringExtra("userid");
+        name_user = findViewById(R.id.nm);
+        user_email = findViewById(R.id.em);
+        user_ph=findViewById( R.id.ph );
+        endvrid= findViewById( R.id.endid );
+
+
         occ = findViewById( R.id.curr_occ_text );
         view1=findViewById( R.id.layout_test1 );
         view2=findViewById( R.id.layout_test2 );
@@ -121,62 +124,7 @@ endvrid=findViewById( R.id.endv_id );
             }
         } );
 
-        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference().child("Users");
-        databaseReference.keepSynced(true);
-        databaseReference.orderByChild("uid").equalTo(FirebaseAuth.getInstance().getCurrentUser().getUid()).addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                for (DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()){
-                    User user = dataSnapshot1.getValue(User.class);
 
-                    name_user.setText(user.name);
-                    user_email.setText(user.email);
-                    endvrid.setText( user.endvrid );
-                    
-                    String code=user.getCode();
-                    if(user.code!=null){
-                        user_ph.setText("(+"+code+")"+ user.getContactn() );
-                    }
-                    else{
-                        user_ph.setText("(+91)"+ user.getContactn() );
-                    }
-                    //  user_ph.setText( "+91"+user.contactn );
-                }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-        });
-
-
-        final DatabaseReference databaseReferencemain = FirebaseDatabase.getInstance().getReference().child("Users");
-        databaseReferencemain.keepSynced(true);
-        databaseReferencemain.orderByChild("uid").equalTo( FirebaseAuth.getInstance().getCurrentUser().getUid()).addValueEventListener( new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                for (DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()){
-                    User user = dataSnapshot1.getValue(User.class);
-                    if (user.profileimg!=null){
-
-                        Picasso.get().load(user.getProfileimg()).resize(400,400).into(imageuser);
-
-                    }
-                    else {
-                        imageuser.setImageResource(R.drawable.user);
-
-                    }
-                    pb_userimg.setVisibility(View.GONE);
-
-                }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-        });
 
         reff= FirebaseDatabase.getInstance().getReference().child( "Users" );
         reff.keepSynced(true);
@@ -199,6 +147,45 @@ endvrid=findViewById( R.id.endv_id );
 
             }
         } );
+        DatabaseReference databaseReference1 = FirebaseDatabase.getInstance().getReference().child("Users");
+        databaseReference1.keepSynced(true);
+        databaseReference1.orderByChild("uid").equalTo(userid).addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                for (DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()){
+                    User user = dataSnapshot1.getValue(User.class);
+
+                    assert user != null;
+                    name_user.setText(user.getName());
+                    user_email.setText(user.getEmail());
+                    endvrid.setText( user.getEndvrid() );
+
+                    String code=user.getCode();
+                    if(user.code!=null){
+                        user_ph.setText("(+"+code+")"+ user.getContactn() );
+                    }
+                    else{
+                        user_ph.setText("(+91)"+ user.getContactn() );
+                    }
+                    //  user_ph.setText( "+91"+user.contactn );
+                    if (user.profileimg!=null){
+
+                        Picasso.get().load(user.getProfileimg()).resize(400,400).into(imageuser);
+
+                    }
+                    else {
+                        imageuser.setImageResource(R.drawable.user);
+
+                    }
+                    pb_userimg.setVisibility(View.GONE);
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
 
         reff=FirebaseDatabase.getInstance().getReference().child( "Profile" ).child(userid);
         reff.keepSynced(true);

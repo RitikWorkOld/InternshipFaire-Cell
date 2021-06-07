@@ -76,6 +76,17 @@ android:layout_below="@+id/heading"
                     android:textSize="20sp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
+                <TextView
+                    android:layout_marginBottom="10dp"
+                    android:layout_below="@+id/ques_3"
+                    android:id="@+id/ques_4"
+                    android:fontFamily="@font/montserrat"
+                    android:text="Question4"
+                    android:textColor="@color/purple_200"
+                    android:layout_marginTop="24dp"
+                    android:textSize="20sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
 
             </RelativeLayout>
             <TextView

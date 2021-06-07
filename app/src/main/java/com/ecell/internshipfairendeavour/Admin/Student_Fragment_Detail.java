@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -44,7 +45,7 @@ import com.squareup.picasso.Picasso;
 
 public class Student_Fragment_Detail extends AppCompatActivity {
     private Button matri_btn,inter_btn,dip_btn,clg_btn;
-    TextView ques1,ques2,ques3;
+    TextView ques1,ques2,ques3,ques4;
     ImageView user_img;
     private FirebaseRecyclerAdapter<addexp1_model, addexp1_viewholder>adapterexp1;
     private FirebaseRecyclerOptions<addexp1_model> optionsexp1;
@@ -64,6 +65,7 @@ public class Student_Fragment_Detail extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate( savedInstanceState );
         setContentView( R.layout.activity_student__fragment__detail );
+        userid= getIntent().getStringExtra("userid");
         dob =findViewById( R.id.dob_text );
 
         address = findViewById( R.id.add_text );
@@ -77,6 +79,7 @@ public class Student_Fragment_Detail extends AppCompatActivity {
         ques1=findViewById( R.id.ques_1 );
         ques2=findViewById( R.id.ques_2 );
         ques3=findViewById( R.id.ques_3 );
+        ques4=findViewById( R.id.ques_4 );
         view1=findViewById( R.id.layout_test1 );
         view2=findViewById( R.id.layout_test2 );
 
@@ -94,7 +97,7 @@ public class Student_Fragment_Detail extends AppCompatActivity {
         rv_exp.showIfEmpty( view1 );
         //  rv_exp.setLayoutManager( new LinearLayoutManager( this ) );
         rv_exp.setLayoutManager( new LinearLayoutManager(  Student_Fragment_Detail.this));
-        userid= getIntent().getStringExtra("userid");
+
         reff=FirebaseDatabase.getInstance().getReference().child( "Profile" ).child(userid);
         reff.keepSynced(true);
         reff.orderByChild("uid").equalTo("per"+ userid).addValueEventListener( new ValueEventListener() {
@@ -298,6 +301,7 @@ rv_exp1.showIfEmpty(  view2);
                         public void onClick(View v) {
                             Intent intent = new Intent(getApplicationContext(), Profile_activity1.class);
                             intent.putExtra( "userid",userid );
+
                             startActivity(intent);
 
                         }
@@ -382,6 +386,7 @@ rv_exp1.showIfEmpty(  view2);
 ques1.setText( bnd_helper.getName() );
                     ques2.setText( bnd_helper.getEmail() );
                     ques3.setText("+91 "+ bnd_helper.getContactn() );
+                    ques4.setText( bnd_helper.getEndvrid() );
                     if (bnd_helper.profileimg!=null){
                         Picasso.get().load(bnd_helper.getProfileimg()).resize( 400,400 ).into(user_img);
                     }
