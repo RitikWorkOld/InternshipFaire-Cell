@@ -36,6 +36,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.messaging.FirebaseMessaging;
 
 public class Login_Student extends AppCompatActivity implements TextWatcher,
         CompoundButton.OnCheckedChangeListener {
@@ -166,6 +167,7 @@ String lstatus;
                                 Toast.makeText( Login_Student.this, "Something went wrong!!", Toast.LENGTH_SHORT ).show();
 
                             } else {
+                                FirebaseMessaging.getInstance().subscribeToTopic("allDevices");
                                 // progressBars.setVisibility(View.GONE);
 
                                 Log.d( ">> NOTWORKING 1", "onComplete: + COME IN LOOP " );

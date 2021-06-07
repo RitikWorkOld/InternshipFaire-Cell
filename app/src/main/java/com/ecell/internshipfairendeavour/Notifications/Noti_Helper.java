@@ -2,55 +2,51 @@ package com.ecell.internshipfairendeavour.Notifications;
 
 public class Noti_Helper {
 
-    String Title;
-    String Desc;
-    String Date;
-    String notiid;
-
+    String title;
+    String body;
+    String date;
+    String id;
 
     public Noti_Helper() {
     }
 
-    public Noti_Helper(String title, String desc, String notiid,  String date) {
-        Title = title;
-        Desc = desc;
-        Date = date;
-        this.notiid = notiid;
-
-
+    public Noti_Helper(String title, String body, String id,  String date) {
+        this.title = title;
+        this.body = body;
+        this.date = date;
+        this.id = id;
     }
 
-
     public String getDate() {
-        return Date;
+        return date;
     }
 
     public void setDate(String date) {
-        Date = date;
+        this.date = date;
     }
 
     public String getTitle() {
-        return Title;
+        return title;
     }
 
     public void setTitle(String title) {
-        Title = title;
+        this.title = title;
     }
 
-    public String getDesc() {
-        return Desc;
+    public String getBody() {
+        return body;
     }
 
-    public void setDesc(String desc) {
-        Desc = desc;
+    public void setBody(String body) {
+        this.body = body;
     }
 
-    public String getNotiid() {
-        return notiid;
+    public String getId() {
+        return id;
     }
 
-    public void setNotiid(String notiid) {
-        this.notiid = notiid;
+    public void setId(String id) {
+        this.id = id;
     }
 
 }

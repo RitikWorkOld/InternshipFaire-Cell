@@ -65,10 +65,8 @@ public class Notifications extends AppCompatActivity {
             protected void onBindViewHolder(@NonNull final Notification_ViewHolder notification_viewHolder, int i, @NonNull final Noti_Helper noti_helper) {
 
                 notification_viewHolder.Title.setText(noti_helper.getTitle());
-                notification_viewHolder.Description.setText(noti_helper.getDesc());
+                notification_viewHolder.Description.setText(noti_helper.getBody());
                 notification_viewHolder.Date.setText(noti_helper.getDate());     //added
-
-                final String notiid = noti_helper.getNotiid();
 
             }
             @NonNull
