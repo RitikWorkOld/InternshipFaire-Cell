@@ -20,6 +20,7 @@ public class Noti_Helper {
 
     }
 
+
     public String getDate() {
         return Date;
     }

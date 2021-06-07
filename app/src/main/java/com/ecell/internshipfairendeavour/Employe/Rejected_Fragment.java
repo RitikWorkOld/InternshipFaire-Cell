@@ -259,6 +259,7 @@ public class Rejected_Fragment extends Fragment {
                                     }
                                     else {
                          //               Intent intent = new Intent( getActivity(), MainActivity.class );
+                                        Toast.makeText( getContext(),"Coming Soon",Toast.LENGTH_LONG ).show();
                                //         intent.putStringArrayListExtra( "uid_noti", statusStudents );
                               //          startActivity( intent );
                                     }
@@ -369,6 +370,7 @@ public class Rejected_Fragment extends Fragment {
                                     }
                                     else {
                                //         Intent intent = new Intent( getActivity(), MainActivity.class );
+                                        Toast.makeText( getContext(),"Coming Soon",Toast.LENGTH_LONG ).show();
                                //         intent.putStringArrayListExtra( "uid_noti", statusStudents );
                                //         startActivity( intent );
                                     }

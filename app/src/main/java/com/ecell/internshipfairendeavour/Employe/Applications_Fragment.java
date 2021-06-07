@@ -265,9 +265,10 @@ id=model.getInternid();
                                         Toast.makeText(getActivity(), "You have not selected any student", Toast.LENGTH_SHORT).show();
                                     }
                                     else {
-                                     //   Intent intent = new Intent( getActivity(), MainActivity.class );
-                               //         intent.putStringArrayListExtra( "uid_noti", statusStudents );
-                             //           startActivity( intent );
+                                //       Intent intent = new Intent( getActivity(), Main_2Activity.class );
+                                //   intent.putStringArrayListExtra( "uid_noti", statusStudents );
+                                        Toast.makeText( getContext(),"Coming Soon",Toast.LENGTH_LONG ).show();
+                            //         startActivity( intent );
                                     }
                                 }
                             } );
@@ -376,6 +377,7 @@ id=model.getInternid();
                                     }
                                     else {
                                    //     Intent intent = new Intent( getActivity(), MainActivity.class );
+                                        Toast.makeText( getContext(),"Coming Soon",Toast.LENGTH_LONG ).show();
                                     ///    intent.putStringArrayListExtra( "uid_noti", statusStudents );
                                 //        startActivity( intent );
                                     }

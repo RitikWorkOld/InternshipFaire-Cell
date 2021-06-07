@@ -31,7 +31,8 @@
         <activity android:name=".Admin.Profiles_Fragment" />
         <activity android:name=".Admin.FragThree" />
         <activity android:name=".Admin.Intern_Fragment" />
-        <activity android:name=".Contact_Us"
+        <activity
+            android:name=".Contact_Us"
             android:theme="@style/Theme.InternshipPopup" />
         <activity
             android:name=".Employe.Profile_activity1"

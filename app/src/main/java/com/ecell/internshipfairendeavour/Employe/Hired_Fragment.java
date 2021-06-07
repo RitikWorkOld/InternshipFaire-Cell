@@ -260,6 +260,7 @@ id=model.getInternid();
                                     }
                                     else {
                                     //    Intent intent = new Intent( getActivity(), MainActivity.class );
+                                        Toast.makeText( getContext(),"Coming Soon",Toast.LENGTH_LONG ).show();
                                    //     intent.putStringArrayListExtra( "uid_noti", statusStudents );
                                    //     startActivity( intent );
                                     }
@@ -370,6 +371,7 @@ id=model.getInternid();
                                     }
                                     else {
                                  //       Intent intent = new Intent( getActivity(), MainActivity.class );
+                                        Toast.makeText( getContext(),"Coming Soon",Toast.LENGTH_LONG ).show();
                                  //       intent.putStringArrayListExtra( "uid_noti", statusStudents );
                                   //      startActivity( intent );
                                     }
