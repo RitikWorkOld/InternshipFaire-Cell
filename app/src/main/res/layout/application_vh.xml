@@ -30,13 +30,12 @@
             <de.hdodenhof.circleimageview.CircleImageView
                 android:layout_width="40dp"
                 android:src="@drawable/user"
-android:id="@+id/icd_cmpimg"
-android:layout_marginStart="4dp"
-
+                android:id="@+id/icd_cmpimg"
+                android:layout_marginStart="4dp"
                 android:layout_height="match_parent"/>
             <LinearLayout
                 android:layout_width="wrap_content"
-android:layout_toEndOf="@+id/icd_cmpimg"
+                android:layout_toEndOf="@+id/icd_cmpimg"
                 android:orientation="vertical"
                 android:id="@+id/layout_lay"
 

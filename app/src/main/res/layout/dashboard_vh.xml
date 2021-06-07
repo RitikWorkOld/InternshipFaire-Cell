@@ -25,7 +25,6 @@
             android:layout_height="74dp">
 
             <ImageView
-                android:scaleType="centerCrop"
                 android:id="@+id/icd_cmpimg"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"/>
