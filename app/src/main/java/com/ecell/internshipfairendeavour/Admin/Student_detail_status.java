@@ -71,7 +71,7 @@ public class Student_detail_status extends AppCompatActivity {
         address = findViewById( R.id.add_text );
         dob =findViewById( R.id.dob_text );
         imageuser =findViewById(R.id.image_user);
-endvrid=findViewById( R.id.endv_id );
+        endvrid=findViewById( R.id.endv_id );
         acc = findViewById( R.id.acc );
         rej = findViewById( R.id.rej );
 
@@ -104,6 +104,7 @@ endvrid=findViewById( R.id.endv_id );
         final RelativeLayout layout_profile4 = (RelativeLayout)findViewById(R.id.pers_detail4);
         BucketRecyclerView rv_exp =findViewById( R.id.rv_exp );
         rv_exp.setHasFixedSize( true );
+        rv_exp.setLayoutManager(new LinearLayoutManager(this));
         rv_exp.showIfEmpty( view1 );
 
 
@@ -213,7 +214,8 @@ endvrid=findViewById( R.id.endv_id );
 
             }
         } );
-        DatabaseReference databaseReferenceexprv = FirebaseDatabase.getInstance().getReference().child( "Profile" ).child( userid).child( "cmpexp" );
+
+        DatabaseReference databaseReferenceexprv = FirebaseDatabase.getInstance().getReference().child( "Profile" ).child(userid).child( "cmpexp" );
         databaseReferenceexprv.keepSynced( true );
 
         optionsexp = new FirebaseRecyclerOptions.Builder<addexp_model>().setQuery( databaseReferenceexprv, addexp_model.class ).build();
@@ -266,10 +268,7 @@ endvrid=findViewById( R.id.endv_id );
 
         BucketRecyclerView rv_exp1 = findViewById( R.id.rv_exp1 );
         rv_exp1.setHasFixedSize(true);
-
-
         rv_exp1.showIfEmpty( view2 );
-
         rv_exp1.setLayoutManager(new LinearLayoutManager(Student_detail_status.this));
 
         DatabaseReference databaseReferenceexprv1 = FirebaseDatabase.getInstance().getReference().child( "Profile" ).child( userid ).child( "cmpskills" );
@@ -314,6 +313,7 @@ endvrid=findViewById( R.id.endv_id );
 
         rv_exp1.setAdapter(adapterexp1);
         adapterexp1.startListening();
+
         layout_profile3.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View v) {

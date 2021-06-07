@@ -13,7 +13,15 @@
             android:textSize="22sp"
             android:layout_height="wrap_content"
             android:textColor="@color/purple_200"
-            android:text="Users"/>
+            android:text="Users: "/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:id="@+id/totalcon"
+            android:layout_marginLeft="4dp"
+            android:textColor="@color/black"
+            android:text=""/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

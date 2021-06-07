@@ -35,13 +35,13 @@ ImageView arrow;
         final FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
         fragmentTransaction.add( R.id.events_container, new Student_Fragment() );
         fragmentTransaction.commit();
-arrow.setOnClickListener( new View.OnClickListener() {
-    @Override
-    public void onClick(View v) {
-        Intent intent= new Intent( getActivity(), AdminWorkArrow.class );
-        startActivity( intent );
-    }
-} );
+        arrow.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent= new Intent( getActivity(), AdminWorkArrow.class );
+                startActivity( intent );
+            }
+        } );
         radioButton_student.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View v) {

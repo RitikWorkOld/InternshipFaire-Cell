@@ -77,7 +77,7 @@ TextView schlstarty10,schlendy10,schlstarty12,schlendy12,collegestart,collegeend
     Button submit,yesbtn,nobtn;
     String name,phno,email,uid;
     RadioButton radioButton_high, radioButton_diploma;
-private String pres_doctor,pres_doctor1,pres_doctor2,pres_doctor3,pres_doctor4,pres_doctor5,pres_doctor6,pres_doctor7;
+    private String pres_doctor,pres_doctor1,pres_doctor2,pres_doctor3,pres_doctor4,pres_doctor5,pres_doctor6,pres_doctor7;
     EditText stream1,board,board1,dipclgname,dipcorsname,dippercentage;
     long maxid,maxid1,maxid2;
     private int max;
@@ -85,7 +85,7 @@ private String pres_doctor,pres_doctor1,pres_doctor2,pres_doctor3,pres_doctor4,p
     private static final int ImageBack = 1;
     StorageReference storageReference;
     ProgressBar pb_userimg;
-int counter=0;
+    int counter=0;
     private int mYear, mMonth, mDay;
     private int count1=0,count2=0,count3=0,count4=0,count5=0;
 

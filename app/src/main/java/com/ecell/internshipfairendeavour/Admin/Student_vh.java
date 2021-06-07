@@ -31,7 +31,7 @@ public class Student_vh extends RecyclerView.ViewHolder {
 
     public Student_vh(@NonNull View itemView) {
         super(itemView);
-tick=itemView.findViewById( R.id.tick );
+        tick=itemView.findViewById( R.id.tick );
         cmpimg = itemView.findViewById( R.id.icd_cmpimg);
         cmpname = itemView.findViewById(R.id.icd_cmpname);
         layout_card=itemView.findViewById( R.id.layout_card );

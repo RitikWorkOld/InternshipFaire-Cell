@@ -55,7 +55,7 @@ public class Student_Fragment extends Fragment {
     BucketRecyclerView rv_internall;
     Button send_email,send_notif;
     DatabaseReference drinternall;
-    TextView total1;
+    TextView total1,totalcon;
     CheckBox all;
     ImageView downloadxls;
     FirebaseRecyclerOptions<User_admin> optionsinternall;
@@ -69,7 +69,6 @@ public class Student_Fragment extends Fragment {
     public Student_Fragment() {
         // Required empty public constructor
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -89,10 +88,11 @@ public class Student_Fragment extends Fragment {
         selected_names = new ArrayList<>();
 
         all_noti = new ArrayList<>();
-        send_email=view.findViewById( R.id.send_email );
-        all=view.findViewById( R.id.all );
-        send_notif=view.findViewById( R.id.send_noti );
-        total1=view.findViewById( R.id.total );
+        send_email=view.findViewById( R.id.send_email);
+        all=view.findViewById( R.id.all);
+        send_notif=view.findViewById( R.id.send_noti);
+        total1=view.findViewById( R.id.total);
+        totalcon=view.findViewById(R.id.totalcon);
         rv_internall.setHasFixedSize(true);
 
         downloadxls = view.findViewById(R.id.downloadxls);
@@ -122,8 +122,7 @@ public class Student_Fragment extends Fragment {
 
             }
         });
-        Query query = drinternall.orderByChild("officialstatus").equalTo("yes");
-        optionsinternall = new FirebaseRecyclerOptions.Builder<User_admin>().setQuery(query,User_admin.class).build();
+        optionsinternall = new FirebaseRecyclerOptions.Builder<User_admin>().setQuery(drinternall,User_admin.class).build();
 
         adapterinternall = new FirebaseRecyclerAdapter<User_admin, Student_vh>(optionsinternall) {
             @Override
@@ -131,6 +130,12 @@ public class Student_Fragment extends Fragment {
                 holder.cmpname.setText(model.getName());
                 holder.cmpsubname.setText(model.getContactn());
                 holder.checkBox.setChecked(model.isSelected());
+                if (model.getOfficialstatus().equals("yes")){
+                    holder.tick.setVisibility(View.VISIBLE);
+                }
+                else {
+                    holder.tick.setVisibility(View.GONE);
+                }
 
                 holder.checkBox.setOnClickListener( new View.OnClickListener() {
                     @Override
@@ -220,8 +225,7 @@ public class Student_Fragment extends Fragment {
             @Override
             public void onClick(View v) {
                 if (!all.isChecked()){
-                    Query query = drinternall.orderByChild("officialstatus").equalTo("yes");
-                    optionsinternall = new FirebaseRecyclerOptions.Builder<User_admin>().setQuery(query,User_admin.class).build();
+                    optionsinternall = new FirebaseRecyclerOptions.Builder<User_admin>().setQuery(drinternall,User_admin.class).build();
 
                     adapterinternall = new FirebaseRecyclerAdapter<User_admin, Student_vh>(optionsinternall) {
                         @Override
@@ -229,6 +233,12 @@ public class Student_Fragment extends Fragment {
                             holder.cmpname.setText(model.getName());
                             holder.cmpsubname.setText(model.getContactn());
                             holder.checkBox.setChecked(false);
+                            if (model.getOfficialstatus().equals("yes")){
+                                holder.tick.setVisibility(View.VISIBLE);
+                            }
+                            else {
+                                holder.tick.setVisibility(View.GONE);
+                            }
 
                             selectedStudent_main.clear();
                             selectedStudent_noti.clear();
@@ -326,9 +336,7 @@ public class Student_Fragment extends Fragment {
                     selected_numbers.clear();
                     selected_numbers.addAll(all_numbers);
 
-
-                    Query query = drinternall.orderByChild("officialstatus").equalTo("yes");
-                    optionsinternall = new FirebaseRecyclerOptions.Builder<User_admin>().setQuery(query,User_admin.class).build();
+                    optionsinternall = new FirebaseRecyclerOptions.Builder<User_admin>().setQuery(drinternall,User_admin.class).build();
 
                     adapterinternall = new FirebaseRecyclerAdapter<User_admin, Student_vh>(optionsinternall) {
                         @Override
@@ -336,6 +344,12 @@ public class Student_Fragment extends Fragment {
                             holder.cmpname.setText(model.getName());
                             holder.cmpsubname.setText(model.getContactn());
                             holder.checkBox.setChecked(true);
+                            if (model.getOfficialstatus().equals("yes")){
+                                holder.tick.setVisibility(View.VISIBLE);
+                            }
+                            else {
+                                holder.tick.setVisibility(View.GONE);
+                            }
 
                             holder.checkBox.setOnClickListener( new View.OnClickListener() {
                                 @Override
@@ -530,7 +544,23 @@ public class Student_Fragment extends Fragment {
             }
         });
 
+        final DatabaseReference database = FirebaseDatabase.getInstance().getReference().child("Users");
+        database.keepSynced(true);
+        database.orderByChild("officialstatus").equalTo("yes").addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
+                Long sum = dataSnapshot.getChildrenCount();
+                String total = String.valueOf(sum);
+                totalcon.setText(total+" /");
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
 
     }
 }
