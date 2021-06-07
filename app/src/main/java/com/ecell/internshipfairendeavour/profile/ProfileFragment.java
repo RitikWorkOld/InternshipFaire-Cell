@@ -417,6 +417,7 @@ Log.d("HAS","ONE");
                         @Override
                         public void onClick(View v) {
                             Intent intent = new Intent(getActivity(), Profile_activity1.class);
+                            intent.putExtra("userid",FirebaseAuth.getInstance().getCurrentUser().getUid());
 
                             startActivity(intent);
 
@@ -426,6 +427,7 @@ Log.d("HAS","ONE");
                         @Override
                         public void onClick(View v) {
                             Intent intent = new Intent(getActivity(), Profile_activity2.class);
+                            intent.putExtra("userid",FirebaseAuth.getInstance().getCurrentUser().getUid());
 
                             startActivity(intent);
 
@@ -435,6 +437,7 @@ Log.d("HAS","ONE");
                         @Override
                         public void onClick(View v) {
                             Intent intent = new Intent(getActivity(), Profile_activity3.class);
+                            intent.putExtra("userid",FirebaseAuth.getInstance().getCurrentUser().getUid());
 
                             startActivity(intent);
 
@@ -444,6 +447,7 @@ Log.d("HAS","ONE");
                         @Override
                         public void onClick(View v) {
                             Intent intent = new Intent(getActivity(), Profile_activity4.class);
+                            intent.putExtra("userid",FirebaseAuth.getInstance().getCurrentUser().getUid());
 
                             startActivity(intent);
 

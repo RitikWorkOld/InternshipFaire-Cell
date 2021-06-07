@@ -55,9 +55,9 @@ TextView schoolname,startyear,endyear,board,percentage,stream;
     @Override
     protected void onStart() {
         super.onStart();
-        reff= FirebaseDatabase.getInstance().getReference().child( "Profile" ).child( FirebaseAuth.getInstance().getCurrentUser().getUid());
+        reff= FirebaseDatabase.getInstance().getReference().child( "Profile" ).child(userid);
         reff.keepSynced(true);
-        reff.orderByChild("uid").equalTo("sch12"+ FirebaseAuth.getInstance().getCurrentUser().getUid()).addValueEventListener( new ValueEventListener() {
+        reff.orderByChild("uid").equalTo("sch12"+ userid).addValueEventListener( new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot1) {
 

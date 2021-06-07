@@ -113,8 +113,6 @@ public class Student_Fragment_Detail extends AppCompatActivity {
                     occ.setText(personaldet_md.getOccupation());
                     wa_no.setText(personaldet_md.getWanumber());
 
-
-
                 }
             }
 
@@ -145,7 +143,6 @@ public class Student_Fragment_Detail extends AppCompatActivity {
                         if (!holder1.expand){
 
                             holder1.companynamelayout.setVisibility(View.VISIBLE);
-
                             holder1.editexp.setVisibility(View.GONE);
                             holder1.expand = true;
                         }

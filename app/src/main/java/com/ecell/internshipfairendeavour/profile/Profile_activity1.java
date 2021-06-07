@@ -53,9 +53,9 @@ public class Profile_activity1 extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        reff= FirebaseDatabase.getInstance().getReference().child( "Profile" ).child( FirebaseAuth.getInstance().getCurrentUser().getUid());
+        reff= FirebaseDatabase.getInstance().getReference().child( "Profile" ).child(userid);
         reff.keepSynced(true);
-        reff.orderByChild("uid").equalTo("sch10"+ FirebaseAuth.getInstance().getCurrentUser().getUid()).addValueEventListener( new ValueEventListener() {
+        reff.orderByChild("uid").equalTo("sch10"+ userid).addValueEventListener( new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot1) {
 
