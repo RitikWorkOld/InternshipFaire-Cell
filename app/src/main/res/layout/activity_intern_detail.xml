@@ -292,14 +292,22 @@ android:gravity="end"
                             android:id="@+id/alr_applied"
                             android:background="@drawable/gray_btn"
                             android:textColor="#fff"
-
                             android:visibility="gone"
                             android:fontFamily="@font/montserrat"
                             android:padding="8dp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Already Applied"
-                            />
+                            android:text="Already Applied"/>
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:id="@+id/app_closed"
+                                android:background="@drawable/gray_btn"
+                                android:textColor="#fff"
+                                android:visibility="gone"
+                                android:fontFamily="@font/montserrat"
+                                android:padding="8dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Application Closed"/>
                         </RelativeLayout>
                     </RelativeLayout>
 

@@ -2,6 +2,7 @@ package com.ecell.internshipfairendeavour.Internship;
 
 import android.content.Intent;
 import android.graphics.Paint;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -38,7 +39,7 @@ public class InternDetail extends AppCompatActivity implements TabLayout.OnTabSe
     String key;
     ImageView cmpimage;
     TextView intername,cmpname,location,stipend,duration,worktime;
-    Button apply_btn,applied_btn;
+    Button apply_btn,applied_btn,appClosedBtn;
     TextView ctext1,ctext2,ctext3;
 
     //This is our viewPager
@@ -47,7 +48,7 @@ public class InternDetail extends AppCompatActivity implements TabLayout.OnTabSe
     @Override
     protected void onStart() {
         super.onStart();
-Log.d("HAS","KEY:"+key);
+        Log.d("HAS","KEY:"+key);
         DatabaseReference dbref = FirebaseDatabase.getInstance().getReference().child("Formsself").child(FirebaseAuth.getInstance().getCurrentUser().getUid());
         dbref.keepSynced(true);
         dbref.orderByChild("internshipuid").equalTo(key+FirebaseAuth.getInstance().getCurrentUser().getUid()).addListenerForSingleValueEvent(new ValueEventListener() {
@@ -58,8 +59,32 @@ Log.d("HAS","KEY:"+key);
                     applied_btn.setVisibility(View.VISIBLE);
                 }
                 else {
-                    apply_btn.setVisibility(View.VISIBLE);
                     applied_btn.setVisibility(View.GONE);
+                    DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference().child("AppControl");
+                    databaseReference.keepSynced(true);
+                    databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot snapshot) {
+                            if (snapshot.getValue()!=null){
+                                for (DataSnapshot dataSnapshot2 : snapshot.getChildren()){
+                                    String value = dataSnapshot2.getValue(String.class);
+                                    if (value.equals("open")){
+                                        apply_btn.setVisibility(View.VISIBLE);
+                                        appClosedBtn.setVisibility(View.GONE);
+                                    }
+                                    else {
+                                        apply_btn.setVisibility(View.GONE);
+                                        appClosedBtn.setVisibility(View.VISIBLE);
+                                    }
+                                }
+                            }
+                        }
+
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError error) {
+
+                        }
+                    });
                 }
             }
 
@@ -68,7 +93,6 @@ Log.d("HAS","KEY:"+key);
 
             }
         });
-
     }
 
     @Override
@@ -81,6 +105,7 @@ Log.d("HAS","KEY:"+key);
 
         apply_btn = findViewById(R.id.applied);
         applied_btn = findViewById(R.id.alr_applied);
+        appClosedBtn = findViewById(R.id.app_closed);
 
         cmpimage = findViewById( R.id.icd_cmp_img);
         intername = findViewById(R.id.cmp_work_detail);
@@ -145,39 +170,7 @@ Log.d("HAS","KEY:"+key);
         apply_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-
-                DatabaseReference dbhelper1 = FirebaseDatabase.getInstance().getReference().child("Users");
-                dbhelper1.keepSynced(true);
-                dbhelper1.orderByChild("uid").equalTo(FirebaseAuth.getInstance().getCurrentUser().getUid()).addListenerForSingleValueEvent(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                        for (DataSnapshot dataSnapshot1: dataSnapshot.getChildren()){
-                            User user = dataSnapshot1.getValue(User.class);
-
-                            int noi = user.getNoi();
-
-                            if(noi == 0 || noi ==1 ){
-
-                                Intent intent = new Intent(InternDetail.this, ApplyIntern.class);
-                                intent.putExtra("key",key);
-                                startActivity(intent);
-
-                            }
-
-                            else{
-                                Toast.makeText(getApplicationContext(),"You have already applied for the maximum companies",Toast.LENGTH_LONG).show();
-                            }
-
-                        }
-                    }
-
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError databaseError) {
-
-                    }
-                });
-
+                Apply();
             }
         });
 
@@ -204,6 +197,39 @@ Log.d("HAS","KEY:"+key);
         //Adding onTabSelectedListener to swipe views
         tabLayout.setOnTabSelectedListener(this);
 
+    }
+
+    private void Apply() {
+        DatabaseReference dbhelper1 = FirebaseDatabase.getInstance().getReference().child("Users");
+        dbhelper1.keepSynced(true);
+        dbhelper1.orderByChild("uid").equalTo(FirebaseAuth.getInstance().getCurrentUser().getUid()).addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                for (DataSnapshot dataSnapshot1: dataSnapshot.getChildren()){
+                    User user = dataSnapshot1.getValue(User.class);
+
+                    int noi = user.getNoi();
+
+                    if(noi == 0 || noi ==1 ){
+
+                        Intent intent = new Intent(InternDetail.this, ApplyIntern.class);
+                        intent.putExtra("key",key);
+                        startActivity(intent);
+
+                    }
+
+                    else{
+                        Toast.makeText(getApplicationContext(),"You have already applied for the maximum companies",Toast.LENGTH_LONG).show();
+                    }
+
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
     }
 
     @Override
